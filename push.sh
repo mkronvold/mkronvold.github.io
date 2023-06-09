@@ -20,27 +20,31 @@ trap "die 'SIG disruption, but cleanup finished.' 114" 1 2 3 15
 #    Cleanup after INTERRUPT: 1=SIGHUP, 2=SIGINT, 3=SIGQUIT, 15=SIGTERM
 
 
-confirmpush ()
-{
- REPLY=h
- while [ "$REPLY" == "h" ] || [ "$REPLY" != "n" ]
+confirmpush () {
+ reply=h
+ while true
  do
-   echo -e "\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
+   echo -e "\t\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
    read -n1 -s
-   case "$REPLY" in
-     x|X)  echo "Exiting leaving adds and commits as is"    ;break ;;
-     n|N)  git reset HEAD^ ; echo "Aborted push and commit" ;break ;;
-     y|Y)  git push                                         ;break ;;
-       *)  echo ""                                                 ;;
+   case $reply in
+     x|X) echo "Exiting leaving adds and commits as is" ;    break ;;
+     n|N) git reset HEAD^ ; echo "Aborted push and commit" ; break ;;
+     y|Y) git push ; echo "Pushed" ;                         break ;;
+       *) echo ""                                                  ;;
    esac
  done
 }
 
 
-[ "${1}" ] || die "Missing commit message"
+[ "${1}" ] && MSG="${1}" || MSG="$(date +%Y%m%d%H%M)"
+
+./render-emacs-org-to-html.sh
 git add -A
 git commit -m "${1}"
+echo "\t\tThese changes will be pushed"
 git push --dry-run
 git diff --stat --cached origin/main | cat
+
 confirmpush
-echo "End"
+
+echo "fin"

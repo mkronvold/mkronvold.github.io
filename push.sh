@@ -38,7 +38,7 @@ confirmpush ()
 
 
 [ "${1}" ] || die "Missing commit message"
-git add *.org
+git add -A
 git commit -m "${1}"
 git push --dry-run
 git diff --stat --cached origin/main | cat

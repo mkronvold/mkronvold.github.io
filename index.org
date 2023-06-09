@@ -4,8 +4,48 @@
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
 
 * Kronvold.org
-** Test
-** Test 2
-** Test 3
-*** Stuff in test 3
-*** more stuff in test 3
+** Archive
+** Monday
+*** Labels
+   + no more create without labels as of (talk about it monday)
+   + make list of everything that needs to be labeled (project for ops to label everything)
+     - namespaces
+     - all vm's get a label
+       - supervisors are department: Hosting operations
+       - tkc VM's are are Subscription ARR
+       - tkc's and namespaces
+     - Solution = tanzu?  normally a product, what do we use here for vsphere?  elastic search?
+** Tuesday
+** Wednesday
+** Thursday
+** Friday
+*** 6/9/23
+**** E2net Update
+**** Cleanup of unused TKCs
+    + 3 more scheduled to remove, waiting on confirmation
+**** Cloudy/JIRA
+    + Devops might have time in 2-3 weeks
+    + Scheduling call to get all the requirements defined ahead of time
+    + will need some backing of both DCOps and R&D for this to work
+**** OCVS load balancer
+    + AVI
+    + This will probably require several detailed sessions with vmware
+      - possibly a full workshop
+    + self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features
+      - also provides WAF, appalytics
+      - solves ip pool issues
+**** Netapp Cloud Insights
+    + Suggest we have Joel work with Adam on setup and implementation
+    + Tim, HY, Joel, You and I should brainstorm a list of what we want to get out of it.
+      - fancy notetaking, mind mapping
+**** NSX-T updates
+    + Original suspected patch that caused issue deployed to dev, stg, shg
+    + Fix now deployed in dev
+      - No issues observes fo far.
+      - Can take a while to show symptoms
+      - also includes some critical security fixes
+    + Fix Scheduled for staging this weekend
+      - More non-prod locations the better I feel about prod
+    + Prod will be scheduled for next CI window
+      - couple months?
+*** 6/16/23

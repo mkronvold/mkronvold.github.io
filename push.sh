@@ -41,7 +41,7 @@ confirmpush () {
 ./render-emacs-org-to-html.sh
 git add -A
 git commit -m "$MSG"
-echo "\t\tThese changes will be pushed"
+echo -e "\t\tThese changes will be pushed\n"
 git push --dry-run
 git diff --stat --cached origin/main | cat
 

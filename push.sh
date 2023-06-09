@@ -21,12 +21,12 @@ trap "die 'SIG disruption, but cleanup finished.' 114" 1 2 3 15
 
 
 confirmpush () {
- reply=h
+ REPLY=h
  while true
  do
    echo -e "\t\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
    read -n1 -s
-   case "$reply" in
+   case "$REPLY" in
      x | X ) echo "Exiting leaving adds and commits as is" ;    break ;;
      n | N ) git reset HEAD^ ; echo "Aborted push and commit" ; break ;;
      y | Y ) git push ; echo "Pushed" ;                         break ;;

@@ -3,18 +3,199 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-09 Fri 15:19 -->
+<!-- 2023-06-09 Fri 15:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>mkronvold org mode site</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Mike-Adamant" />
-<link rel="stylesheet" type="text/css" href="https://mkronvold.github.io/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://mkronvold.github.io/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://mkronvold.github.io/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://mkronvold.github.io/js/readtheorg.js"></script>
+<meta name="author" content="Michael Kronvold" />
+<meta name="description" content="Org mode Notes"
+ />
+<meta name="keywords" content="syntax, org, document" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -65,21 +246,74 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">mkronvold org mode site</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1cd3339">Kronvold.org</a>
+<ul>
+<li><a href="#org333fee4">Archive</a></li>
+<li><a href="#orgd5d5326">Monday</a></li>
+<li><a href="#org3d1dcdc">Tuesday</a></li>
+<li><a href="#orgb56fc2c">Wednesday</a></li>
+<li><a href="#org05ba395">Thursday</a></li>
+<li><a href="#orge789856">Friday</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+;; <a href="https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup">https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup</a>
+</p>
 
-<div id="outline-container-orgf2e838d" class="outline-2">
-<h2 id="orgf2e838d"><span class="section-number-2">1</span> Kronvold.org</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org1cd3339" class="outline-2">
+<h2 id="org1cd3339">Kronvold.org</h2>
+<div class="outline-text-2" id="text-org1cd3339">
 </div>
-<div id="outline-container-org7ae7e57" class="outline-3">
-<h3 id="org7ae7e57"><span class="section-number-3">1.1</span> Archive</h3>
+<div id="outline-container-org333fee4" class="outline-3">
+<h3 id="org333fee4">Archive</h3>
+<div class="outline-text-3" id="text-org333fee4">
 </div>
-<div id="outline-container-orge2a9dd3" class="outline-3">
-<h3 id="orge2a9dd3"><span class="section-number-3">1.2</span> Monday</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org4ecf11c" class="outline-4">
+<h4 id="org4ecf11c">Naming Conventions</h4>
+<div class="outline-text-4" id="text-org4ecf11c">
+<ul class="org-ul">
+<li>Discuss naming conventions</li>
+<li>DCOps
+<ul class="org-ul">
+<li>DC</li>
+<li>vCenter &lt;- vmware cluster</li>
+<li>vSphere namespace -&gt; egress IP</li>
+<li>TKG
+<ul class="org-ul">
+<li>WCP</li>
+<li>Worker nodes -&gt; esx hosts</li>
+</ul></li>
+</ul></li>
+<li>DCEng
+<ul class="org-ul">
+<li>TKC &lt;&#x2013; consumes resources</li>
+<li>NS</li>
+<li>Deployments</li>
+<li>Special
+<ul class="org-ul">
+<li>SA = Service accounts</li>
+<li>RB = role bindings</li>
+<li>Secrets</li>
+</ul></li>
+</ul></li>
+</ul>
 </div>
-<div id="outline-container-org4abdc41" class="outline-4">
-<h4 id="org4abdc41"><span class="section-number-4">1.2.1</span> Labels</h4>
-<div class="outline-text-4" id="text-1-2-1">
+</div>
+</div>
+<div id="outline-container-orgd5d5326" class="outline-3">
+<h3 id="orgd5d5326">Monday</h3>
+<div class="outline-text-3" id="text-orgd5d5326">
+</div>
+<div id="outline-container-orgf54a1eb" class="outline-4">
+<h4 id="orgf54a1eb">Labels</h4>
+<div class="outline-text-4" id="text-orgf54a1eb">
 <ul class="org-ul">
 <li>no more create without labels as of (talk about it monday)</li>
 <li>make list of everything that needs to be labeled (project for ops to label everything)
@@ -97,59 +331,67 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-org60e2e54" class="outline-3">
-<h3 id="org60e2e54"><span class="section-number-3">1.3</span> Tuesday</h3>
+<div id="outline-container-org3d1dcdc" class="outline-3">
+<h3 id="org3d1dcdc">Tuesday</h3>
 </div>
-<div id="outline-container-org978ec45" class="outline-3">
-<h3 id="org978ec45"><span class="section-number-3">1.4</span> Wednesday</h3>
+<div id="outline-container-orgb56fc2c" class="outline-3">
+<h3 id="orgb56fc2c">Wednesday</h3>
 </div>
-<div id="outline-container-org027ddbe" class="outline-3">
-<h3 id="org027ddbe"><span class="section-number-3">1.5</span> Thursday</h3>
+<div id="outline-container-org05ba395" class="outline-3">
+<h3 id="org05ba395">Thursday</h3>
 </div>
-<div id="outline-container-org1b1a120" class="outline-3">
-<h3 id="org1b1a120"><span class="section-number-3">1.6</span> Friday</h3>
-<div class="outline-text-3" id="text-1-6">
+<div id="outline-container-orge789856" class="outline-3">
+<h3 id="orge789856">Friday</h3>
+<div class="outline-text-3" id="text-orge789856">
 </div>
-<div id="outline-container-org4687d45" class="outline-4">
-<h4 id="org4687d45"><span class="section-number-4">1.6.1</span> 6/9/23</h4>
-<div class="outline-text-4" id="text-1-6-1">
+<div id="outline-container-org5d27f77" class="outline-4">
+<h4 id="org5d27f77">6/9/23</h4>
+<div class="outline-text-4" id="text-org5d27f77">
 </div>
-<ol class="org-ol">
-<li><a id="org465167e"></a>E2net Update<br /></li>
-<li><a id="org5bfa407"></a>Cleanup of unused TKCs<br />
-<div class="outline-text-5" id="text-1-6-1-2">
+<div id="outline-container-org17a0c92" class="outline-5">
+<h5 id="org17a0c92">E2net Update</h5>
+</div>
+<div id="outline-container-orgc7cc104" class="outline-5">
+<h5 id="orgc7cc104">Cleanup of unused TKCs</h5>
+<div class="outline-text-5" id="text-orgc7cc104">
 <ul class="org-ul">
 <li>3 more scheduled to remove, waiting on confirmation</li>
 </ul>
 </div>
-</li>
-<li><a id="org029d75a"></a>Cloudy/JIRA<br />
-<div class="outline-text-5" id="text-1-6-1-3">
+</div>
+<div id="outline-container-org6b9cb7c" class="outline-5">
+<h5 id="org6b9cb7c">Cloudy/JIRA</h5>
+<div class="outline-text-5" id="text-org6b9cb7c">
 <ul class="org-ul">
 <li>Devops might have time in 2-3 weeks</li>
 <li>Scheduling call to get all the requirements defined ahead of time</li>
 <li>will need some backing of both DCOps and R&amp;D for this to work</li>
 </ul>
 </div>
-</li>
-<li><a id="orgd606119"></a>OCVS load balancer<br />
-<div class="outline-text-5" id="text-1-6-1-4">
+</div>
+<div id="outline-container-orgce41c2f" class="outline-5">
+<h5 id="orgce41c2f">OCVS load balancer</h5>
+<div class="outline-text-5" id="text-orgce41c2f">
 <ul class="org-ul">
-<li>AVI</li>
+<li>AVI
+<ul class="org-ul">
 <li>This will probably require several detailed sessions with vmware
 <ul class="org-ul">
 <li>possibly a full workshop</li>
 </ul></li>
-<li>self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features
+<li>self-healing software-defined elastic application delivery fabric
 <ul class="org-ul">
+<li>that just so happens to provide very nice load balancing features</li>
 <li>also provides WAF, appalytics</li>
 <li>solves ip pool issues</li>
 </ul></li>
+</ul></li>
 </ul>
 </div>
-</li>
-<li><a id="org93f495e"></a>Netapp Cloud Insights<br />
-<div class="outline-text-5" id="text-1-6-1-5">
+</div>
+<div id="outline-container-org89e8066" class="outline-5">
+<h5 id="org89e8066">Netapp Cloud Insights</h5>
+<div class="outline-text-5" id="text-org89e8066">
 <ul class="org-ul">
 <li>Suggest we have Joel work with Adam on setup and implementation</li>
 <li>Tim, HY, Joel, You and I should brainstorm a list of what we want to get out of it.
@@ -158,9 +400,10 @@ for the JavaScript code in this tag.
 </ul></li>
 </ul>
 </div>
-</li>
-<li><a id="orge3c246c"></a>NSX-T updates<br />
-<div class="outline-text-5" id="text-1-6-1-6">
+</div>
+<div id="outline-container-org2252791" class="outline-5">
+<h5 id="org2252791">NSX-T updates</h5>
+<div class="outline-text-5" id="text-org2252791">
 <ul class="org-ul">
 <li>Original suspected patch that caused issue deployed to dev, stg, shg</li>
 <li>Fix now deployed in dev
@@ -179,18 +422,17 @@ for the JavaScript code in this tag.
 </ul></li>
 </ul>
 </div>
-</li>
-</ol>
 </div>
-<div id="outline-container-org0e5f915" class="outline-4">
-<h4 id="org0e5f915"><span class="section-number-4">1.6.2</span> 6/16/23</h4>
+</div>
+<div id="outline-container-org842b477" class="outline-4">
+<h4 id="org842b477">6/16/23</h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Mike-Adamant</p>
-<p class="date">Created: 2023-06-09 Fri 15:19</p>
+<p class="author">Author: Michael Kronvold</p>
+<p class="date">Created: 2023-06-09 Fri 15:36</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

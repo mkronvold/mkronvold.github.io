@@ -1,10 +1,36 @@
-#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
+# Hey Emacs, this is a -*- org -*- file ...
 #+TITLE: mkronvold org mode site
-#+OPTIONS: toc:nil
+#+OPTIONS: H:5 num:nil toc:2 p:t
+#+AUTHOR:    Michael Kronvold
+#+EMAIL:     mike@kronvold.org
+#+DESCRIPTION: Org mode Notes
+#+KEYWORDS:  syntax, org, document
+#+LANGUAGE:  en
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
+;;#+SETUPFILE: https://raw.githubusercontent.com/mkronvold/mkronvold.github.io/main/theme-readtheorg.setup
+#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
+
+#+PROPERTY:  header-args :eval never-export
 
 * Kronvold.org
 ** Archive
+*** Naming Conventions
+   + Discuss naming conventions
+   + DCOps
+     - DC
+     - vCenter <- vmware cluster
+     - vSphere namespace -> egress IP
+     - TKG
+       - WCP
+       - Worker nodes -> esx hosts
+   + DCEng
+     - TKC <-- consumes resources
+     - NS
+     - Deployments
+     - Special
+       - SA = Service accounts
+       - RB = role bindings
+       - Secrets
 ** Monday
 *** Labels
    + no more create without labels as of (talk about it monday)

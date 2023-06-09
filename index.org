@@ -7,8 +7,15 @@
 #+KEYWORDS:  syntax, org, document
 #+LANGUAGE:  en
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
-#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
-# https://raw.githubusercontent.com/mkronvold/mkronvold.github.io/main/theme-readtheorg.setup
+
+# SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
+# SETUPFILE: https://raw.githubusercontent.com/mkronvold/mkronvold.github.io/main/theme-readtheorg.setup
+# Unset body width limit of ReadTheOrg
+# HTML_HEAD: <style> #content{max-width:1800px;}</style>
+# HTML_HEAD: <style> p{max-width:800px;}</style>
+# HTML_HEAD: <style> li{max-width:800px;}</style
+
+#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-bigblow.setup
 
 #+PROPERTY:  header-args :eval never-export
 

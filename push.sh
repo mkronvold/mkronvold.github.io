@@ -26,11 +26,11 @@ confirmpush () {
  do
    echo -e "\t\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
    read -n1 -s
-   case $reply in
-     x|X) echo "Exiting leaving adds and commits as is" ;    break ;;
-     n|N) git reset HEAD^ ; echo "Aborted push and commit" ; break ;;
-     y|Y) git push ; echo "Pushed" ;                         break ;;
-       *) echo ""                                                  ;;
+   case "$reply" in
+     x | X ) echo "Exiting leaving adds and commits as is" ;    break ;;
+     n | N ) git reset HEAD^ ; echo "Aborted push and commit" ; break ;;
+     y | Y ) git push ; echo "Pushed" ;                         break ;;
+         * ) echo ""                                                  ;;
    esac
  done
 }
@@ -40,7 +40,7 @@ confirmpush () {
 
 ./render-emacs-org-to-html.sh
 git add -A
-git commit -m "${1}"
+git commit -m "$MSG"
 echo "\t\tThese changes will be pushed"
 git push --dry-run
 git diff --stat --cached origin/main | cat

@@ -1,4 +1,4 @@
-#+SETUPFILE: https://raw.githubusercontent.com/mkronvold/mkronvold.github.io/main/theme-readtheorg.setup
+#+SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
 #+TITLE: mkronvold org mode site
 #+OPTIONS: toc:nil
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
@@ -29,11 +29,12 @@
     + will need some backing of both DCOps and R&D for this to work
 **** OCVS load balancer
     + AVI
-    + This will probably require several detailed sessions with vmware
-      - possibly a full workshop
-    + self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features
-      - also provides WAF, appalytics
-      - solves ip pool issues
+      + This will probably require several detailed sessions with vmware
+        - possibly a full workshop
+      + self-healing software-defined elastic application delivery fabric
+        - that just so happens to provide very nice load balancing features
+        - also provides WAF, appalytics
+        - solves ip pool issues
 **** Netapp Cloud Insights
     + Suggest we have Joel work with Adam on setup and implementation
     + Tim, HY, Joel, You and I should brainstorm a list of what we want to get out of it.

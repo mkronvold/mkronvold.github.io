@@ -47,4 +47,4 @@ git diff --stat --cached origin/main | cat
 
 confirmpush
 
-echo "fin"
+git status

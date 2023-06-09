@@ -1,2 +1,11 @@
+#+SETUPFILE: https://raw.githubusercontent.com/mkronvold/mkronvold.github.io/main/theme-readtheorg.setup
+#+TITLE: mkronvold org mode site
+#+OPTIONS: toc:nil
+# Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
+
 * Kronvold.org
 ** Test
+** Test 2
+** Test 3
+*** Stuff in test 3
+*** more stuff in test 3

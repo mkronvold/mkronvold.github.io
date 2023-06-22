@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-22 Thu 13:28 -->
+<!-- 2023-06-22 Thu 13:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>mkronvold org mode site</title>
@@ -72,36 +72,36 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org297c76b">Monday</a>
+<li><a href="#org4e77e9a">Monday</a>
 <ul>
-<li><a href="#org7d2391c">Labels</a></li>
+<li><a href="#org3897825">Labels</a></li>
 </ul>
 </li>
-<li><a href="#org40bf357">Tuesday</a></li>
-<li><a href="#org51728b9">Wednesday</a></li>
-<li><a href="#orgfab58e8">Thursday</a></li>
-<li><a href="#org646494d">Friday</a>
+<li><a href="#org0d7c220">Tuesday</a></li>
+<li><a href="#orgffa147d">Wednesday</a></li>
+<li><a href="#org47cffdc">Thursday</a></li>
+<li><a href="#org5af61bc">Friday</a>
 <ul>
-<li><a href="#orgba3e0f0">6/9/23</a></li>
-<li><a href="#org80d61bc">6/16/23</a></li>
+<li><a href="#org83a5d49">6/9/23</a></li>
+<li><a href="#orga12d06a">6/16/23</a></li>
 </ul>
 </li>
-<li><a href="#org27154fe">Archive</a>
+<li><a href="#org0392102">Archive</a>
 <ul>
-<li><a href="#orgdf2af1a">Naming Conventions</a></li>
+<li><a href="#org3dfa633">Naming Conventions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org297c76b" class="outline-2">
-<h2 id="org297c76b">Monday</h2>
-<div class="outline-text-2" id="text-org297c76b">
+<div id="outline-container-org4e77e9a" class="outline-2">
+<h2 id="org4e77e9a">Monday</h2>
+<div class="outline-text-2" id="text-org4e77e9a">
 </div>
-<div id="outline-container-org7d2391c" class="outline-3">
-<h3 id="org7d2391c">Labels</h3>
-<div class="outline-text-3" id="text-org7d2391c">
+<div id="outline-container-org3897825" class="outline-3">
+<h3 id="org3897825">Labels</h3>
+<div class="outline-text-3" id="text-org3897825">
 <ul class="org-ul">
 <li>no more create without labels as of (talk about it monday)</li>
 <li>make list of everything that needs to be labeled (project for ops to label everything)
@@ -119,37 +119,37 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-org40bf357" class="outline-2">
-<h2 id="org40bf357">Tuesday</h2>
+<div id="outline-container-org0d7c220" class="outline-2">
+<h2 id="org0d7c220">Tuesday</h2>
 </div>
-<div id="outline-container-org51728b9" class="outline-2">
-<h2 id="org51728b9">Wednesday</h2>
+<div id="outline-container-orgffa147d" class="outline-2">
+<h2 id="orgffa147d">Wednesday</h2>
 </div>
-<div id="outline-container-orgfab58e8" class="outline-2">
-<h2 id="orgfab58e8">Thursday</h2>
+<div id="outline-container-org47cffdc" class="outline-2">
+<h2 id="org47cffdc">Thursday</h2>
 </div>
-<div id="outline-container-org646494d" class="outline-2">
-<h2 id="org646494d">Friday</h2>
-<div class="outline-text-2" id="text-org646494d">
+<div id="outline-container-org5af61bc" class="outline-2">
+<h2 id="org5af61bc">Friday</h2>
+<div class="outline-text-2" id="text-org5af61bc">
 </div>
-<div id="outline-container-orgba3e0f0" class="outline-3">
-<h3 id="orgba3e0f0">6/9/23</h3>
-<div class="outline-text-3" id="text-orgba3e0f0">
+<div id="outline-container-org83a5d49" class="outline-3">
+<h3 id="org83a5d49">6/9/23</h3>
+<div class="outline-text-3" id="text-org83a5d49">
 </div>
-<div id="outline-container-org7c26f91" class="outline-4">
-<h4 id="org7c26f91">E2net Update</h4>
+<div id="outline-container-org20554f2" class="outline-4">
+<h4 id="org20554f2">E2net Update</h4>
 </div>
-<div id="outline-container-org95db52c" class="outline-4">
-<h4 id="org95db52c">Cleanup of unused TKCs</h4>
-<div class="outline-text-4" id="text-org95db52c">
+<div id="outline-container-orgd2743c9" class="outline-4">
+<h4 id="orgd2743c9">Cleanup of unused TKCs</h4>
+<div class="outline-text-4" id="text-orgd2743c9">
 <ul class="org-ul">
 <li>3 more scheduled to remove, waiting on confirmation</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org05f47bb" class="outline-4">
-<h4 id="org05f47bb">Cloudy/JIRA</h4>
-<div class="outline-text-4" id="text-org05f47bb">
+<div id="outline-container-org3587d87" class="outline-4">
+<h4 id="org3587d87">Cloudy/JIRA</h4>
+<div class="outline-text-4" id="text-org3587d87">
 <ul class="org-ul">
 <li>Devops might have time in 2-3 weeks</li>
 <li>Scheduling call to get all the requirements defined ahead of time</li>
@@ -157,9 +157,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org05172f5" class="outline-4">
-<h4 id="org05172f5">OCVS load balancer</h4>
-<div class="outline-text-4" id="text-org05172f5">
+<div id="outline-container-orgaf736ba" class="outline-4">
+<h4 id="orgaf736ba">OCVS load balancer</h4>
+<div class="outline-text-4" id="text-orgaf736ba">
 <ul class="org-ul">
 <li>AVI
 <ul class="org-ul">
@@ -177,9 +177,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org5a4520c" class="outline-4">
-<h4 id="org5a4520c">Netapp Cloud Insights</h4>
-<div class="outline-text-4" id="text-org5a4520c">
+<div id="outline-container-orgfdd17d0" class="outline-4">
+<h4 id="orgfdd17d0">Netapp Cloud Insights</h4>
+<div class="outline-text-4" id="text-orgfdd17d0">
 <ul class="org-ul">
 <li>Suggest we have Joel work with Adam on setup and implementation</li>
 <li>Tim, HY, Joel, You and I should brainstorm a list of what we want to get out of it.
@@ -189,9 +189,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org86eaef4" class="outline-4">
-<h4 id="org86eaef4">NSX-T updates</h4>
-<div class="outline-text-4" id="text-org86eaef4">
+<div id="outline-container-org7258905" class="outline-4">
+<h4 id="org7258905">NSX-T updates</h4>
+<div class="outline-text-4" id="text-org7258905">
 <ul class="org-ul">
 <li>Original suspected patch that caused issue deployed to dev, stg, shg</li>
 <li>Fix now deployed in dev
@@ -212,17 +212,17 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-org80d61bc" class="outline-3">
-<h3 id="org80d61bc">6/16/23</h3>
+<div id="outline-container-orga12d06a" class="outline-3">
+<h3 id="orga12d06a">6/16/23</h3>
 </div>
 </div>
-<div id="outline-container-org27154fe" class="outline-2">
-<h2 id="org27154fe">Archive</h2>
-<div class="outline-text-2" id="text-org27154fe">
+<div id="outline-container-org0392102" class="outline-2">
+<h2 id="org0392102">Archive</h2>
+<div class="outline-text-2" id="text-org0392102">
 </div>
-<div id="outline-container-orgdf2af1a" class="outline-3">
-<h3 id="orgdf2af1a">Naming Conventions</h3>
-<div class="outline-text-3" id="text-orgdf2af1a">
+<div id="outline-container-org3dfa633" class="outline-3">
+<h3 id="org3dfa633">Naming Conventions</h3>
+<div class="outline-text-3" id="text-org3dfa633">
 <ul class="org-ul">
 <li>Discuss naming conventions</li>
 <li>DCOps
@@ -255,7 +255,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Michael Kronvold</p>
-<p class="date">Created: 2023-06-22 Thu 13:28</p>
+<p class="date">Created: 2023-06-22 Thu 13:29</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -1,7 +1,7 @@
 # Hey Emacs, this is a -*- org -*- file ...
-#+TITLE: mkronvold org mode site
+#+TITLE: mkronvold org-mode notes
 #+AUTHOR:    Michael Kronvold
-#+EMAIL:     mike@kronvold.org
+#+EMAIL:     michael.kronvold@e2open.com
 #+DESCRIPTION: Org mode Notes
 #+KEYWORDS:  syntax, org, document
 #+LANGUAGE:  en
@@ -12,66 +12,546 @@
 # TOC: headlines 3 ALT_TITLE:Index
 #+PROPERTY:  header-args :eval never-export
 
-* Monday
-** Labels
-  + no more create without labels as of (talk about it monday)
-  + make list of everything that needs to be labeled (project for ops to label everything)
-    - namespaces
-    - all vm's get a label
-      - supervisors are department: Hosting operations
-      - tkc VM's are are Subscription ARR
-      - tkc's and namespaces
-    - Solution = tanzu?  normally a product, what do we use here for vsphere?  elastic search?
-* Tuesday
-* Wednesday
-* Thursday
-* Friday
-** 6/9/23
-*** E2net Update
-*** Cleanup of unused TKCs
-   + 3 more scheduled to remove, waiting on confirmation
-*** Cloudy/JIRA
-   + Devops might have time in 2-3 weeks
-   + Scheduling call to get all the requirements defined ahead of time
-   + will need some backing of both DCOps and R&D for this to work
-*** OCVS load balancer
-   + AVI
-     + This will probably require several detailed sessions with vmware
-       - possibly a full workshop
-     + self-healing software-defined elastic application delivery fabric
-       - that just so happens to provide very nice load balancing features
-       - also provides WAF, appalytics
-       - solves ip pool issues
-*** Netapp Cloud Insights
-   + Suggest we have Joel work with Adam on setup and implementation
-   + Tim, HY, Joel, You and I should brainstorm a list of what we want to get out of it.
-     - fancy notetaking, mind mapping
-*** NSX-T updates
-   + Original suspected patch that caused issue deployed to dev, stg, shg
-   + Fix now deployed in dev
-     - No issues observes fo far.
-     - Can take a while to show symptoms
-     - also includes some critical security fixes
-   + Fix Scheduled for staging this weekend
-     - More non-prod locations the better I feel about prod
-   + Prod will be scheduled for next CI window
-     - couple months?
-** 6/16/23
+
+* Quick Notes
+* Mon
+* Tue
+** 5/23/23
+*** New tasklist/progress tracker
+  - Confluence table
+    Excel
+    MS Planner
+*** Add 9:00am working sessions?
+  - Tue? Wed?
+    9am?
+    https://i.imgur.com/4lBtKyq.png
+*** Generate argocd notes
+  - https://confluence.dev.e2open.com/display/KUBE/Argocd+Automation
+    Pros
+    Cons
+    Questions
+    Other concerns
+*** Terraform
+    - Create tkc
+    - What can it do that argo can't?
+    - What can't it do?
+    - Create ns
+    - Deploy yaml/app to multiple clusters?  namespaces?  dynamic?
+    - State
+      Storing vs not storing
+      Terraform's state file is a crucial component of how Terraform manages and tracks resources. It keeps track of the metadata of all the resources it creates and manages. The state file is vital in ensuring idempotency, allowing Terraform to know what it previously provisioned and to make changes accordingly.
+      That said, here are the pros and cons of maintaining Terraform state files vs regenerating them:
+      -  **Keeping Terraform State:**
+          Pros:
+            1. **Tracking**: State files provide Terraform the context it needs to know what has been previously created and what changes need to be made to achieve the desired state defined in your configuration files.
+            2. **Performance**: Without state files, Terraform would need to query the provider API to discover resources each time you run a command. State files cache this information, reducing the number of necessary API calls and making Terraform operations faster.
+            3. **Idempotency**: With the state file, Terraform can ensure that commands like `terraform apply` are idempotent, i.e., repeated commands do not result in different outcomes. This makes operations predictable and safe.
+          Cons:
+            1. **Sensitive Data**: State files can contain sensitive data, as they capture all the details about your resources. You'll need to be careful about how you store and handle state files.
+            2. **State Drift**: The actual infrastructure can drift from the state defined in the state file if changes are made outside of Terraform.
+            3. **Merge Conflicts**: In a team setting, if multiple people are making changes concurrently, this could lead to merge conflicts in the state file.
+      -  **Regenerating Terraform State as Needed:**
+          Pros:
+            1. **No Syncing Needed**: Since you regenerate state every time, you don't need to worry about keeping the state file in sync with the actual infrastructure.
+            2. **Reduced Risk**: There's less risk of sensitive data exposure from the state file, as it's not persistently stored.
+          Cons:
+            1. **Slower**: Regenerating state would involve Terraform querying all your resources each time you run a command, which can be slow for large infrastructures.
+            2. **No History**: Without a persistent state file, you lose history and the ability to see how resources have changed over time.
+            3. **Inconsistent Results**: Regenerating state can result in inconsistencies. If you create resources with Terraform and then regenerate the state, Terraform will lose track of the resources it has created, which can cause problems.
+    - In conclusion, it is generally recommended to keep and properly manage Terraform state files. They play a critical role in how Terraform operates, and the benefits usually outweigh the drawbacks. The key is to establish proper state file management practices, such as using remote state, enabling state locking, and routinely checking for state drift.
+    - How to schedule (when and where should what run?)
+
+** 6/13/23
+ + Label mandata, all environments
+ + Wrap up research
+   config mgmt (all the same) vs cattle (different but treated the same)
+ + Next projects
+   ArgoCD Design (K)
+   Vault Justification (R)
+   Work on priorities
+ + Training and expenses
+   What do we need
+   Take what you need
+ + GitOps sans automation, workflow manumation, documation
+ + CI build automation
+   Github actions to prep things for use
+   Alternatives?
+ + Schedule 1on1s
+ + Additional weekly meeting
+
+** CD vs Config Management
+  + Define CM
+    - Same thing in multiple places
+      I.e. same config settings across multiple clusters
+      Same tools installed in multiple clusters with cluster specific options
+  + Assumption
+    - Argo doesn't do config management
+      Uses kustomize to adapt yaml on the fly, can't handle mutiple clusters with the same yaml without injecting env variables or other tkc specific data.
+      This could be solved by running a CI build whenever the yaml is checked in to inject values rather than at run time
+
+** Label mandate, all environments
+  + VM (as seen from vSphere)
+    - Node labels
+      visible to K8s
+      Configured in TMC via TF
+    - Cloud label
+      visible to vsphere and TMC
+      Configured in TMC via TF
+    - VSphere TAG
+      Everytime a node is rebuilt or horizontal scaling creates/destroys a node the tagging is lost
+      Tanzu creates node VMs, we don't have any control over tags
+      - Find out what VMware recommends
+      Might need to filter at the cloud insight level
+
+  + Namespace
+    - Application ns
+      Normal solution CI- labels applied via yaml
+    - Tooling ns
+      Fixed labels for CI-department, etc.
+** CodeFresh
+*** TF
+  + Terraform requires lock management to prevent multiple tf's from trying to make changes at the same time.  The infra to do this is 3rd party (Atlantis) and untested.   Definitely complex.
+  + Actual state is not stored in git, only "Expected" state
+  + tf is good for things that don't change much, like the initial cluster creation, onboarding to tmc, installation of core cluster objects.
+*** Argo
+  + for everything else?
+*** Tunnelling
+  + Using a tunnel/mesh to communicate between CD components, git, argo, image repos, artifactory, jump servers.
+    Codefresh has a TLS based one that uses 443, expects 443 open to everywhere, public cloud based.
+    Tailscale-WireGuard
+*** TMC
+  + To apply OPA to entire cluster rather than using tf or argo
+*** Tigris
+  + Nosql key/value store
+    https://github.com/tigrisdata/tigris
+*** Monitoring and health
+  + argocd_app_info
+    https://argo-cd.readthedocs.io/enn/stable/operator-manual/health
+    https://github.com/argoproj/gitops-engine/blob/master/pkg/health/health.go#L24
+    https://github.com/argoproj/argo-cd/blob/master/ui/src/app/shared/models.ts#L301
+  + health_status
+    https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics
+  + sync_status
+    https://argo-cd.readthedocs.io/en/stable/operator-manual/metric
+*** Codefresh conclusions
+  + https://i.imgur.com/TISi4wq.png
+  + coupon / class
+    https://i.imgur.com/LXRwm4Q.png
+* Wed
+* Thu
+** OCVS
+  + Netops is working on fastconnect that connects our DCs to cloud
+    Once that's complete we need to install Tanzu
+    TKG/s
+** K8s DR
+  + What can k8s offer?
+    - Self-healing
+      Reconcile current state to desired state
+      Requires GitOps
+    - Rebuild pods, nodes, policies, load balancers, networks?
+      How far can each one go today
+      How far can each go if we make changes/improvements?
+  + What can we offer today for DR?
+    For an application namespace?
+    For an entire tkc?
+  + What do we want?
+    - Vmotion for tkc's?
+    - Replicate data and desired state and build on the fly during DR event?
+      - What do we need to do this?
+    GitOps, GitOps tooling in DR location
+    Data replication in a declarative/code way
+    Shift to using Storage abstraction
+* Fri
+** 5/18/23
+*** People
+  + Equity 100 vs 130%
+    currently receiving on call allowance for weekends
+    Ask HR if there is a shift bonus for 2nd shift on call
+    This isn't considered part of their base pay for bonus/equity incentives?
+    This won't continue post DCO to DCE transition
+    Correction for that.
+    Correction for change of role
+    Correction for Kantha
+  + Change of working hours to 2nd shift MYT 3pm -11pm
+  + ayyappan interested in more k8s work, possibly applying for engineering team.
+  + Most kOps tasks are done by Jeyson in NA including major upgrade projects.
+  + Most kOps tasks done by Ayyappan and Ming in APAC
+  + Ming should take a larger role in kOps
+*** Places
+  + e2prod fr8, rubrik for backups of trident
+    fra-stg/prod snapmirror DR to paris (ontap appliance)
+    Where can they test this?
+  + How did the VMware offsite go?
+  + Need a vSphere Team/Architect/Lead/Owner
+*** Things
+  + Ops will be migrating dev k8s backups from affcluster 1 (no nbu license) to 2 (yes nbu license)
+  + Vrni licensing to troubleshoot nsx issue
+  + licensing portal access for k & r
+  + Ming reinitialized a tanzu node which had clock skew.
+    Need a monitor for this
+** CDM
+  + CDM
+    https://jira.dev.e2open.com/jira/browse/OPS-99200
+** 6/8/23
+  + E2net update
+  + Cleanup of unused tkc's
+    3 more scheduled to remove, waiting on confirmation
+  + Cloudy/Jira
+    Devops might have time in 2-3 weeks
+    Scheduling call to get all requirements defined ahead of time
+  + OCVS load balancer / AVI
+    This will probably require several detailed sessions up to a full workshop with vmware
+    self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features. WAF, appalytics, deals with ip pooling issues
+  + Netapp Cloud Insights
+    Have Joel work with Adam on setup and implementation
+    Tim, HY, Joel, You and I should make a list of what we want out of it.  Brainstorm, fancy notetaking.
+  + NSX-T updates
+    deployed in dev
+    No issues observed so far.  It can take a while to show symptoms.
+    scheduled for staging this weekend
+    More better.
+  + DR
+    What can k8s offer for DR?
+    What should we?
+  + Portworx
+  + Vault
+** 6/23/23
+  + E2net update
+  + Portworks
+  + Vault
+  + OCVS
+    - TKG/s vs m
+      Should be the same everywhere since it impacts how we do support and LCM
+      M uses more hardware
+* ToDo
+** Clock Skew
+*** Ming reinitialized a tanzu node which had a clock skew.
+Need a monitor for this
+** ssh jump pod
+create an ssh jump server pod
+inject secrets(pubkeys) from vault
+start sshd
+sleep for an hour
+pod terminates
+create terraform to deploy an ssh pod
+** Capacity Analysis
+*** R&D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created
+*** Separate Staging from Dev
+*** Weighted Score for each DC
+performace
+capacity
+obsolescence
+
+risk
+trending
+comfort
+
+maybe compare to last year?
+***
+capacity analysis
+hot spots
+prescribed actions
+** Network Performance
+VM's consolidated hardware and exposed resource contention in the network and storage areas.
+k8s consolidation is another order of magnitude and further stresses network and storage.
+e2open's network is 1gig and 10gig and NAS storage shares that. additionally, our SAN is 8 and 16gig fiber.
+most vendors are recommending dual 25G per esx host minimum and quad 100G between clusters for kubernetes
+*** Collect some articles
+*** make a monitoring procedure
+** Tanzu Design Doc
+Tanzu Design Doc
+
+complete overarching doc
+components will go towards this doc
+general k8s architecture
+
+talbot meeting to decide what belongs in that doc
+* Attention
+** Request for cluster admin
+Does this app team have their own DevOps team and/or Deployment tool?
+If they do, we can give them their own cluster to build and run. We are not responsible for anything inside the cluster other than providing required policies and daemon sets (falco, fluentbit, need list).
+What about namespace admin?
+** Port Rollover Problem
+port roll over problem (1 egress IP) mostly a windows problem, worse for nfs?
+** Zabbis DR
+*** ask R&D to propose zabbis DR timeline
+** E2net Migration
+ + B2bc
+   - Cisco
+     Staging on 5/22 had some issues, rescheduling that update
+     r&d looking into the issue
+     Production deploy still tentatively scheduled for August
+   -  Non-cisco
+     Last email was a followup after the meeting we all had with Peter on 5/10.
+     I have nothing since… which leads me to believe they used the b2bc list and the sftp doc instead of the b2b docs from the 5/10 email and meeting.
+ + Sftp-e2net
+
+
+ + Sftp-non-e2net
+   - Email Crafted
+   - List curated
+     addressees pending
+** FR8/OCVS
++ fr8
+- long term dc in europe
+- doesn't have DR
++ paris
+- SDDC on public OCI cloud
++ poc/testing completed
+- ontap replication
+- vsphere replication
++ Network transport questions
+- overlay transport zones
+** JIRA/Cloudy requests for k8s
++ jira requests/cloudy
+- new/existing kns/tkc
+** Plans for FR4
+plan for fr4?
+
+old network, 100mbit
+old ibm hardware, out of support, parts
+esx 6.5 and 6.7 hosts can't be upgraded, out of support, many security issues.
+esx 5.5 hosts can only run stand alone, can't join vcenter, are these even in inventory anywhere?
+claim is that customer needs these 24/7 and their contract says we can't do any maintenance???
+is this contract even worth continuing?
+** Plans for Naperville
+** Plans for vxRail
+** Plans for DevTools
 * Archive
+** Rubrik
+ + K8s Agent to CentralDM private tunnel port 8011
+   Agents are on google container registry (internet)
+   Rubrik nodes need inet access
+   Requires version 8.0.3 or 8.1.1
+   To use with trident csi requires kubernetes external snapshotter
+   Netapp external-snapshotter on github
+** Dell server roadmap
+Intel Xeon Gold 6348 @ 2.60GHz
+ddr4 3600
+
+replace with gold 5420+ @ 2.0Ghz
+ddr5 4800
+** Elastic Search
+ES for CI
+in dev
+need hardware
+build, test, break, runbook
+** Vault
+  + Proposal
+    - 4 prod, 4 non-prod, gold support, 50 users
+      - Includes cobra training
+    7 weeks 1 hour per week, unlimited attendees
+      - Paid training/certification
+    3 days, 10k for 5 people
+      - Cost
+    MSRP $451,440 for 3 years paid annually
+        Discounted $293,436 by July 28th
+        True up happens at end of 3 years
+        Does this mean you can grow wildly and then shrink just before renewal?
+    - Gold support
+      4 support specialists assigned to our account
+      1 CSM assigned to our account
+      Meet monthly, KB's, Tickets, etc.
+    - Procurement
+      - AWS Marketplace
+    EDP -> draw down from your commit
+    Terms based on AWS Terms
+      - Signed Order with or without PO
+    Net 30/45 based on PO
+  + Cluster size stays small until 100 clients PER cluster or 400 clients for 4 clusters before it shifts to medium for the purposes of licensing
+  + Client license consumption
+    When the service-account is mapped to a path in vault, it is considered active.
+    If we never map it to a path, it is not active and not used.
+    We can precreate the KV paths, and the s-a but not assign it and we don't have to pay for them now.
+  + Prod or Non-Prod Staging
+    An interesting discussion came up about whether Staging was prod or non-prod when it came to vault.
+    Staging has a spotty history at e2open and has been used for everything from development to prototyping to QA to deployment testing/proofing to data quality assurance (with customer data!!) to modelling to light production use (like pre-sales demos).
+    Limiting the focus right now to provisioning and deployment needs (so, Digital AI, Tanzu, K8s, Terraform?) and our intent to buy enterprise vault by limiting the scope to "use tool X to pull secret from vault, inject in payload and deploy"....
+    How can we answer the question, what kind of secrets does staging need?
+    Time allowing, we can continue with Dave's plans to build a central tool to manage secrets in the vault, which will reduce the license requirements for human clients greatly.  What will this need, how does KPE avoid making this more difficult for Dave's development efforts.
+    - Dev
+    - Test
+    - Uat (customers test changes to applications before accepting them for production use)
+    - Staging
+    - Pre-prod (includes customer data and customer access)
+    - Prod
+    - Prime = prod, used by all production applications/deployments
+    - Beta = staging, used by all non-prod
+    - Alpha = dev, used by platform engineers, people who are changing
+  + Vault Tool
+    Allows users to declare what they need for their application in a structured way ala pd
+    Database passwords, secrets, tokens go here…
+    May use vault for entire pd-style config store
+    Will use one service account per environment?
+    Known structured method to create, known structured method to consume
+    - This is somewhat contradictory to the cloud like approach shaival prescribed
+      My application consumes vault as a service
+      Request a "space"
+      Use it however my app wants to use it
+    - Need to review our vault provisioning/onboarding and stop creating empty stores
+      Each has a unique service-account/user
+      Will continue Thursday
+  + Does the creation of a user trigger licensing or does USE by a user trigger it?
+    YES (hashi)
+** CloudHealth
+  + install on each cluster
+    export CHT_API_TOKEN=7eb7c32fa68fc108ac7ad934a28ceaa2f76e892aa2accb35
+    export CHT_CLUSTER_NAME=${clustername}
+    export CHT_NAMESPACE=${namespace}
+    helm repo add cloudhealth https://cloudheatth.github.io/helm/
+    helm install cloudhealth-collector -n $CHT_NAMESPACE --set apiToken=$CHT_API_TOKEN,clusterName=$CHT_CLUSTER_NAME cloudhealth/cloudhealth-collector
+  + to upgrade
+    helm upgrade cloudhealth-collector cloudhealth/cloudhealth-collector
+  + to uninstall
+    helm uninstall cloudhealth-collector
+    helm repo remove cloudhealth
+  + should label these
+    --set customLabels={}
+  + more info
+    https://github.com/CloudHealth/helm
+    https://i.imgur.com/7O37MY6.png
+** Incident Manager
+Unified Incident Management Process
+e2pr in april
+need more incident managers
+does not need specific knowledge of application
+will get training for responsibilities
+does not need to be technical but might benefit
+coordination
+communication
+guide technical team
+provide pressure and guide rails
+only during office hours
+currently 5 in US
+9 in APAC
+7 in EMEA
 ** Naming Conventions
-  + Discuss naming conventions
-  + DCOps
-    - DC
-    - vCenter <- vmware cluster
-    - vSphere namespace -> egress IP
-    - TKG
-      - WCP
-      - Worker nodes -> esx hosts
-  + DCEng
-    - TKC <-- consumes resources
-    - NS
-    - Deployments
-    - Special
-      - SA = Service accounts
-      - RB = role bindings
-      - Secrets
+ + Discuss naming conventions
+   - DCOps
+     DC
+     vCenter <- vmware cluster
+     vSphere namespace -> egress IP
+     TKG
+     - WCP
+     - Worker nodes -> esx hosts
+   -  DCEng
+     TKC <-- consumes resources
+     NS
+     Deployments
+     Special
+     - SA = Service accounts
+     - RB = role bindings
+     - Secrets
+ + ArgoCD Demo
+    How to arrange "tiles"
+        1 tile per DC-Environment for all clusters (wcp level)
+            Example:
+            CH3-PROD
+                Ch3-prod-Cluster1.yaml
+                Ch3-prod-Cluster2.yaml
+                Ch3-prod-Cluster3.yaml
+            SJC-PROD
+                Prod-sjc-Cluster4.yaml
+                Prod-sjc-Cluster5.yaml
+            FR8-PROD
+                Cluster6.yaml
+                Cluster7.yaml
+                Cluster8.yaml
+            FR8-STG
+                Cluster9.yaml
+                Cluster10.yaml
+            SV1-DEV
+                dev-ci.yaml <--- tkc
+                pepsi-lds.yaml
+                e2dev-tanzu-rdm.yaml
+        1 tile per cluster for everything inside
+            Example:
+            Ch3-prod-Cluster1
+                Cluster1-sys.yaml
+                Cluster1-sys-Rb.yaml
+                Cluster1-sys-Sa.yaml
+                Cluster1-sys-OPA.yaml
+                Cluster1-sys-falco.yaml
+                Cluster1-sys-fluntbit.yaml
+                Cluster1-Ns1.yaml
+                Cluster1-Ns1-Rb.yaml
+                Cluster1-Ns1-Sa.yaml
+                Cluster1-Ns1-Psp.yaml
+                Cluster1-Ns1-App3.yaml
+                Cluster1-Ns2.yaml
+                Cluster1-Ns2-Rb.yaml
+                Cluster1-Ns2-Sa.yaml
+                Cluster1-Ns2-Psp.yaml
+                Cluster1-Ns2-App4.yaml
+ + CI windows are by physical region
+ + Daytime work hours are by region
+ + Cluster types:
+   Multi-tenant
+   - E2proxy
+     …-e2proxy.yaml
+   - CL
+     …-cl1.yaml
+     …-cl2.yaml
+   - CDM
+     Ch3-prod-cdm1.yaml
+     Ch3-prod--cdm2.yaml
+     Ch3-prod--cdm3.yaml
+   Single-tenant (1 namespace per tenant)
+   - DX
+     …-dx10.yaml
+     …-dx2.yaml
+     …-dx.yaml
+     …-dx1.yaml
+     …-dx2.yaml
+     …-dx3.yaml
+     …-dx.yaml  <-- prime
+   - xDS
+   Common
+   - Ci         < ci that belongs to ci
+   - Cops       < ci that belongs to ops
+   - E2proxy    < ci that needs its own dmz
+ + Should we use - to separate dc-env-cluster
+   Can't use _ in tkc or vns names
+ + examples
+   e2dev-tanzu-dcops        <-- don't do this.  These are test clusters
+   e2dev-tanzu-dcops-2023   <-- don't do this.  These are test clusters
+   e2dev-tanzu-project-name <-- don't do this.  These are test clusters
+   e2dev-tanzu-vault        <-- this is a test, this belongs in cops
+   e2open-test              <-- don't do this.  These are test clusters
+   tanzu-workshop           <-- don't do this.  These are test cluster
+   Default                  <-- system created cluster
+* 1on1
+** Kantha
+*** 6/13/23
+  + Shared learning (Kantha)
+    I was stuck, I figured it out, here's how.
+    Post it in the team chat
+    Some ideas are good for DCOps, how to share with them?
+  + We need a team meeting that's just our team
+  + Promotion/raise info, when
+** Rajesh
+*** 6/26/23
+** Me
+*** 3/28/23
++ work hours change
++ adam
+- capacity planning
+- vsphere/vrops
++ Capacity Analysis
+- should meet next week to review desired changes.
++ gitops
+- day 2.5 with cdm
+- does the decision making
+- doesn't do go/no-go (unless you want)
++ mvi/mvp
+- need to start over, ship has sailed.
+- talk about platform as a product
+- vs what platform as a service is
++ goals
+- personal
+- DCEng
+- VMware initiatives
+- https://i.imgur.com/C0vDUYF.png
++ incident manager
+- better, but not comfortable at all.
+- I'll be honest, I deal with the intensity and stress of this job largely due to the flexibility of it... commitments that are likely to interfere with my own time are going to make these things harder to deal with.

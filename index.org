@@ -9,7 +9,6 @@
 
 #+STARTUP: overview
 #+OPTIONS: H:5 num:nil toc:2 p:t
-#+TOC: headlines 3 ALT_TITLE:Index
 #+PROPERTY:  header-args :eval never-export
 
 * Quick Notes
@@ -521,3 +520,5 @@ currently 5 in US
    e2open-test              <-- don't do this.  These are test clusters
    tanzu-workshop           <-- don't do this.  These are test cluster
    Default                  <-- system created cluster
+
+#+TOC: headlines 3 TITLE:Index ALT_TITLE:Index

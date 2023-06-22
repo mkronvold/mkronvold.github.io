@@ -519,38 +519,3 @@ currently 5 in US
    e2open-test              <-- don't do this.  These are test clusters
    tanzu-workshop           <-- don't do this.  These are test cluster
    Default                  <-- system created cluster
-* 1on1
-** Kantha
-*** 6/13/23
-  + Shared learning (Kantha)
-    I was stuck, I figured it out, here's how.
-    Post it in the team chat
-    Some ideas are good for DCOps, how to share with them?
-  + We need a team meeting that's just our team
-  + Promotion/raise info, when
-** Rajesh
-*** 6/26/23
-** Me
-*** 3/28/23
-+ work hours change
-+ adam
-- capacity planning
-- vsphere/vrops
-+ Capacity Analysis
-- should meet next week to review desired changes.
-+ gitops
-- day 2.5 with cdm
-- does the decision making
-- doesn't do go/no-go (unless you want)
-+ mvi/mvp
-- need to start over, ship has sailed.
-- talk about platform as a product
-- vs what platform as a service is
-+ goals
-- personal
-- DCEng
-- VMware initiatives
-- https://i.imgur.com/C0vDUYF.png
-+ incident manager
-- better, but not comfortable at all.
-- I'll be honest, I deal with the intensity and stress of this job largely due to the flexibility of it... commitments that are likely to interfere with my own time are going to make these things harder to deal with.

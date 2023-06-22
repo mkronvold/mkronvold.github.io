@@ -28,10 +28,8 @@ hr () { printf "%0$(tput cols)d" | tr 0 ${1:-=}; }
 ##### Batch processing doesn't prompt for sync or push
 [ "${1}" == "-b" ] && BATCH=1 || BATCH=
 
-
 confirmsync () {
- [ "${BATCH}" ] && REPLY = n || REPLY=0
- while true
+ while [ "${BATCH}" == "" ]
  do
    hr ; echo -e "\n"
    echo -e "\t\tPress 'y' to sync home to local\t\tPress 'n' to use local .org files as is\t\tPress 'x' to quit"
@@ -48,8 +46,7 @@ confirmsync () {
 
 
 confirmpush () {
- [ "${BATCH}" ] && REPLY = y || REPLY=0
- while true
+ while [ "${BATCH}" == "" ]
  do
    hr ; echo -e "\n"
    echo -e "\t\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
@@ -62,6 +59,7 @@ confirmpush () {
          * ) echo ""                                                  ;;
    esac
  done
+ [ "${BATCH}" == "1" ] && git push
 }
 
 ##### Check to see if a commit message was specified on command line otherwise use the date

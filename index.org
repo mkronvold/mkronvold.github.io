@@ -1,6 +1,5 @@
 # Hey Emacs, this is a -*- org -*- file ...
 #+TITLE: mkronvold org mode site
-#+OPTIONS: H:5 num:nil toc:2 p:t
 #+AUTHOR:    Michael Kronvold
 #+EMAIL:     mike@kronvold.org
 #+DESCRIPTION: Org mode Notes
@@ -8,19 +7,9 @@
 #+LANGUAGE:  en
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
 
-# SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-readtheorg.setup
-# SETUPFILE: https://raw.githubusercontent.com/mkronvold/mkronvold.github.io/main/theme-readtheorg.setup
-# Unset body width limit of ReadTheOrg
-# HTML_HEAD: <style> #content{max-width:1800px;}</style>
-# HTML_HEAD: <style> p{max-width:800px;}</style>
-# HTML_HEAD: <style> li{max-width:800px;}</style
-
-# SETUPFILE: https://raw.githubusercontent.com/fniessen/org-html-themes/master/org/theme-bigblow.setup
-
-# SETUPFILE: https://gitlab.com/OlMon/org-themes/-/raw/master/src/darksun/export/setup/theme-darksun.setup
-
-#+SETUPFILE: export/setup/theme-darksun-local.setup
-
+#+STARTUP: overview
+#+OPTIONS: H:5 num:nil toc:2 p:t
+# TOC: headlines 3 ALT_TITLE:Index
 #+PROPERTY:  header-args :eval never-export
 
 * Monday

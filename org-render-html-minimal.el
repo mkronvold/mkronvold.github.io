@@ -8,7 +8,7 @@
 (package-refresh-contents)
 
 ;; this is required to highlight code blocks properly
-(package-install 'htmlize)
+;;(package-install 'htmlize)
 
 (require 'org)
 

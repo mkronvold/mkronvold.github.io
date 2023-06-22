@@ -9,7 +9,7 @@
 
 #+STARTUP: overview
 #+OPTIONS: H:5 num:nil toc:2 p:t
-# TOC: headlines 3 ALT_TITLE:Index
+#+TOC: headlines 3 ALT_TITLE:Index
 #+PROPERTY:  header-args :eval never-export
 
 * Quick Notes

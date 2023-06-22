@@ -11,6 +11,8 @@
 #+OPTIONS: H:5 num:nil toc:2 p:t
 #+PROPERTY:  header-args :eval never-export
 
+#+TOC: headlines 3 TITLE:Index ALT_TITLE:Index
+
 * Quick Notes
 * Mon
 * Tue
@@ -521,4 +523,4 @@ currently 5 in US
    tanzu-workshop           <-- don't do this.  These are test cluster
    Default                  <-- system created cluster
 
-#+TOC: headlines 3 TITLE:Index ALT_TITLE:Index
+

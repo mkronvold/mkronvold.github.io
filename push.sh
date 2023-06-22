@@ -29,37 +29,47 @@ hr () { printf "%0$(tput cols)d" | tr 0 ${1:-=}; }
 [ "${1}" == "-b" ] && BATCH=1 || BATCH=
 
 confirmsync () {
- while [ "${BATCH}" == "" ]
- do
-   hr ; echo -e "\n"
-   echo -e "\t\tPress 'y' to sync home to local\t\tPress 'n' to use local .org files as is\t\tPress 'x' to quit"
-   hr
-   read -n1 -s
-   case "$REPLY" in
-     x | X ) die "======> Exiting leaving everything as is" ;;
-     n | N ) echo "======> Using local .org files" ; break ;;
-     y | Y ) for i in $(cat ./orglist); do cp -v ${HOMEDIR}/${i}.org ./${i}.org ; done ; echo "======> Copied from ${HOMEDIR}" ; break ;;
-         * ) echo "" ;;
-   esac
- done
+ if [ "${BATCH}" == "" ]; then
+   while true
+   do
+     hr ; echo -e "\n"
+     echo -e "\t\tPress 'y' to sync home to local\t\tPress 'n' to use local .org files as is\t\tPress 'x' to quit"
+     hr
+     read -n1 -s
+     case "$REPLY" in
+       x | X ) die "======> Exiting leaving everything as is" ;;
+       n | N ) echo "======> Using local .org files" ; break ;;
+       y | Y ) for i in $(cat ./orglist); do cp -v ${HOMEDIR}/${i}.org ./${i}.org ; done ; echo "======> Copied from ${HOMEDIR}" ; break ;;
+       * ) echo "" ;;
+     esac
+   done
+ else
+   for i in $(cat ./orglist); do
+     cp -v ${HOMEDIR}/${i}.org ./${i}.org
+   done
+   echo "======> Copied from ${HOMEDIR}"
+ fi
 }
 
 
 confirmpush () {
- while [ "${BATCH}" == "" ]
- do
-   hr ; echo -e "\n"
-   echo -e "\t\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
-   hr
-   read -n1 -s
-   case "$REPLY" in
-     x | X ) echo "======> Exiting leaving adds and commits as is" ;    break ;;
-     n | N ) git reset HEAD^ ; echo "======> Aborted push and commit" ; break ;;
-     y | Y ) git push ; echo "======> Pushed" ;                         break ;;
-         * ) echo ""                                                  ;;
-   esac
- done
- [ "${BATCH}" == "1" ] && git push
+if [ "${BATCH}" == "" ]; then
+  while true
+  do
+    hr ; echo -e "\n"
+    echo -e "\t\tPress 'y' to push these changes\t\tPress 'n' to roll back commit\t\tPress 'x' to quit"
+    hr
+    read -n1 -s
+    case "$REPLY" in
+      x | X ) echo "======> Exiting leaving adds and commits as is" ;    break ;;
+      n | N ) git reset HEAD^ ; echo "======> Aborted push and commit" ; break ;;
+      y | Y ) git push ; echo "======> Pushed" ;                         break ;;
+      * ) echo ""                                                  ;;
+    esac
+  done
+else
+  git push
+fi
 }
 
 ##### Check to see if a commit message was specified on command line otherwise use the date

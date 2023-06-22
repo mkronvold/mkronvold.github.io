@@ -225,6 +225,17 @@
     - TKG/s vs m
       Should be the same everywhere since it impacts how we do support and LCM
       M uses more hardware
+  + DR
+    Should all DR for NA be to DE2 for now?
+  + Vault Prod
+    - We have requests for dev's to have access to prod vault
+      They cannot get to the vault url because they don't have access to a windows server in PROD
+      Should they have access to a windows jump server?
+      Can we even secure a Windows jump server?
+      Should they even have access to Prod Vault directly like this?
+      We originally said it was locked down to managers and up
+    - We have plans to change the prod vault dramatically
+      Should we tell them to wait?
 * ToDo
 ** Clock Skew
 *** Ming reinitialized a tanzu node which had a clock skew.

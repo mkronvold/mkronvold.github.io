@@ -160,6 +160,8 @@
     GitOps, GitOps tooling in DR location
     Data replication in a declarative/code way
     Shift to using Storage abstraction
+** Tanzu Labs
+*** Who
 * Fri
 ** 5/18/23
 *** People

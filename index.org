@@ -227,6 +227,10 @@
       - M uses more hardware
 *** DR
     - Should all DR for NA be to DE2 for now?
+**** TODO Make DR list?
+  + Steps to DR
+  + Who does what
+  + Components of Platform that need DR
 *** Vault Prod
     - We have requests for dev's to have access to prod vault
     - They cannot get to the vault url because they don't have access to a windows server in PROD 

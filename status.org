@@ -1,4 +1,5 @@
 # Hey Emacs, this is a -*- org -*- file ...
+#+HEADER:
 :HEADER:
 #+TITLE: mkronvold org-mode tables
 #+AUTHOR:    Michael Kronvold

@@ -1,4 +1,5 @@
-:HEADERDRAWER:
+#+HEADER:
+:HEADER:
 # Hey Emacs, this is a -*- org -*- file ...
 #+TITLE: mkronvold org-mode notes
 #+AUTHOR:    Michael Kronvold
@@ -12,6 +13,7 @@
 #+PROPERTY: header-args :eval never-export
 #+TOC: ALT_TITLE:Index headlines 1 
 :END:
+
 * Quick Notes
 
 

@@ -1,3 +1,4 @@
+:HEADERDRAWER:
 # Hey Emacs, this is a -*- org -*- file ...
 #+TITLE: mkronvold org-mode notes
 #+AUTHOR:    Michael Kronvold
@@ -6,14 +7,13 @@
 #+KEYWORDS:  syntax, org, document
 #+LANGUAGE:  en
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
-
 #+STARTUP: overview indent
 #+OPTIONS: H:5 num:nil toc:nil p:t
 #+PROPERTY: header-args :eval never-export
-
 #+TOC: ALT_TITLE:Index headlines 1 
-
+:END:
 * Quick Notes
+
 
 * Mon
 ** Vault
@@ -659,9 +659,7 @@ currently 5 in US
    e2dev-tanzu-vault        <-- this is a test, this belongs in cops
    e2open-test              <-- don't do this.  These are test clusters
    tanzu-workshop           <-- don't do this.  These are test cluster
-   Default                  <-- system created cluster
-
-
+p   Default                  <-- system created cluster
 ** CD vs Config Management
   + Define CM
     - Same thing in multiple places
@@ -700,3 +698,6 @@ currently 5 in US
   + https://i.imgur.com/TISi4wq.png
   + coupon / class
     https://i.imgur.com/LXRwm4Q.png
+
+
+  

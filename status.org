@@ -1,6 +1,6 @@
 # Hey Emacs, this is a -*- org -*- file ...
 :HEADER:
-#+TITLE: mkronvold org-mode notes
+#+TITLE: mkronvold org-mode tables
 #+AUTHOR:    Michael Kronvold
 #+EMAIL:     michael.kronvold@e2open.com
 #+DESCRIPTION: Org mode Notes

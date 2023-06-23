@@ -35,7 +35,32 @@
 
 
 * Tue
-** 5/23/23
+** New
+*** OCVS
+  + Netops is working on fastconnect that connects our DCs to cloud
+    - Once that's complete we need to install Tanzu
+    - TKG/s
+*** Training and expenses
+   What do we need
+   Take what you need
+*** GitOps sans automation, workflow manumation, documation
+*** CI build automation
+  -  Github actions to prep things for use
+  -  Alternatives?
+** Old
+*** Next projects
+   - ArgoCD Design (K)
+   - Vault Justification (R)
+   - Work on priorities
+*** Label Mandate
+ + Label mandata, all environments
+*** Wrap up research
+   - config mgmt (all the same) vs cattle (different but treated the same)
+*** Schedule 1on1s
+*** Additional weekly meeting
+*** CDM
+  + CDM
+   - https://jira.dev.e2open.com/jira/browse/OPS-99200
 *** New tasklist/progress tracker
   - Confluence table
     Excel
@@ -80,75 +105,16 @@
     - In conclusion, it is generally recommended to keep and properly manage Terraform state files. They play a critical role in how Terraform operates, and the benefits usually outweigh the drawbacks. The key is to establish proper state file management practices, such as using remote state, enabling state locking, and routinely checking for state drift.
     - How to schedule (when and where should what run?)
 
-** 6/13/23
- + Label mandata, all environments
- + Wrap up research
-   config mgmt (all the same) vs cattle (different but treated the same)
- + Next projects
-   ArgoCD Design (K)
-   Vault Justification (R)
-   Work on priorities
- + Training and expenses
-   What do we need
-   Take what you need
- + GitOps sans automation, workflow manumation, documation
- + CI build automation
-   Github actions to prep things for use
-   Alternatives?
- + Schedule 1on1s
- + Additional weekly meeting
-
-** CD vs Config Management
-  + Define CM
-    - Same thing in multiple places
-      I.e. same config settings across multiple clusters
-      Same tools installed in multiple clusters with cluster specific options
-  + Assumption
-    - Argo doesn't do config management
-      Uses kustomize to adapt yaml on the fly, can't handle mutiple clusters with the same yaml without injecting env variables or other tkc specific data.
-      This could be solved by running a CI build whenever the yaml is checked in to inject values rather than at run time
-** CodeFresh
-*** TF
-  + Terraform requires lock management to prevent multiple tf's from trying to make changes at the same time.  The infra to do this is 3rd party (Atlantis) and untested.   Definitely complex.
-  + Actual state is not stored in git, only "Expected" state
-  + tf is good for things that don't change much, like the initial cluster creation, onboarding to tmc, installation of core cluster objects.
-*** Argo
-  + for everything else?
-*** Tunnelling
-  + Using a tunnel/mesh to communicate between CD components, git, argo, image repos, artifactory, jump servers.
-    Codefresh has a TLS based one that uses 443, expects 443 open to everywhere, public cloud based.
-    Tailscale-WireGuard
-*** TMC
-  + To apply OPA to entire cluster rather than using tf or argo
-*** Tigris
-  + Nosql key/value store
-    https://github.com/tigrisdata/tigris
-*** Monitoring and health
-  + argocd_app_info
-    https://argo-cd.readthedocs.io/enn/stable/operator-manual/health
-    https://github.com/argoproj/gitops-engine/blob/master/pkg/health/health.go#L24
-    https://github.com/argoproj/argo-cd/blob/master/ui/src/app/shared/models.ts#L301
-  + health_status
-    https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics
-  + sync_status
-    https://argo-cd.readthedocs.io/en/stable/operator-manual/metric
-*** Codefresh conclusions
-  + https://i.imgur.com/TISi4wq.png
-  + coupon / class
-    https://i.imgur.com/LXRwm4Q.png
-** OCVS
-  + Netops is working on fastconnect that connects our DCs to cloud
-    - Once that's complete we need to install Tanzu
-    - TKG/s
 
 
-  
-
-
-
-  
+    
 * Wed
-** Label mandate, all environments
+** New
+*** Vault
+**** TODO Any questions, followup from Monday
+*** Label mandate, all environments
+**** TODO Followup from last week
+**** Labelling VMs
   + VM (as seen from vSphere)
     - Node labels
       visible to K8s
@@ -161,19 +127,20 @@
       Tanzu creates node VMs, we don't have any control over tags
       - Find out what VMware recommends
       Might need to filter at the cloud insight level
-
+  + Supervisors
+  + control
+  + workers
+**** Labelling namespaces
   + Namespace
     - Application ns
-      Normal solution CI- labels applied via yaml
+      - Normal solution CI- labels applied via yaml
     - Tooling ns
-      Fixed labels for CI-department, etc.
-
-** Vault
-** PortWorks
+      - Fixed labels for CI-department, etc.
+*** PortWorks
   + start initial research
     - does it resolve some of the issues identified in dev
-** DR
-*** What can k8s offer?
+*** DR
+**** What can k8s offer?
   + Self-healing
     - Reconcile current state to desired state
     - Requires GitOps
@@ -190,7 +157,7 @@
 	- GitOps, GitOps tooling in DR location
 	- Data replication in a declarative/code way
 	- Shift to using Storage abstraction
-*** Components of DR
+**** Components of DR
   + Application
       - Services
       - DBs
@@ -227,7 +194,7 @@
 	- bitbucket / github
       - jump servers
       - argo
-*** Responsibilities
+**** Responsibilities
   + Application
     - R&D
   + Platform
@@ -242,7 +209,7 @@
     - jump servers
       -  where?
     - argo
-*** What
+**** What to do
   + Everything on here needs:
     + Prototype
       - Design doc
@@ -267,94 +234,47 @@
       - Ops Setup and Deployment Guide
       - Ops Access Guide
       - Ops Backup and Recovery documentation
+      - Ops DR Runbook for this componenty
     + End-User Guides
       - Tooling, scripts, deployment yamls, dashboards
       - User Access Guide
       - Non-User Access Guide
-** Tanzu Labs
+*** Tanzu Labs
 **** TODO ask about engagement hours
   + Anticipating 7 to 4 or 8 to 5 US/Central
   + Is it okay to have meetings on Friday 7 to 11am US/Central?
-** Misc
+*** Misc
 **** TODO ask about stippen
   + how do they get it approved?
   + how do they know they got it?
+** Old
 
 
 
 * Thu
-** Tanzu Labs
+** New
+*** Tanzu Labs
+** Old
 
 
 
 * Fri
-** 5/18/23
-*** People
-  + Equity 100 vs 130%
-   -  currently receiving on call allowance for weekends
-   -  Ask HR if there is a shift bonus for 2nd shift on call
-   -  This isn't considered part of their base pay for bonus/equity incentives?
-   -  This won't continue post DCO to DCE transition
-   -  Correction for that.
-   -  Correction for change of role
-   -  Correction for Kantha
-  + Change of working hours to 2nd shift MYT 3pm -11pm
-  + ayyappan interested in more k8s work, possibly applying for engineering team.
-  + Most kOps tasks are done by Jeyson in NA including major upgrade projects.
-  + Most kOps tasks done by Ayyappan and Ming in APAC
-  + Ming should take a larger role in kOps
-*** Places
-  + e2prod fr8, rubrik for backups of trident
-   - fra-stg/prod snapmirror DR to paris (ontap appliance)
-   - Where can they test this?
-  + How did the VMware offsite go?
-  + Need a vSphere Team/Architect/Lead/Owner
-*** Things
-  + Ops will be migrating dev k8s backups from affcluster 1 (no nbu license) to 2 (yes nbu license)
-  + Vrni licensing to troubleshoot nsx issue
-  + licensing portal access for k & r
-  + Ming reinitialized a tanzu node which had clock skew.
-   - Need a monitor for this
-** CDM
-  + CDM
-   - https://jira.dev.e2open.com/jira/browse/OPS-99200
-** 6/8/23
-  + E2net update
-  + Cleanup of unused tkc's
-   - 3 more scheduled to remove, waiting on confirmation
-  + Cloudy/Jira
-   - Devops might have time in 2-3 weeks
-   - Scheduling call to get all requirements defined ahead of time
-  + OCVS load balancer / AVI
-   - This will probably require several detailed sessions up to a full workshop with vmware
-   - self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features. WAF, appalytics, deals with ip pooling issues
-  + Netapp Cloud Insights
-   - Have Joel work with Adam on setup and implementation
-   - Tim, HY, Joel, You and I should make a list of what we want out of it.  Brainstorm, fancy notetaking.
-  + NSX-T updates
-   - deployed in dev
-   - No issues observed so far.  It can take a while to show symptoms.
-   - scheduled for staging this weekend
-   - More better.
-  + DR
-   - What can k8s offer for DR?
-   - What should we?
-  + Portworx
-  + Vault
-** 6/23/23
-*** E2net update
-*** Portworks
-*** OCVS
+**** TODO END OF WEEK TASKLIST CLEANUP
+** New
+*** 6/23/23
+**** E2net update
+**** Portworks
+**** OCVS
     - TKG/s vs m
       - Should be the same everywhere since it impacts how we do support and LCM 
       - M uses more hardware
-*** DR
+**** DR
     - Should all DR for NA be to DE2 for now?
-**** TODO Make DR list?
+***** TODO Make DR list?
     + Steps to DR
     + Who does what
     + Components of Platform that need DR
-*** Hashicorp purchase Justification
+**** Hashicorp purchase Justification
     + Pros:
       1) Vendor assistance in finding RCAs and with implementations.
       2) Reduced management
@@ -378,16 +298,69 @@
 	 - True up based on increases to # of DC's and # of "users = applications"
 	 - don't expect a lot of cluster growth but application usage patterns could increase user count dramatically
 	 - somewhat unpredictable future cost increases
-*** 1:1's with team
-**** TODO ask about stippen
+**** 1:1's with team
+***** TODO ask about stippen
   + how do they get it approved?
   + how do they know they got it?
-**** TODO ask about engagement hours
+***** TODO ask about engagement hours
   + Anticipating 7 to 4 or 8 to 5 US/Central
+** Old
+*** 5/18/23
+**** People
+  + Equity 100 vs 130%
+   -  currently receiving on call allowance for weekends
+   -  Ask HR if there is a shift bonus for 2nd shift on call
+   -  This isn't considered part of their base pay for bonus/equity incentives?
+   -  This won't continue post DCO to DCE transition
+   -  Correction for that.
+   -  Correction for change of role
+   -  Correction for Kantha
+  + Change of working hours to 2nd shift MYT 3pm -11pm
+  + ayyappan interested in more k8s work, possibly applying for engineering team.
+  + Most kOps tasks are done by Jeyson in NA including major upgrade projects.
+  + Most kOps tasks done by Ayyappan and Ming in APAC
+  + Ming should take a larger role in kOps
+**** Places
+  + e2prod fr8, rubrik for backups of trident
+   - fra-stg/prod snapmirror DR to paris (ontap appliance)
+   - Where can they test this?
+  + How did the VMware offsite go?
+  + Need a vSphere Team/Architect/Lead/Owner
+**** Things
+  + Ops will be migrating dev k8s backups from affcluster 1 (no nbu license) to 2 (yes nbu license)
+  + Vrni licensing to troubleshoot nsx issue
+  + licensing portal access for k & r
+  + Ming reinitialized a tanzu node which had clock skew.
+   - Need a monitor for this
 
 
+*** 6/8/23
+  + E2net update
+  + Cleanup of unused tkc's
+   - 3 more scheduled to remove, waiting on confirmation
+  + Cloudy/Jira
+   - Devops might have time in 2-3 weeks
+   - Scheduling call to get all requirements defined ahead of time
+  + OCVS load balancer / AVI
+   - This will probably require several detailed sessions up to a full workshop with vmware
+   - self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features. WAF, appalytics, deals with ip pooling issues
+  + Netapp Cloud Insights
+   - Have Joel work with Adam on setup and implementation
+   - Tim, HY, Joel, You and I should make a list of what we want out of it.  Brainstorm, fancy notetaking.
+  + NSX-T updates
+   - deployed in dev
+   - No issues observed so far.  It can take a while to show symptoms.
+   - scheduled for staging this weekend
+   - More better.
+  + DR
+   - What can k8s offer for DR?
+   - What should we?
+  + Portworx
+  + Vault
 
-* ToDo
+
+  
+* Attention
 ** Clock Skew
 *** Ming reinitialized a tanzu node which had a clock skew.
 Need a monitor for this
@@ -430,10 +403,6 @@ components will go towards this doc
 general k8s architecture
 
 talbot meeting to decide what belongs in that doc
-
-
-
-* Attention
 ** Request for cluster admin
 Does this app team have their own DevOps team and/or Deployment tool?
 If they do, we can give them their own cluster to build and run. We are not responsible for anything inside the cluster other than providing required policies and daemon sets (falco, fluentbit, need list).
@@ -692,3 +661,42 @@ currently 5 in US
    Default                  <-- system created cluster
 
 
+
+** CD vs Config Management
+  + Define CM
+    - Same thing in multiple places
+      I.e. same config settings across multiple clusters
+      Same tools installed in multiple clusters with cluster specific options
+  + Assumption
+    - Argo doesn't do config management
+      Uses kustomize to adapt yaml on the fly, can't handle mutiple clusters with the same yaml without injecting env variables or other tkc specific data.
+      This could be solved by running a CI build whenever the yaml is checked in to inject values rather than at run time
+** CodeFresh
+*** TF
+  + Terraform requires lock management to prevent multiple tf's from trying to make changes at the same time.  The infra to do this is 3rd party (Atlantis) and untested.   Definitely complex.
+  + Actual state is not stored in git, only "Expected" state
+  + tf is good for things that don't change much, like the initial cluster creation, onboarding to tmc, installation of core cluster objects.
+*** Argo
+  + for everything else?
+*** Tunnelling
+  + Using a tunnel/mesh to communicate between CD components, git, argo, image repos, artifactory, jump servers.
+    Codefresh has a TLS based one that uses 443, expects 443 open to everywhere, public cloud based.
+    Tailscale-WireGuard
+*** TMC
+  + To apply OPA to entire cluster rather than using tf or argo
+*** Tigris
+  + Nosql key/value store
+    https://github.com/tigrisdata/tigris
+*** Monitoring and health
+  + argocd_app_info
+    https://argo-cd.readthedocs.io/enn/stable/operator-manual/health
+    https://github.com/argoproj/gitops-engine/blob/master/pkg/health/health.go#L24
+    https://github.com/argoproj/argo-cd/blob/master/ui/src/app/shared/models.ts#L301
+  + health_status
+    https://argo-cd.readthedocs.io/en/stable/operator-manual/metrics
+  + sync_status
+    https://argo-cd.readthedocs.io/en/stable/operator-manual/metric
+*** Codefresh conclusions
+  + https://i.imgur.com/TISi4wq.png
+  + coupon / class
+    https://i.imgur.com/LXRwm4Q.png

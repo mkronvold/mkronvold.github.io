@@ -17,3 +17,6 @@
 ;; For some reason the default value `inline-css' doesn't apply syntax highlighting correctly
 ;; in the resulting html file so we need to change the value to `css'
 (setq org-html-htmlize-output-type 'css)
+
+;; hide drawers in output
+(setq org-export-with-drawers 'nil)

@@ -7,13 +7,14 @@
 #+LANGUAGE:  en
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
 
-#+STARTUP: overview
-#+OPTIONS: H:5 num:nil toc:2 p:t
-#+PROPERTY:  header-args :eval never-export
+#+STARTUP: overview indent
+#+OPTIONS: H:5 num:nil toc:nil p:t
+#+PROPERTY: header-args :eval never-export
 
-#+TOC: headlines 3 TITLE:Index ALT_TITLE:Index
+#+TOC: ALT_TITLE:Index headlines 1 
 
 * Quick Notes
+
 * Mon
 ** Vault
 *** Watermill Prod
@@ -659,7 +660,6 @@ currently 5 in US
    e2open-test              <-- don't do this.  These are test clusters
    tanzu-workshop           <-- don't do this.  These are test cluster
    Default                  <-- system created cluster
-
 
 
 ** CD vs Config Management

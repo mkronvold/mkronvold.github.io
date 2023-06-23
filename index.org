@@ -218,16 +218,16 @@
   + Portworx
   + Vault
 ** 6/23/23
-  + E2net update
-  + Portworks
-  + Vault
-  + OCVS
+*** E2net update
+*** Portworks
+*** Vault
+*** OCVS
     - TKG/s vs m
       - Should be the same everywhere since it impacts how we do support and LCM 
-      - M uses more hardware 
-  + DR
+      - M uses more hardware
+*** DR
     - Should all DR for NA be to DE2 for now?
-  + Vault Prod
+*** Vault Prod
     - We have requests for dev's to have access to prod vault
     - They cannot get to the vault url because they don't have access to a windows server in PROD 
     - Should they have access to a windows jump server? 
@@ -260,12 +260,17 @@
        - True up based on increases to # of DC's and # of "users = applications"
        - don't expect a lot of cluster growth but application usage patterns could increase user count dramatically
        - somewhat unpredictable future cost increases
-**** TODO schedule call with shaival about watermill DR during engagement
-**** TODO schedule call with shaival and s about vault prod access 
-**** TODO schedule call with CDM to discuss external secrets usage
-*** Schedule 1:1's with team
+**** TODO schedule call with Shaival and Saravana (watermill)
+  + watermill DR during engagement
+  + vault prod access
+  + discuss external secret usage by apps directly vs on filesystem (re: CDM)
+**** TODO schedule call with CDM and Shaival to discuss external secrets usage
+*** 1:1's with team
 **** TODO ask about stippen
+  + how do they get it approved?
+  + how do they know they got it?
 **** TODO ask about engagement hours
+  + Anticipating 7 to 4 or 8 to 5 US/Central
 * ToDo
 ** Clock Skew
 *** Ming reinitialized a tanzu node which had a clock skew.

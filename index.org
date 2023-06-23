@@ -9,7 +9,7 @@
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
 #+STARTUP: overview indent
 #+OPTIONS: H:5 num:nil toc:nil p:t
-#+OPTIONS: d:(not "HEADER")
+#+OPTIONS: d:("HEADER")
 #+PROPERTY: header-args :eval never-export
 #+TOC: ALT_TITLE:Index headlines 1 
 :END:

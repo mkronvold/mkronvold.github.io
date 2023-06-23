@@ -138,6 +138,89 @@
   + coupon / class
     https://i.imgur.com/LXRwm4Q.png
 * Wed
+** Projects
+** Vault
+** OCVS
+** PortWorks
+** DR
+*** Components of DR
+    + Application
+      - Services
+      - DBs
+    + Platform
+      - TKG
+	- TKC
+	  - kNS
+	  - k8s services
+	    - ingress
+	    - LB
+	    - PV
+	    - core DNS
+	  - Hosting Tools
+	    - Falco
+	    - FluentBit
+	    - Monitoring
+	    - ArgoCD
+	    - TF
+    + Infrastructure
+      - Network
+	- Core/Access
+	- NSX
+	  - Egress network
+	  - Ingress network
+	- Load Balancer
+      - Storage
+	- NFS
+	- SAN
+      - Compute
+	- vSphere
+	- vCenter 
+    + Deployment Tooling and Infra
+      - source revision control
+	- bitbucket / github
+      - jump servers
+      - argo
+*** Responsibilities
+    + Application
+      - R&D
+    + Platform
+      - Ops
+    + Infrastructure
+      - Network
+      - Storage
+      - vCenter
+    + Deployment Tooling and Infra
+      - git / bitbucket
+	- where?
+      - jump servers
+	- where?
+      - argo
+*** What
+    + Everything on here needs:
+      - Prototype
+	- Design doc
+      - Reviews
+	- Arch review
+	- DevOps review
+	- NetOps review
+	- SecOps review
+	- Insight review
+	- Ops/SRE review
+      - Ops Docs
+	- Ops Setup and Deployment Guide
+	- Ops Access Guide
+	- Ops Backup and Recovery documentation
+      - End-User Guides
+	- Tooling, scripts, deployment yamls, dashboards
+	- User Access Guide
+	- Non-User Access Guide
+** Tanzu Labs
+**** TODO ask about engagement hours
+  + Anticipating 7 to 4 or 8 to 5 US/Central
+** Misc
+**** TODO ask about stippen
+  + how do they get it approved?
+  + how do they know they got it?
 * Thu
 ** OCVS
   + Netops is working on fastconnect that connects our DCs to cloud

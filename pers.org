@@ -47,3 +47,10 @@
 + incident manager
 - better, but not comfortable at all.
 - I'll be honest, I deal with the intensity and stress of this job largely due to the flexibility of it... commitments that are likely to interfere with my own time are going to make these things harder to deal with.
+*** 6/23/23
+**** equity compensation
+    + bonus $11937 100% of 55.5%
+    + $7000 RSU vest over 3 years, changed from last year (over 12 mo)
+      - last year is over 3 x 12 mo periods.  1/3rd per year.
+      - this year first 1/3rd over 12 mo period.  remainder vest 1/12th every 3 mo over next 2 years.
+      - details are all in shareworks

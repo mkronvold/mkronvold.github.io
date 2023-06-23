@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-22 Thu 18:38 -->
+<!-- 2023-06-22 Thu 18:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>mkronvold org-mode notes</title>
@@ -283,65 +283,65 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf86b0c0">Quick Notes</a></li>
-<li><a href="#org5b6d604">Mon</a></li>
-<li><a href="#org871cf95">Tue</a>
+<li><a href="#org1417e24">Quick Notes</a></li>
+<li><a href="#org310180a">Mon</a></li>
+<li><a href="#orgd482597">Tue</a>
 <ul>
-<li><a href="#org4c36153">5/23/23</a></li>
-<li><a href="#orgd3ddb8e">6/13/23</a></li>
-<li><a href="#org1553a4e">CD vs Config Management</a></li>
-<li><a href="#org0553815">Label mandate, all environments</a></li>
-<li><a href="#org0084ccf">CodeFresh</a></li>
+<li><a href="#orga50d720">5/23/23</a></li>
+<li><a href="#org709039f">6/13/23</a></li>
+<li><a href="#org0a7814a">CD vs Config Management</a></li>
+<li><a href="#org871af68">Label mandate, all environments</a></li>
+<li><a href="#org1dfbd75">CodeFresh</a></li>
 </ul>
 </li>
-<li><a href="#orge0b27b6">Wed</a></li>
-<li><a href="#org60ca0c4">Thu</a>
+<li><a href="#org2210d1d">Wed</a></li>
+<li><a href="#org96d8f88">Thu</a>
 <ul>
-<li><a href="#org827d258">OCVS</a></li>
-<li><a href="#org29fad44">K8s DR</a></li>
-<li><a href="#org47784e1">Tanzu Labs</a></li>
+<li><a href="#org4fc6663">OCVS</a></li>
+<li><a href="#org5fa29bf">K8s DR</a></li>
+<li><a href="#org053be96">Tanzu Labs</a></li>
 </ul>
 </li>
-<li><a href="#orgf0b87fc">Fri</a>
+<li><a href="#org8e3e411">Fri</a>
 <ul>
-<li><a href="#org255a4c5">5/18/23</a></li>
-<li><a href="#orgb2a97a6">CDM</a></li>
-<li><a href="#org5ca3be6">6/8/23</a></li>
-<li><a href="#org5c929a5">6/23/23</a></li>
+<li><a href="#orgd27141f">5/18/23</a></li>
+<li><a href="#org980de32">CDM</a></li>
+<li><a href="#org33aa09b">6/8/23</a></li>
+<li><a href="#orgca190e8">6/23/23</a></li>
 </ul>
 </li>
-<li><a href="#orgbe3cf2a">ToDo</a>
+<li><a href="#org9685eb0">ToDo</a>
 <ul>
-<li><a href="#orgfb0c8e9">Clock Skew</a></li>
-<li><a href="#orgfda0096">ssh jump pod</a></li>
-<li><a href="#orge5a1f5b">Capacity Analysis</a></li>
-<li><a href="#org762fce3">Network Performance</a></li>
-<li><a href="#org2adbd49">Tanzu Design Doc</a></li>
+<li><a href="#orgc839778">Clock Skew</a></li>
+<li><a href="#orgac6eb42">ssh jump pod</a></li>
+<li><a href="#org11d3284">Capacity Analysis</a></li>
+<li><a href="#org6ef2dbc">Network Performance</a></li>
+<li><a href="#org74055a1">Tanzu Design Doc</a></li>
 </ul>
 </li>
-<li><a href="#orgc3c7a48">Attention</a>
+<li><a href="#org2e6d0b4">Attention</a>
 <ul>
-<li><a href="#org9602131">Request for cluster admin</a></li>
-<li><a href="#org2b8d1a4">Port Rollover Problem</a></li>
-<li><a href="#org3ae8b34">Zabbis DR</a></li>
-<li><a href="#org628439b">E2net Migration</a></li>
-<li><a href="#org218da8e">FR8/OCVS</a></li>
-<li><a href="#orga2046d0">JIRA/Cloudy requests for k8s</a></li>
-<li><a href="#org8ce74ce">Plans for FR4</a></li>
-<li><a href="#orgb916d56">Plans for Naperville</a></li>
-<li><a href="#org5cb6dc2">Plans for vxRail</a></li>
-<li><a href="#orgc61b5c8">Plans for DevTools</a></li>
+<li><a href="#org22cbf89">Request for cluster admin</a></li>
+<li><a href="#orgaf3cded">Port Rollover Problem</a></li>
+<li><a href="#org6b40600">Zabbis DR</a></li>
+<li><a href="#orgea07d90">E2net Migration</a></li>
+<li><a href="#org689a439">FR8/OCVS</a></li>
+<li><a href="#orgcc9a91a">JIRA/Cloudy requests for k8s</a></li>
+<li><a href="#org0817dc6">Plans for FR4</a></li>
+<li><a href="#org150a28d">Plans for Naperville</a></li>
+<li><a href="#orgc3543f0">Plans for vxRail</a></li>
+<li><a href="#orgca8f66f">Plans for DevTools</a></li>
 </ul>
 </li>
-<li><a href="#orgf2c161d">Archive</a>
+<li><a href="#orgda69c1c">Archive</a>
 <ul>
-<li><a href="#orgc5e5cda">Rubrik</a></li>
-<li><a href="#org78ed894">Dell server roadmap</a></li>
-<li><a href="#org9ba955a">Elastic Search</a></li>
-<li><a href="#org6c37581">Vault</a></li>
-<li><a href="#org3730e0d">CloudHealth</a></li>
-<li><a href="#org4f0c91d">Incident Manager</a></li>
-<li><a href="#org5723322">Naming Conventions</a></li>
+<li><a href="#orgb8c9738">Rubrik</a></li>
+<li><a href="#org9c2dc62">Dell server roadmap</a></li>
+<li><a href="#orge611a6d">Elastic Search</a></li>
+<li><a href="#orgfbce2b5">Vault</a></li>
+<li><a href="#org78ac470">CloudHealth</a></li>
+<li><a href="#org3aed274">Incident Manager</a></li>
+<li><a href="#org49a580c">Naming Conventions</a></li>
 </ul>
 </li>
 </ul>
@@ -351,134 +351,134 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf86b0c0">Quick Notes</a></li>
-<li><a href="#org5b6d604">Mon</a></li>
-<li><a href="#org871cf95">Tue</a>
+<li><a href="#org1417e24">Quick Notes</a></li>
+<li><a href="#org310180a">Mon</a></li>
+<li><a href="#orgd482597">Tue</a>
 <ul>
-<li><a href="#org4c36153">5/23/23</a>
+<li><a href="#orga50d720">5/23/23</a>
 <ul>
-<li><a href="#org4f28770">New tasklist/progress tracker</a></li>
-<li><a href="#org9920ad1">Add 9:00am working sessions?</a></li>
-<li><a href="#orgf239678">Generate argocd notes</a></li>
-<li><a href="#org8765bf6">Terraform</a></li>
+<li><a href="#org66ad9b7">New tasklist/progress tracker</a></li>
+<li><a href="#org2ec8798">Add 9:00am working sessions?</a></li>
+<li><a href="#orgcd5e9d7">Generate argocd notes</a></li>
+<li><a href="#orgb12914b">Terraform</a></li>
 </ul>
 </li>
-<li><a href="#orgd3ddb8e">6/13/23</a></li>
-<li><a href="#org1553a4e">CD vs Config Management</a></li>
-<li><a href="#org0553815">Label mandate, all environments</a></li>
-<li><a href="#org0084ccf">CodeFresh</a>
+<li><a href="#org709039f">6/13/23</a></li>
+<li><a href="#org0a7814a">CD vs Config Management</a></li>
+<li><a href="#org871af68">Label mandate, all environments</a></li>
+<li><a href="#org1dfbd75">CodeFresh</a>
 <ul>
-<li><a href="#orgae12d4f">TF</a></li>
-<li><a href="#org010d8d6">Argo</a></li>
-<li><a href="#org772665d">Tunnelling</a></li>
-<li><a href="#org7325ccd">TMC</a></li>
-<li><a href="#orgbca13a0">Tigris</a></li>
-<li><a href="#orge776128">Monitoring and health</a></li>
-<li><a href="#org8ec4a06">Codefresh conclusions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orge0b27b6">Wed</a></li>
-<li><a href="#org60ca0c4">Thu</a>
-<ul>
-<li><a href="#org827d258">OCVS</a></li>
-<li><a href="#org29fad44">K8s DR</a></li>
-<li><a href="#org47784e1">Tanzu Labs</a>
-<ul>
-<li><a href="#orgfd0306c">Who</a></li>
+<li><a href="#org6b95b67">TF</a></li>
+<li><a href="#org8022176">Argo</a></li>
+<li><a href="#orgd808ab6">Tunnelling</a></li>
+<li><a href="#orgdc4d1d2">TMC</a></li>
+<li><a href="#orge901d2e">Tigris</a></li>
+<li><a href="#orgea51299">Monitoring and health</a></li>
+<li><a href="#org9cbb78e">Codefresh conclusions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf0b87fc">Fri</a>
+<li><a href="#org2210d1d">Wed</a></li>
+<li><a href="#org96d8f88">Thu</a>
 <ul>
-<li><a href="#org255a4c5">5/18/23</a>
+<li><a href="#org4fc6663">OCVS</a></li>
+<li><a href="#org5fa29bf">K8s DR</a></li>
+<li><a href="#org053be96">Tanzu Labs</a>
 <ul>
-<li><a href="#orga52e93e">People</a></li>
-<li><a href="#org6e1bf93">Places</a></li>
-<li><a href="#orgb454c3d">Things</a></li>
+<li><a href="#org240210a">Who</a></li>
 </ul>
 </li>
-<li><a href="#orgb2a97a6">CDM</a></li>
-<li><a href="#org5ca3be6">6/8/23</a></li>
-<li><a href="#org5c929a5">6/23/23</a></li>
 </ul>
 </li>
-<li><a href="#orgbe3cf2a">ToDo</a>
+<li><a href="#org8e3e411">Fri</a>
 <ul>
-<li><a href="#orgfb0c8e9">Clock Skew</a>
+<li><a href="#orgd27141f">5/18/23</a>
 <ul>
-<li><a href="#orgee270b8">Ming reinitialized a tanzu node which had a clock skew.</a></li>
+<li><a href="#org07c84a3">People</a></li>
+<li><a href="#org7fd8955">Places</a></li>
+<li><a href="#orgf5f0a0a">Things</a></li>
 </ul>
 </li>
-<li><a href="#orgfda0096">ssh jump pod</a></li>
-<li><a href="#orge5a1f5b">Capacity Analysis</a>
-<ul>
-<li><a href="#org20c8fe6">R&amp;D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created</a></li>
-<li><a href="#org4922394">Separate Staging from Dev</a></li>
-<li><a href="#org12026d6">Weighted Score for each DC</a></li>
+<li><a href="#org980de32">CDM</a></li>
+<li><a href="#org33aa09b">6/8/23</a></li>
+<li><a href="#orgca190e8">6/23/23</a></li>
 </ul>
 </li>
-<li><a href="#org762fce3">Network Performance</a>
+<li><a href="#org9685eb0">ToDo</a>
 <ul>
-<li><a href="#org68769a1">Collect some articles</a></li>
-<li><a href="#orgd28b590">make a monitoring procedure</a></li>
+<li><a href="#orgc839778">Clock Skew</a>
+<ul>
+<li><a href="#org3ad6642">Ming reinitialized a tanzu node which had a clock skew.</a></li>
 </ul>
 </li>
-<li><a href="#org2adbd49">Tanzu Design Doc</a></li>
+<li><a href="#orgac6eb42">ssh jump pod</a></li>
+<li><a href="#org11d3284">Capacity Analysis</a>
+<ul>
+<li><a href="#orgac6c440">R&amp;D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created</a></li>
+<li><a href="#org78bbb0f">Separate Staging from Dev</a></li>
+<li><a href="#org0e80950">Weighted Score for each DC</a></li>
 </ul>
 </li>
-<li><a href="#orgc3c7a48">Attention</a>
+<li><a href="#org6ef2dbc">Network Performance</a>
 <ul>
-<li><a href="#org9602131">Request for cluster admin</a></li>
-<li><a href="#org2b8d1a4">Port Rollover Problem</a></li>
-<li><a href="#org3ae8b34">Zabbis DR</a>
-<ul>
-<li><a href="#orge06c809">ask R&amp;D to propose zabbis DR timeline</a></li>
+<li><a href="#org08bc88c">Collect some articles</a></li>
+<li><a href="#org029da2e">make a monitoring procedure</a></li>
 </ul>
 </li>
-<li><a href="#org628439b">E2net Migration</a></li>
-<li><a href="#org218da8e">FR8/OCVS</a></li>
-<li><a href="#orga2046d0">JIRA/Cloudy requests for k8s</a></li>
-<li><a href="#org8ce74ce">Plans for FR4</a></li>
-<li><a href="#orgb916d56">Plans for Naperville</a></li>
-<li><a href="#org5cb6dc2">Plans for vxRail</a></li>
-<li><a href="#orgc61b5c8">Plans for DevTools</a></li>
+<li><a href="#org74055a1">Tanzu Design Doc</a></li>
 </ul>
 </li>
-<li><a href="#orgf2c161d">Archive</a>
+<li><a href="#org2e6d0b4">Attention</a>
 <ul>
-<li><a href="#orgc5e5cda">Rubrik</a></li>
-<li><a href="#org78ed894">Dell server roadmap</a></li>
-<li><a href="#org9ba955a">Elastic Search</a></li>
-<li><a href="#org6c37581">Vault</a></li>
-<li><a href="#org3730e0d">CloudHealth</a></li>
-<li><a href="#org4f0c91d">Incident Manager</a></li>
-<li><a href="#org5723322">Naming Conventions</a></li>
+<li><a href="#org22cbf89">Request for cluster admin</a></li>
+<li><a href="#orgaf3cded">Port Rollover Problem</a></li>
+<li><a href="#org6b40600">Zabbis DR</a>
+<ul>
+<li><a href="#orgf1200cf">ask R&amp;D to propose zabbis DR timeline</a></li>
+</ul>
+</li>
+<li><a href="#orgea07d90">E2net Migration</a></li>
+<li><a href="#org689a439">FR8/OCVS</a></li>
+<li><a href="#orgcc9a91a">JIRA/Cloudy requests for k8s</a></li>
+<li><a href="#org0817dc6">Plans for FR4</a></li>
+<li><a href="#org150a28d">Plans for Naperville</a></li>
+<li><a href="#orgc3543f0">Plans for vxRail</a></li>
+<li><a href="#orgca8f66f">Plans for DevTools</a></li>
+</ul>
+</li>
+<li><a href="#orgda69c1c">Archive</a>
+<ul>
+<li><a href="#orgb8c9738">Rubrik</a></li>
+<li><a href="#org9c2dc62">Dell server roadmap</a></li>
+<li><a href="#orge611a6d">Elastic Search</a></li>
+<li><a href="#orgfbce2b5">Vault</a></li>
+<li><a href="#org78ac470">CloudHealth</a></li>
+<li><a href="#org3aed274">Incident Manager</a></li>
+<li><a href="#org49a580c">Naming Conventions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgf86b0c0" class="outline-2">
-<h2 id="orgf86b0c0">Quick Notes</h2>
+<div id="outline-container-org1417e24" class="outline-2">
+<h2 id="org1417e24">Quick Notes</h2>
 </div>
-<div id="outline-container-org5b6d604" class="outline-2">
-<h2 id="org5b6d604">Mon</h2>
+<div id="outline-container-org310180a" class="outline-2">
+<h2 id="org310180a">Mon</h2>
 </div>
-<div id="outline-container-org871cf95" class="outline-2">
-<h2 id="org871cf95">Tue</h2>
-<div class="outline-text-2" id="text-org871cf95">
+<div id="outline-container-orgd482597" class="outline-2">
+<h2 id="orgd482597">Tue</h2>
+<div class="outline-text-2" id="text-orgd482597">
 </div>
-<div id="outline-container-org4c36153" class="outline-3">
-<h3 id="org4c36153">5/23/23</h3>
-<div class="outline-text-3" id="text-org4c36153">
+<div id="outline-container-orga50d720" class="outline-3">
+<h3 id="orga50d720">5/23/23</h3>
+<div class="outline-text-3" id="text-orga50d720">
 </div>
-<div id="outline-container-org4f28770" class="outline-4">
-<h4 id="org4f28770">New tasklist/progress tracker</h4>
-<div class="outline-text-4" id="text-org4f28770">
+<div id="outline-container-org66ad9b7" class="outline-4">
+<h4 id="org66ad9b7">New tasklist/progress tracker</h4>
+<div class="outline-text-4" id="text-org66ad9b7">
 <ul class="org-ul">
 <li>Confluence table
 Excel
@@ -486,9 +486,9 @@ MS Planner</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9920ad1" class="outline-4">
-<h4 id="org9920ad1">Add 9:00am working sessions?</h4>
-<div class="outline-text-4" id="text-org9920ad1">
+<div id="outline-container-org2ec8798" class="outline-4">
+<h4 id="org2ec8798">Add 9:00am working sessions?</h4>
+<div class="outline-text-4" id="text-org2ec8798">
 <ul class="org-ul">
 <li>Tue? Wed?
 9am?
@@ -496,9 +496,9 @@ MS Planner</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf239678" class="outline-4">
-<h4 id="orgf239678">Generate argocd notes</h4>
-<div class="outline-text-4" id="text-orgf239678">
+<div id="outline-container-orgcd5e9d7" class="outline-4">
+<h4 id="orgcd5e9d7">Generate argocd notes</h4>
+<div class="outline-text-4" id="text-orgcd5e9d7">
 <ul class="org-ul">
 <li><a href="https://confluence.dev.e2open.com/display/KUBE/Argocd+Automation%0D">https://confluence.dev.e2open.com/display/KUBE/Argocd+Automation%0D</a>
 Pros
@@ -508,9 +508,9 @@ Other concerns</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8765bf6" class="outline-4">
-<h4 id="org8765bf6">Terraform</h4>
-<div class="outline-text-4" id="text-org8765bf6">
+<div id="outline-container-orgb12914b" class="outline-4">
+<h4 id="orgb12914b">Terraform</h4>
+<div class="outline-text-4" id="text-orgb12914b">
 <ul class="org-ul">
 <li>Create tkc</li>
 <li>What can it do that argo can't?</li>
@@ -563,9 +563,9 @@ Cons:
 </div>
 </div>
 
-<div id="outline-container-orgd3ddb8e" class="outline-3">
-<h3 id="orgd3ddb8e">6/13/23</h3>
-<div class="outline-text-3" id="text-orgd3ddb8e">
+<div id="outline-container-org709039f" class="outline-3">
+<h3 id="org709039f">6/13/23</h3>
+<div class="outline-text-3" id="text-org709039f">
 <ul class="org-ul">
 <li>Label mandata, all environments</li>
 <li>Wrap up research
@@ -587,9 +587,9 @@ Alternatives?</li>
 </div>
 </div>
 
-<div id="outline-container-org1553a4e" class="outline-3">
-<h3 id="org1553a4e">CD vs Config Management</h3>
-<div class="outline-text-3" id="text-org1553a4e">
+<div id="outline-container-org0a7814a" class="outline-3">
+<h3 id="org0a7814a">CD vs Config Management</h3>
+<div class="outline-text-3" id="text-org0a7814a">
 <ul class="org-ul">
 <li>Define CM
 <ul class="org-ul">
@@ -607,9 +607,9 @@ This could be solved by running a CI build whenever the yaml is checked in to in
 </div>
 </div>
 
-<div id="outline-container-org0553815" class="outline-3">
-<h3 id="org0553815">Label mandate, all environments</h3>
-<div class="outline-text-3" id="text-org0553815">
+<div id="outline-container-org871af68" class="outline-3">
+<h3 id="org871af68">Label mandate, all environments</h3>
+<div class="outline-text-3" id="text-org871af68">
 <ul class="org-ul">
 <li>VM (as seen from vSphere)
 <ul class="org-ul">
@@ -644,13 +644,13 @@ Fixed labels for CI-department, etc.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0084ccf" class="outline-3">
-<h3 id="org0084ccf">CodeFresh</h3>
-<div class="outline-text-3" id="text-org0084ccf">
+<div id="outline-container-org1dfbd75" class="outline-3">
+<h3 id="org1dfbd75">CodeFresh</h3>
+<div class="outline-text-3" id="text-org1dfbd75">
 </div>
-<div id="outline-container-orgae12d4f" class="outline-4">
-<h4 id="orgae12d4f">TF</h4>
-<div class="outline-text-4" id="text-orgae12d4f">
+<div id="outline-container-org6b95b67" class="outline-4">
+<h4 id="org6b95b67">TF</h4>
+<div class="outline-text-4" id="text-org6b95b67">
 <ul class="org-ul">
 <li>Terraform requires lock management to prevent multiple tf's from trying to make changes at the same time.  The infra to do this is 3rd party (Atlantis) and untested.   Definitely complex.</li>
 <li>Actual state is not stored in git, only "Expected" state</li>
@@ -658,17 +658,17 @@ Fixed labels for CI-department, etc.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org010d8d6" class="outline-4">
-<h4 id="org010d8d6">Argo</h4>
-<div class="outline-text-4" id="text-org010d8d6">
+<div id="outline-container-org8022176" class="outline-4">
+<h4 id="org8022176">Argo</h4>
+<div class="outline-text-4" id="text-org8022176">
 <ul class="org-ul">
 <li>for everything else?</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org772665d" class="outline-4">
-<h4 id="org772665d">Tunnelling</h4>
-<div class="outline-text-4" id="text-org772665d">
+<div id="outline-container-orgd808ab6" class="outline-4">
+<h4 id="orgd808ab6">Tunnelling</h4>
+<div class="outline-text-4" id="text-orgd808ab6">
 <ul class="org-ul">
 <li>Using a tunnel/mesh to communicate between CD components, git, argo, image repos, artifactory, jump servers.
 Codefresh has a TLS based one that uses 443, expects 443 open to everywhere, public cloud based.
@@ -676,26 +676,26 @@ Tailscale-WireGuard</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7325ccd" class="outline-4">
-<h4 id="org7325ccd">TMC</h4>
-<div class="outline-text-4" id="text-org7325ccd">
+<div id="outline-container-orgdc4d1d2" class="outline-4">
+<h4 id="orgdc4d1d2">TMC</h4>
+<div class="outline-text-4" id="text-orgdc4d1d2">
 <ul class="org-ul">
 <li>To apply OPA to entire cluster rather than using tf or argo</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbca13a0" class="outline-4">
-<h4 id="orgbca13a0">Tigris</h4>
-<div class="outline-text-4" id="text-orgbca13a0">
+<div id="outline-container-orge901d2e" class="outline-4">
+<h4 id="orge901d2e">Tigris</h4>
+<div class="outline-text-4" id="text-orge901d2e">
 <ul class="org-ul">
 <li>Nosql key/value store
 <a href="https://github.com/tigrisdata/tigris%0D">https://github.com/tigrisdata/tigris%0D</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge776128" class="outline-4">
-<h4 id="orge776128">Monitoring and health</h4>
-<div class="outline-text-4" id="text-orge776128">
+<div id="outline-container-orgea51299" class="outline-4">
+<h4 id="orgea51299">Monitoring and health</h4>
+<div class="outline-text-4" id="text-orgea51299">
 <ul class="org-ul">
 <li>argocd<sub>app</sub><sub>info</sub>
 <a href="https://argo-cd.readthedocs.io/enn/stable/operator-manual/health%0D">https://argo-cd.readthedocs.io/enn/stable/operator-manual/health%0D</a>
@@ -708,9 +708,9 @@ Tailscale-WireGuard</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8ec4a06" class="outline-4">
-<h4 id="org8ec4a06">Codefresh conclusions</h4>
-<div class="outline-text-4" id="text-org8ec4a06">
+<div id="outline-container-org9cbb78e" class="outline-4">
+<h4 id="org9cbb78e">Codefresh conclusions</h4>
+<div class="outline-text-4" id="text-org9cbb78e">
 <ul class="org-ul">
 <li><a href="https://i.imgur.com/TISi4wq.png%0D">https://i.imgur.com/TISi4wq.png%0D</a></li>
 <li>coupon / class
@@ -720,16 +720,16 @@ Tailscale-WireGuard</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orge0b27b6" class="outline-2">
-<h2 id="orge0b27b6">Wed</h2>
+<div id="outline-container-org2210d1d" class="outline-2">
+<h2 id="org2210d1d">Wed</h2>
 </div>
-<div id="outline-container-org60ca0c4" class="outline-2">
-<h2 id="org60ca0c4">Thu</h2>
-<div class="outline-text-2" id="text-org60ca0c4">
+<div id="outline-container-org96d8f88" class="outline-2">
+<h2 id="org96d8f88">Thu</h2>
+<div class="outline-text-2" id="text-org96d8f88">
 </div>
-<div id="outline-container-org827d258" class="outline-3">
-<h3 id="org827d258">OCVS</h3>
-<div class="outline-text-3" id="text-org827d258">
+<div id="outline-container-org4fc6663" class="outline-3">
+<h3 id="org4fc6663">OCVS</h3>
+<div class="outline-text-3" id="text-org4fc6663">
 <ul class="org-ul">
 <li>Netops is working on fastconnect that connects our DCs to cloud
 Once that's complete we need to install Tanzu
@@ -737,9 +737,9 @@ TKG/s</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org29fad44" class="outline-3">
-<h3 id="org29fad44">K8s DR</h3>
-<div class="outline-text-3" id="text-org29fad44">
+<div id="outline-container-org5fa29bf" class="outline-3">
+<h3 id="org5fa29bf">K8s DR</h3>
+<div class="outline-text-3" id="text-org5fa29bf">
 <ul class="org-ul">
 <li>What can k8s offer?
 <ul class="org-ul">
@@ -771,26 +771,26 @@ Shift to using Storage abstraction
 </ul>
 </div>
 </div>
-<div id="outline-container-org47784e1" class="outline-3">
-<h3 id="org47784e1">Tanzu Labs</h3>
-<div class="outline-text-3" id="text-org47784e1">
+<div id="outline-container-org053be96" class="outline-3">
+<h3 id="org053be96">Tanzu Labs</h3>
+<div class="outline-text-3" id="text-org053be96">
 </div>
-<div id="outline-container-orgfd0306c" class="outline-4">
-<h4 id="orgfd0306c">Who</h4>
+<div id="outline-container-org240210a" class="outline-4">
+<h4 id="org240210a">Who</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf0b87fc" class="outline-2">
-<h2 id="orgf0b87fc">Fri</h2>
-<div class="outline-text-2" id="text-orgf0b87fc">
+<div id="outline-container-org8e3e411" class="outline-2">
+<h2 id="org8e3e411">Fri</h2>
+<div class="outline-text-2" id="text-org8e3e411">
 </div>
-<div id="outline-container-org255a4c5" class="outline-3">
-<h3 id="org255a4c5">5/18/23</h3>
-<div class="outline-text-3" id="text-org255a4c5">
+<div id="outline-container-orgd27141f" class="outline-3">
+<h3 id="orgd27141f">5/18/23</h3>
+<div class="outline-text-3" id="text-orgd27141f">
 </div>
-<div id="outline-container-orga52e93e" class="outline-4">
-<h4 id="orga52e93e">People</h4>
-<div class="outline-text-4" id="text-orga52e93e">
+<div id="outline-container-org07c84a3" class="outline-4">
+<h4 id="org07c84a3">People</h4>
+<div class="outline-text-4" id="text-org07c84a3">
 <ul class="org-ul">
 <li>Equity 100 vs 130%
 currently receiving on call allowance for weekends
@@ -808,9 +808,9 @@ Correction for Kantha</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6e1bf93" class="outline-4">
-<h4 id="org6e1bf93">Places</h4>
-<div class="outline-text-4" id="text-org6e1bf93">
+<div id="outline-container-org7fd8955" class="outline-4">
+<h4 id="org7fd8955">Places</h4>
+<div class="outline-text-4" id="text-org7fd8955">
 <ul class="org-ul">
 <li>e2prod fr8, rubrik for backups of trident
 fra-stg/prod snapmirror DR to paris (ontap appliance)
@@ -820,9 +820,9 @@ Where can they test this?</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb454c3d" class="outline-4">
-<h4 id="orgb454c3d">Things</h4>
-<div class="outline-text-4" id="text-orgb454c3d">
+<div id="outline-container-orgf5f0a0a" class="outline-4">
+<h4 id="orgf5f0a0a">Things</h4>
+<div class="outline-text-4" id="text-orgf5f0a0a">
 <ul class="org-ul">
 <li>Ops will be migrating dev k8s backups from affcluster 1 (no nbu license) to 2 (yes nbu license)</li>
 <li>Vrni licensing to troubleshoot nsx issue</li>
@@ -833,18 +833,18 @@ Need a monitor for this</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb2a97a6" class="outline-3">
-<h3 id="orgb2a97a6">CDM</h3>
-<div class="outline-text-3" id="text-orgb2a97a6">
+<div id="outline-container-org980de32" class="outline-3">
+<h3 id="org980de32">CDM</h3>
+<div class="outline-text-3" id="text-org980de32">
 <ul class="org-ul">
 <li>CDM
 <a href="https://jira.dev.e2open.com/jira/browse/OPS-99200%0D">https://jira.dev.e2open.com/jira/browse/OPS-99200%0D</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5ca3be6" class="outline-3">
-<h3 id="org5ca3be6">6/8/23</h3>
-<div class="outline-text-3" id="text-org5ca3be6">
+<div id="outline-container-org33aa09b" class="outline-3">
+<h3 id="org33aa09b">6/8/23</h3>
+<div class="outline-text-3" id="text-org33aa09b">
 <ul class="org-ul">
 <li>E2net update</li>
 <li>Cleanup of unused tkc's
@@ -871,9 +871,9 @@ What should we?</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5c929a5" class="outline-3">
-<h3 id="org5c929a5">6/23/23</h3>
-<div class="outline-text-3" id="text-org5c929a5">
+<div id="outline-container-orgca190e8" class="outline-3">
+<h3 id="orgca190e8">6/23/23</h3>
+<div class="outline-text-3" id="text-orgca190e8">
 <ul class="org-ul">
 <li>E2net update</li>
 <li>Portworks</li>
@@ -881,46 +881,46 @@ What should we?</li>
 <li>OCVS
 <ul class="org-ul">
 <li>TKG/s vs m
-Should be the same everywhere since it impacts how we do support and LCM\\
-M uses more hardware\\</li>
+Should be the same everywhere since it impacts how we do support and LCM \\
+M uses more hardware \\</li>
 </ul></li>
 <li>DR
 Should all DR for NA be to DE2 for now?</li>
 <li>Vault Prod
 <ul class="org-ul">
 <li>We have requests for dev's to have access to prod vault
-They cannot get to the vault url because they don't have access to a windows server in PROD\\
-Should they have access to a windows jump server?\\
-Can we even secure a Windows jump server?\\
-Should they even have access to Prod Vault directly like this?\\
-We originally said it was locked down to managers and up\\</li>
+They cannot get to the vault url because they don't have access to a windows server in PROD \\
+Should they have access to a windows jump server? \\
+Can we even secure a Windows jump server? \\
+Should they even have access to Prod Vault directly like this? \\
+We originally said it was locked down to managers and up \\</li>
 <li>We have plans to change the prod vault dramatically
-Should we tell them to wait?\\</li>
+Should we tell them to wait? \\</li>
 </ul></li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbe3cf2a" class="outline-2">
-<h2 id="orgbe3cf2a">ToDo</h2>
-<div class="outline-text-2" id="text-orgbe3cf2a">
+<div id="outline-container-org9685eb0" class="outline-2">
+<h2 id="org9685eb0">ToDo</h2>
+<div class="outline-text-2" id="text-org9685eb0">
 </div>
-<div id="outline-container-orgfb0c8e9" class="outline-3">
-<h3 id="orgfb0c8e9">Clock Skew</h3>
-<div class="outline-text-3" id="text-orgfb0c8e9">
+<div id="outline-container-orgc839778" class="outline-3">
+<h3 id="orgc839778">Clock Skew</h3>
+<div class="outline-text-3" id="text-orgc839778">
 </div>
-<div id="outline-container-orgee270b8" class="outline-4">
-<h4 id="orgee270b8">Ming reinitialized a tanzu node which had a clock skew.</h4>
-<div class="outline-text-4" id="text-orgee270b8">
+<div id="outline-container-org3ad6642" class="outline-4">
+<h4 id="org3ad6642">Ming reinitialized a tanzu node which had a clock skew.</h4>
+<div class="outline-text-4" id="text-org3ad6642">
 <p>
 Need a monitor for this
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfda0096" class="outline-3">
-<h3 id="orgfda0096">ssh jump pod</h3>
-<div class="outline-text-3" id="text-orgfda0096">
+<div id="outline-container-orgac6eb42" class="outline-3">
+<h3 id="orgac6eb42">ssh jump pod</h3>
+<div class="outline-text-3" id="text-orgac6eb42">
 <p>
 create an ssh jump server pod
 inject secrets(pubkeys) from vault
@@ -931,19 +931,19 @@ create terraform to deploy an ssh pod
 </p>
 </div>
 </div>
-<div id="outline-container-orge5a1f5b" class="outline-3">
-<h3 id="orge5a1f5b">Capacity Analysis</h3>
-<div class="outline-text-3" id="text-orge5a1f5b">
+<div id="outline-container-org11d3284" class="outline-3">
+<h3 id="org11d3284">Capacity Analysis</h3>
+<div class="outline-text-3" id="text-org11d3284">
 </div>
-<div id="outline-container-org20c8fe6" class="outline-4">
-<h4 id="org20c8fe6">R&amp;D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created</h4>
+<div id="outline-container-orgac6c440" class="outline-4">
+<h4 id="orgac6c440">R&amp;D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created</h4>
 </div>
-<div id="outline-container-org4922394" class="outline-4">
-<h4 id="org4922394">Separate Staging from Dev</h4>
+<div id="outline-container-org78bbb0f" class="outline-4">
+<h4 id="org78bbb0f">Separate Staging from Dev</h4>
 </div>
-<div id="outline-container-org12026d6" class="outline-4">
-<h4 id="org12026d6">Weighted Score for each DC</h4>
-<div class="outline-text-4" id="text-org12026d6">
+<div id="outline-container-org0e80950" class="outline-4">
+<h4 id="org0e80950">Weighted Score for each DC</h4>
+<div class="outline-text-4" id="text-org0e80950">
 <p>
 performace
 capacity
@@ -962,9 +962,9 @@ prescribed actions
 </div>
 </div>
 </div>
-<div id="outline-container-org762fce3" class="outline-3">
-<h3 id="org762fce3">Network Performance</h3>
-<div class="outline-text-3" id="text-org762fce3">
+<div id="outline-container-org6ef2dbc" class="outline-3">
+<h3 id="org6ef2dbc">Network Performance</h3>
+<div class="outline-text-3" id="text-org6ef2dbc">
 <p>
 VM's consolidated hardware and exposed resource contention in the network and storage areas.
 k8s consolidation is another order of magnitude and further stresses network and storage.
@@ -972,16 +972,16 @@ e2open's network is 1gig and 10gig and NAS storage shares that. additionally, ou
 most vendors are recommending dual 25G per esx host minimum and quad 100G between clusters for kubernetes
 </p>
 </div>
-<div id="outline-container-org68769a1" class="outline-4">
-<h4 id="org68769a1">Collect some articles</h4>
+<div id="outline-container-org08bc88c" class="outline-4">
+<h4 id="org08bc88c">Collect some articles</h4>
 </div>
-<div id="outline-container-orgd28b590" class="outline-4">
-<h4 id="orgd28b590">make a monitoring procedure</h4>
+<div id="outline-container-org029da2e" class="outline-4">
+<h4 id="org029da2e">make a monitoring procedure</h4>
 </div>
 </div>
-<div id="outline-container-org2adbd49" class="outline-3">
-<h3 id="org2adbd49">Tanzu Design Doc</h3>
-<div class="outline-text-3" id="text-org2adbd49">
+<div id="outline-container-org74055a1" class="outline-3">
+<h3 id="org74055a1">Tanzu Design Doc</h3>
+<div class="outline-text-3" id="text-org74055a1">
 <p>
 Tanzu Design Doc
 
@@ -994,13 +994,13 @@ talbot meeting to decide what belongs in that doc
 </div>
 </div>
 </div>
-<div id="outline-container-orgc3c7a48" class="outline-2">
-<h2 id="orgc3c7a48">Attention</h2>
-<div class="outline-text-2" id="text-orgc3c7a48">
+<div id="outline-container-org2e6d0b4" class="outline-2">
+<h2 id="org2e6d0b4">Attention</h2>
+<div class="outline-text-2" id="text-org2e6d0b4">
 </div>
-<div id="outline-container-org9602131" class="outline-3">
-<h3 id="org9602131">Request for cluster admin</h3>
-<div class="outline-text-3" id="text-org9602131">
+<div id="outline-container-org22cbf89" class="outline-3">
+<h3 id="org22cbf89">Request for cluster admin</h3>
+<div class="outline-text-3" id="text-org22cbf89">
 <p>
 Does this app team have their own DevOps team and/or Deployment tool?
 If they do, we can give them their own cluster to build and run. We are not responsible for anything inside the cluster other than providing required policies and daemon sets (falco, fluentbit, need list).
@@ -1008,25 +1008,25 @@ What about namespace admin?
 </p>
 </div>
 </div>
-<div id="outline-container-org2b8d1a4" class="outline-3">
-<h3 id="org2b8d1a4">Port Rollover Problem</h3>
-<div class="outline-text-3" id="text-org2b8d1a4">
+<div id="outline-container-orgaf3cded" class="outline-3">
+<h3 id="orgaf3cded">Port Rollover Problem</h3>
+<div class="outline-text-3" id="text-orgaf3cded">
 <p>
 port roll over problem (1 egress IP) mostly a windows problem, worse for nfs?
 </p>
 </div>
 </div>
-<div id="outline-container-org3ae8b34" class="outline-3">
-<h3 id="org3ae8b34">Zabbis DR</h3>
-<div class="outline-text-3" id="text-org3ae8b34">
+<div id="outline-container-org6b40600" class="outline-3">
+<h3 id="org6b40600">Zabbis DR</h3>
+<div class="outline-text-3" id="text-org6b40600">
 </div>
-<div id="outline-container-orge06c809" class="outline-4">
-<h4 id="orge06c809">ask R&amp;D to propose zabbis DR timeline</h4>
+<div id="outline-container-orgf1200cf" class="outline-4">
+<h4 id="orgf1200cf">ask R&amp;D to propose zabbis DR timeline</h4>
 </div>
 </div>
-<div id="outline-container-org628439b" class="outline-3">
-<h3 id="org628439b">E2net Migration</h3>
-<div class="outline-text-3" id="text-org628439b">
+<div id="outline-container-orgea07d90" class="outline-3">
+<h3 id="orgea07d90">E2net Migration</h3>
+<div class="outline-text-3" id="text-orgea07d90">
 <ul class="org-ul">
 <li>B2bc
 <ul class="org-ul">
@@ -1052,9 +1052,9 @@ addressees pending</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org218da8e" class="outline-3">
-<h3 id="org218da8e">FR8/OCVS</h3>
-<div class="outline-text-3" id="text-org218da8e">
+<div id="outline-container-org689a439" class="outline-3">
+<h3 id="org689a439">FR8/OCVS</h3>
+<div class="outline-text-3" id="text-org689a439">
 <ul class="org-ul">
 <li>fr8</li>
 <li>long term dc in europe</li>
@@ -1069,18 +1069,18 @@ addressees pending</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga2046d0" class="outline-3">
-<h3 id="orga2046d0">JIRA/Cloudy requests for k8s</h3>
-<div class="outline-text-3" id="text-orga2046d0">
+<div id="outline-container-orgcc9a91a" class="outline-3">
+<h3 id="orgcc9a91a">JIRA/Cloudy requests for k8s</h3>
+<div class="outline-text-3" id="text-orgcc9a91a">
 <ul class="org-ul">
 <li>jira requests/cloudy</li>
 <li>new/existing kns/tkc</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8ce74ce" class="outline-3">
-<h3 id="org8ce74ce">Plans for FR4</h3>
-<div class="outline-text-3" id="text-org8ce74ce">
+<div id="outline-container-org0817dc6" class="outline-3">
+<h3 id="org0817dc6">Plans for FR4</h3>
+<div class="outline-text-3" id="text-org0817dc6">
 <p>
 plan for fr4?
 
@@ -1093,23 +1093,23 @@ is this contract even worth continuing?
 </p>
 </div>
 </div>
-<div id="outline-container-orgb916d56" class="outline-3">
-<h3 id="orgb916d56">Plans for Naperville</h3>
+<div id="outline-container-org150a28d" class="outline-3">
+<h3 id="org150a28d">Plans for Naperville</h3>
 </div>
-<div id="outline-container-org5cb6dc2" class="outline-3">
-<h3 id="org5cb6dc2">Plans for vxRail</h3>
+<div id="outline-container-orgc3543f0" class="outline-3">
+<h3 id="orgc3543f0">Plans for vxRail</h3>
 </div>
-<div id="outline-container-orgc61b5c8" class="outline-3">
-<h3 id="orgc61b5c8">Plans for DevTools</h3>
+<div id="outline-container-orgca8f66f" class="outline-3">
+<h3 id="orgca8f66f">Plans for DevTools</h3>
 </div>
 </div>
-<div id="outline-container-orgf2c161d" class="outline-2">
-<h2 id="orgf2c161d">Archive</h2>
-<div class="outline-text-2" id="text-orgf2c161d">
+<div id="outline-container-orgda69c1c" class="outline-2">
+<h2 id="orgda69c1c">Archive</h2>
+<div class="outline-text-2" id="text-orgda69c1c">
 </div>
-<div id="outline-container-orgc5e5cda" class="outline-3">
-<h3 id="orgc5e5cda">Rubrik</h3>
-<div class="outline-text-3" id="text-orgc5e5cda">
+<div id="outline-container-orgb8c9738" class="outline-3">
+<h3 id="orgb8c9738">Rubrik</h3>
+<div class="outline-text-3" id="text-orgb8c9738">
 <ul class="org-ul">
 <li>K8s Agent to CentralDM private tunnel port 8011
 Agents are on google container registry (internet)
@@ -1120,9 +1120,9 @@ Netapp external-snapshotter on github</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org78ed894" class="outline-3">
-<h3 id="org78ed894">Dell server roadmap</h3>
-<div class="outline-text-3" id="text-org78ed894">
+<div id="outline-container-org9c2dc62" class="outline-3">
+<h3 id="org9c2dc62">Dell server roadmap</h3>
+<div class="outline-text-3" id="text-org9c2dc62">
 <p>
 Intel Xeon Gold 6348 @ 2.60GHz
 ddr4 3600
@@ -1132,9 +1132,9 @@ ddr5 4800
 </p>
 </div>
 </div>
-<div id="outline-container-org9ba955a" class="outline-3">
-<h3 id="org9ba955a">Elastic Search</h3>
-<div class="outline-text-3" id="text-org9ba955a">
+<div id="outline-container-orge611a6d" class="outline-3">
+<h3 id="orge611a6d">Elastic Search</h3>
+<div class="outline-text-3" id="text-orge611a6d">
 <p>
 ES for CI
 in dev
@@ -1143,9 +1143,9 @@ build, test, break, runbook
 </p>
 </div>
 </div>
-<div id="outline-container-org6c37581" class="outline-3">
-<h3 id="org6c37581">Vault</h3>
-<div class="outline-text-3" id="text-org6c37581">
+<div id="outline-container-orgfbce2b5" class="outline-3">
+<h3 id="orgfbce2b5">Vault</h3>
+<div class="outline-text-3" id="text-orgfbce2b5">
 <ul class="org-ul">
 <li><p>
 Proposal
@@ -1236,9 +1236,9 @@ YES (hashi)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3730e0d" class="outline-3">
-<h3 id="org3730e0d">CloudHealth</h3>
-<div class="outline-text-3" id="text-org3730e0d">
+<div id="outline-container-org78ac470" class="outline-3">
+<h3 id="org78ac470">CloudHealth</h3>
+<div class="outline-text-3" id="text-org78ac470">
 <ul class="org-ul">
 <li>install on each cluster
 export CHT<sub>API</sub><sub>TOKEN</sub>=7eb7c32fa68fc108ac7ad934a28ceaa2f76e892aa2accb35
@@ -1259,9 +1259,9 @@ helm repo remove cloudhealth</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4f0c91d" class="outline-3">
-<h3 id="org4f0c91d">Incident Manager</h3>
-<div class="outline-text-3" id="text-org4f0c91d">
+<div id="outline-container-org3aed274" class="outline-3">
+<h3 id="org3aed274">Incident Manager</h3>
+<div class="outline-text-3" id="text-org3aed274">
 <p>
 Unified Incident Management Process
 e2pr in april
@@ -1280,9 +1280,9 @@ currently 5 in US
 </p>
 </div>
 </div>
-<div id="outline-container-org5723322" class="outline-3">
-<h3 id="org5723322">Naming Conventions</h3>
-<div class="outline-text-3" id="text-org5723322">
+<div id="outline-container-org49a580c" class="outline-3">
+<h3 id="org49a580c">Naming Conventions</h3>
+<div class="outline-text-3" id="text-org49a580c">
 <ul class="org-ul">
 <li>Discuss naming conventions
 <ul class="org-ul">
@@ -1403,7 +1403,7 @@ Default                  &lt;&#x2013; system created cluster</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Michael Kronvold</p>
-<p class="date">Created: 2023-06-22 Thu 18:38</p>
+<p class="date">Created: 2023-06-22 Thu 18:40</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

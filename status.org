@@ -1,5 +1,5 @@
-:HEADER:
 # Hey Emacs, this is a -*- org -*- file ...
+:HEADER:
 #+TITLE: mkronvold org-mode notes
 #+AUTHOR:    Michael Kronvold
 #+EMAIL:     michael.kronvold@e2open.com
@@ -11,6 +11,7 @@
 #+OPTIONS: H:5 num:nil toc:nil p:t
 #+PROPERTY: header-args :eval never-export
 :END:
+
 * Table
 | airmass | zenith_seeing | delivered_seeing |
 |---------+---------------+------------------|

@@ -227,49 +227,49 @@
 *** DR
     - Should all DR for NA be to DE2 for now?
 **** TODO Make DR list?
-  + Steps to DR
-  + Who does what
-  + Components of Platform that need DR
+    + Steps to DR
+    + Who does what
+    + Components of Platform that need DR
 *** Vault
 **** Watermill Prod
-  + We have requests for dev's to have access to prod vault
-  + They cannot get to the vault url because they don't have access to a windows server in PROD 
-  + Should they have access to a windows jump server? 
-  + Can we even secure a Windows jump server? 
-  + Should they even have access to Prod Vault directly like this? 
-  + We originally said it was locked down to managers and up
-  + We have plans to change the prod vault dramatically
-  + Should we tell them to wait?
+    + We have requests for dev's to have access to prod vault
+    + They cannot get to the vault url because they don't have access to a windows server in PROD 
+    + Should they have access to a windows jump server? 
+    + Can we even secure a Windows jump server? 
+    + Should they even have access to Prod Vault directly like this? 
+    + We originally said it was locked down to managers and up
+    + We have plans to change the prod vault dramatically
+    + Should we tell them to wait?
 **** TODO schedule call with Shaival and Saravana (watermill)
-  + watermill DR during engagement
-  + vault prod access
-  + discuss external secret usage by apps directly vs on filesystem (re: CDM)
+    + watermill DR during engagement
+    + vault prod access
+    + discuss external secret usage by apps directly vs on filesystem (re: CDM)
 **** TODO schedule call with CDM and Shaival to discuss external secrets usage
     
 *** Hashicorp purchase Justification
-  + Pros:
-    1) Vendor assistance in finding RCAs and with implementations.
-    2) Reduced management
-    3) Scalable across the entire enterprise 
-    4) Centralized UI to manage each environment
-    5) GDPR Filtered Secret Replication across international boundaries
-    6) Onsite HA Clustering and offsite Disaster Recovery
-    7) Namespace segregation
-       - prod, stg and dev all in the same Vault
-       - Can also be used for application or customer isolation
-    8) Enterprise Vault provides analytics tools to track usage patterns
-       - how many apps use secrets directly vs injected at deploy time?
-       - how many consume them using the most secure methods?
-       - how many ... using the least secure?
-       - generate compliance audits
-  + Cons:   
-    1) Initial cost
-       - contract based on # of DC's and # of "users = applications"
-       - hardware for HA clustering and DR
-    2) Ongoing cost
-       - True up based on increases to # of DC's and # of "users = applications"
-       - don't expect a lot of cluster growth but application usage patterns could increase user count dramatically
-       - somewhat unpredictable future cost increases
+    + Pros:
+      1) Vendor assistance in finding RCAs and with implementations.
+      2) Reduced management
+      3) Scalable across the entire enterprise 
+      4) Centralized UI to manage each environment
+      5) GDPR Filtered Secret Replication across international boundaries
+      6) Onsite HA Clustering and offsite Disaster Recovery
+      7) Namespace segregation
+	 - prod, stg and dev all in the same Vault
+	 - Can also be used for application or customer isolation
+      8) Enterprise Vault provides analytics tools to track usage patterns
+	 - how many apps use secrets directly vs injected at deploy time?
+	 - how many consume them using the most secure methods?
+	 - how many ... using the least secure?
+	 - generate compliance audits
+    + Cons:   
+      1) Initial cost
+	 - contract based on # of DC's and # of "users = applications"
+	 - hardware for HA clustering and DR
+      2) Ongoing cost
+	 - True up based on increases to # of DC's and # of "users = applications"
+	 - don't expect a lot of cluster growth but application usage patterns could increase user count dramatically
+	 - somewhat unpredictable future cost increases
 *** 1:1's with team
 **** TODO ask about stippen
   + how do they get it approved?

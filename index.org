@@ -15,6 +15,25 @@
 
 * Quick Notes
 * Mon
+** Vault
+*** Watermill Prod
+   + We have requests for dev's to have access to prod vault
+   + They cannot get to the vault url because they don't have access to a windows server in PROD 
+   + Should they have access to a windows jump server? 
+   + Can we even secure a Windows jump server? 
+   + Should they even have access to Prod Vault directly like this? 
+   + We originally said it was locked down to managers and up
+   + We have plans to change the prod vault dramatically
+   + Should we tell them to wait?
+**** TODO schedule call with Shaival and Saravana (watermill)
+    + watermill DR during engagement
+    + vault prod access
+    + discuss external secret usage by apps directly vs on filesystem (re: CDM)
+**** TODO schedule call with CDM and Shaival to discuss external secrets usage
+    
+
+
+
 * Tue
 ** 5/23/23
 *** New tasklist/progress tracker
@@ -88,26 +107,6 @@
     - Argo doesn't do config management
       Uses kustomize to adapt yaml on the fly, can't handle mutiple clusters with the same yaml without injecting env variables or other tkc specific data.
       This could be solved by running a CI build whenever the yaml is checked in to inject values rather than at run time
-
-** Label mandate, all environments
-  + VM (as seen from vSphere)
-    - Node labels
-      visible to K8s
-      Configured in TMC via TF
-    - Cloud label
-      visible to vsphere and TMC
-      Configured in TMC via TF
-    - VSphere TAG
-      Everytime a node is rebuilt or horizontal scaling creates/destroys a node the tagging is lost
-      Tanzu creates node VMs, we don't have any control over tags
-      - Find out what VMware recommends
-      Might need to filter at the cloud insight level
-
-  + Namespace
-    - Application ns
-      Normal solution CI- labels applied via yaml
-    - Tooling ns
-      Fixed labels for CI-department, etc.
 ** CodeFresh
 *** TF
   + Terraform requires lock management to prevent multiple tf's from trying to make changes at the same time.  The infra to do this is 3rd party (Atlantis) and untested.   Definitely complex.
@@ -137,17 +136,65 @@
   + https://i.imgur.com/TISi4wq.png
   + coupon / class
     https://i.imgur.com/LXRwm4Q.png
-* Wed
-** Projects
-** Vault
 ** OCVS
+  + Netops is working on fastconnect that connects our DCs to cloud
+    - Once that's complete we need to install Tanzu
+    - TKG/s
+
+
+  
+
+
+
+  
+* Wed
+** Label mandate, all environments
+  + VM (as seen from vSphere)
+    - Node labels
+      visible to K8s
+      Configured in TMC via TF
+    - Cloud label
+      visible to vsphere and TMC
+      Configured in TMC via TF
+    - VSphere TAG
+      Everytime a node is rebuilt or horizontal scaling creates/destroys a node the tagging is lost
+      Tanzu creates node VMs, we don't have any control over tags
+      - Find out what VMware recommends
+      Might need to filter at the cloud insight level
+
+  + Namespace
+    - Application ns
+      Normal solution CI- labels applied via yaml
+    - Tooling ns
+      Fixed labels for CI-department, etc.
+
+** Vault
 ** PortWorks
+  + start initial research
+    - does it resolve some of the issues identified in dev
 ** DR
+*** What can k8s offer?
+  + Self-healing
+    - Reconcile current state to desired state
+    - Requires GitOps
+    - Rebuild pods, nodes, policies, load balancers, networks?
+    - How far can each one go today
+    - How far can each go if we make changes/improvements?
+  + What can we offer today for DR?
+    - For an application namespace?
+    - For an entire tkc?
+  + What do we want?
+    - Vmotion for tkc's?
+    - Replicate data and desired state and build on the fly during DR event?
+      - What do we need to do this?
+	- GitOps, GitOps tooling in DR location
+	- Data replication in a declarative/code way
+	- Shift to using Storage abstraction
 *** Components of DR
-    + Application
+  + Application
       - Services
       - DBs
-    + Platform
+  + Platform
       - TKG
 	- TKC
 	  - kNS
@@ -162,7 +209,7 @@
 	    - Monitoring
 	    - ArgoCD
 	    - TF
-    + Infrastructure
+  + Infrastructure
       - Network
 	- Core/Access
 	- NSX
@@ -175,88 +222,82 @@
       - Compute
 	- vSphere
 	- vCenter 
-    + Deployment Tooling and Infra
+  + Deployment Tooling and Infra
       - source revision control
 	- bitbucket / github
       - jump servers
       - argo
 *** Responsibilities
-    + Application
-      - R&D
-    + Platform
-      - Ops
-    + Infrastructure
-      - Network
-      - Storage
-      - vCenter
-    + Deployment Tooling and Infra
-      - git / bitbucket
-	- where?
-      - jump servers
-	- where?
-      - argo
+  + Application
+    - R&D
+  + Platform
+    - Ops
+  + Infrastructure
+    - Network
+    - Storage
+    - vCenter
+  + Deployment Tooling and Infra
+    - git / bitbucket
+      -  where?
+    - jump servers
+      -  where?
+    - argo
 *** What
-    + Everything on here needs:
-      - Prototype
-	- Design doc
-      - Reviews
-	- Arch review
-	- DevOps review
-	- NetOps review
-	- SecOps review
-	- Insight review
-	- Ops/SRE review
-      - Ops Docs
-	- Ops Setup and Deployment Guide
-	- Ops Access Guide
-	- Ops Backup and Recovery documentation
-      - End-User Guides
-	- Tooling, scripts, deployment yamls, dashboards
-	- User Access Guide
-	- Non-User Access Guide
+  + Everything on here needs:
+    + Prototype
+      - Design doc
+    + Reviews
+      - Arch review
+	- Is there a design doc or links to vendor design documents?
+	- Are there clearly stated goals and does it meet these?
+	- Is there already something else in the enterprise that can do something similar?
+      - DevOps review
+      - NetOps review
+      - SecOps review
+      - Insight review
+      - Ops/SRE review
+	+ This should be comprehensive, every component should be evaluated:
+	  - When it fails what is impacted?
+	    - If nothing is impacted, how long can we remain in this state before there is an impact?
+	  - When it fails does it automatically recover?
+	  - How long does it take to recover on its own?
+	  - When it doesn't recover on its own, what can we do to help it recover?
+	  - Based on how long DR failover takes, how long can we try to manually recover before we need to start DR?
+    + Ops Docs
+      - Ops Setup and Deployment Guide
+      - Ops Access Guide
+      - Ops Backup and Recovery documentation
+    + End-User Guides
+      - Tooling, scripts, deployment yamls, dashboards
+      - User Access Guide
+      - Non-User Access Guide
 ** Tanzu Labs
 **** TODO ask about engagement hours
   + Anticipating 7 to 4 or 8 to 5 US/Central
+  + Is it okay to have meetings on Friday 7 to 11am US/Central?
 ** Misc
 **** TODO ask about stippen
   + how do they get it approved?
   + how do they know they got it?
+
+
+
 * Thu
-** OCVS
-  + Netops is working on fastconnect that connects our DCs to cloud
-    Once that's complete we need to install Tanzu
-    TKG/s
-** K8s DR
-  + What can k8s offer?
-    - Self-healing
-      Reconcile current state to desired state
-      Requires GitOps
-    - Rebuild pods, nodes, policies, load balancers, networks?
-      How far can each one go today
-      How far can each go if we make changes/improvements?
-  + What can we offer today for DR?
-    For an application namespace?
-    For an entire tkc?
-  + What do we want?
-    - Vmotion for tkc's?
-    - Replicate data and desired state and build on the fly during DR event?
-      - What do we need to do this?
-    GitOps, GitOps tooling in DR location
-    Data replication in a declarative/code way
-    Shift to using Storage abstraction
 ** Tanzu Labs
-*** Who
+
+
+
 * Fri
 ** 5/18/23
 *** People
   + Equity 100 vs 130%
-    currently receiving on call allowance for weekends
-    Ask HR if there is a shift bonus for 2nd shift on call
-    This isn't considered part of their base pay for bonus/equity incentives?
-    This won't continue post DCO to DCE transition
-    Correction for that.
-    Correction for change of role
-    Correction for Kantha
+   -  currently receiving on call allowance for weekends
+   -  Ask HR if there is a shift bonus for 2nd shift on call
+   -  This isn't considered part of their base pay for bonus/equity incentives?
+   -  This won't continue post DCO to DCE transition
+   -  Correction for that.
+   -  Correction for change of role
+   -  Correction for Kantha
   + Change of working hours to 2nd shift MYT 3pm -11pm
   + ayyappan interested in more k8s work, possibly applying for engineering team.
   + Most kOps tasks are done by Jeyson in NA including major upgrade projects.
@@ -264,8 +305,8 @@
   + Ming should take a larger role in kOps
 *** Places
   + e2prod fr8, rubrik for backups of trident
-    fra-stg/prod snapmirror DR to paris (ontap appliance)
-    Where can they test this?
+   - fra-stg/prod snapmirror DR to paris (ontap appliance)
+   - Where can they test this?
   + How did the VMware offsite go?
   + Need a vSphere Team/Architect/Lead/Owner
 *** Things
@@ -273,31 +314,31 @@
   + Vrni licensing to troubleshoot nsx issue
   + licensing portal access for k & r
   + Ming reinitialized a tanzu node which had clock skew.
-    Need a monitor for this
+   - Need a monitor for this
 ** CDM
   + CDM
-    https://jira.dev.e2open.com/jira/browse/OPS-99200
+   - https://jira.dev.e2open.com/jira/browse/OPS-99200
 ** 6/8/23
   + E2net update
   + Cleanup of unused tkc's
-    3 more scheduled to remove, waiting on confirmation
+   - 3 more scheduled to remove, waiting on confirmation
   + Cloudy/Jira
-    Devops might have time in 2-3 weeks
-    Scheduling call to get all requirements defined ahead of time
+   - Devops might have time in 2-3 weeks
+   - Scheduling call to get all requirements defined ahead of time
   + OCVS load balancer / AVI
-    This will probably require several detailed sessions up to a full workshop with vmware
-    self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features. WAF, appalytics, deals with ip pooling issues
+   - This will probably require several detailed sessions up to a full workshop with vmware
+   - self-healing software-defined elastic application delivery fabric, that just so happens to provide load balancing features. WAF, appalytics, deals with ip pooling issues
   + Netapp Cloud Insights
-    Have Joel work with Adam on setup and implementation
-    Tim, HY, Joel, You and I should make a list of what we want out of it.  Brainstorm, fancy notetaking.
+   - Have Joel work with Adam on setup and implementation
+   - Tim, HY, Joel, You and I should make a list of what we want out of it.  Brainstorm, fancy notetaking.
   + NSX-T updates
-    deployed in dev
-    No issues observed so far.  It can take a while to show symptoms.
-    scheduled for staging this weekend
-    More better.
+   - deployed in dev
+   - No issues observed so far.  It can take a while to show symptoms.
+   - scheduled for staging this weekend
+   - More better.
   + DR
-    What can k8s offer for DR?
-    What should we?
+   - What can k8s offer for DR?
+   - What should we?
   + Portworx
   + Vault
 ** 6/23/23
@@ -313,22 +354,6 @@
     + Steps to DR
     + Who does what
     + Components of Platform that need DR
-*** Vault
-**** Watermill Prod
-    + We have requests for dev's to have access to prod vault
-    + They cannot get to the vault url because they don't have access to a windows server in PROD 
-    + Should they have access to a windows jump server? 
-    + Can we even secure a Windows jump server? 
-    + Should they even have access to Prod Vault directly like this? 
-    + We originally said it was locked down to managers and up
-    + We have plans to change the prod vault dramatically
-    + Should we tell them to wait?
-**** TODO schedule call with Shaival and Saravana (watermill)
-    + watermill DR during engagement
-    + vault prod access
-    + discuss external secret usage by apps directly vs on filesystem (re: CDM)
-**** TODO schedule call with CDM and Shaival to discuss external secrets usage
-    
 *** Hashicorp purchase Justification
     + Pros:
       1) Vendor assistance in finding RCAs and with implementations.
@@ -359,6 +384,9 @@
   + how do they know they got it?
 **** TODO ask about engagement hours
   + Anticipating 7 to 4 or 8 to 5 US/Central
+
+
+
 * ToDo
 ** Clock Skew
 *** Ming reinitialized a tanzu node which had a clock skew.
@@ -402,6 +430,9 @@ components will go towards this doc
 general k8s architecture
 
 talbot meeting to decide what belongs in that doc
+
+
+
 * Attention
 ** Request for cluster admin
 Does this app team have their own DevOps team and/or Deployment tool?
@@ -453,6 +484,9 @@ is this contract even worth continuing?
 ** Plans for Naperville
 ** Plans for vxRail
 ** Plans for DevTools
+
+
+
 * Archive
 ** Rubrik
  + K8s Agent to CentralDM private tunnel port 8011

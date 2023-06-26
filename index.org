@@ -39,13 +39,14 @@
 
 * Tue
 ** New
+*** Oncall
++ new hires, should drop off Ops Oncall.
+  + kantha in 2 weeks
+  + rajesh was last week
 *** OCVS
   + Netops is working on fastconnect that connects our DCs to cloud
     - Once that's complete we need to install Tanzu
     - TKG/s
-*** Training and expenses
-   What do we need
-   Take what you need
 *** GitOps sans automation, workflow manumation, documation
 *** CI build automation
   -  Github actions to prep things for use
@@ -113,8 +114,17 @@
     
 * Wed
 ** New
+*** Tanzu Labs
+**** TODO ask about engagement hours
+  + Anticipating 7 to 4 or 8 to 5 US/Central
+  + Is it okay to have meetings on Friday 7 to 11am US/Central?
 *** Vault
 **** TODO Any questions, followup from Monday
+*** Training and expenses
++ What do we need
++ Take what you need, udemy, paid classes
++ Personal equipment
+  - let me know what you need, we can expense things
 *** Label mandate, all environments
 **** TODO Followup from last week
 **** Labelling VMs
@@ -242,12 +252,8 @@
       - Tooling, scripts, deployment yamls, dashboards
       - User Access Guide
       - Non-User Access Guide
-*** Tanzu Labs
-**** TODO ask about engagement hours
-  + Anticipating 7 to 4 or 8 to 5 US/Central
-  + Is it okay to have meetings on Friday 7 to 11am US/Central?
 *** Misc
-**** TODO ask about stippen
+**** DONE ask about stippen
   + how do they get it approved?
   + how do they know they got it?
 ** Old
@@ -264,6 +270,14 @@
 * Fri
 **** TODO END OF WEEK TASKLIST CLEANUP
 ** New
+*** 6/30/23
+**** Oncall Allowance
++ who approves this
+  - If it's tim, he needs to continue approving this, Kantha and Rajesh are permanently on tier 3 oncall support
+  - if it's HY, David or I need to take over approving it
+**** Kantha Salary adjustment/correction
++ He's looking for a commitment and date
+  - he was promissed this by someone, somewhere...
 *** 6/23/23
 **** E2net update
 **** Portworks
@@ -301,12 +315,6 @@
 	 - True up based on increases to # of DC's and # of "users = applications"
 	 - don't expect a lot of cluster growth but application usage patterns could increase user count dramatically
 	 - somewhat unpredictable future cost increases
-**** 1:1's with team
-***** TODO ask about stippen
-  + how do they get it approved?
-  + how do they know they got it?
-***** TODO ask about engagement hours
-  + Anticipating 7 to 4 or 8 to 5 US/Central
 ** Old
 *** 5/18/23
 **** People

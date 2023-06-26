@@ -1,3 +1,4 @@
+:HEADER:
 # Hey Emacs, this is a -*- org -*- file ...
 #+TITLE: mkronvold org-mode Personnel notes
 #+AUTHOR:    Michael Kronvold
@@ -6,47 +7,50 @@
 #+KEYWORDS:  syntax, org, document
 #+LANGUAGE:  en
 # Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
-
-#+STARTUP: overview
-#+OPTIONS: H:5 num:nil toc:2 p:t
-#+TOC: headlines 3 ALT_TITLE:Index
-#+PROPERTY:  header-args :eval never-export
+#+STARTUP: overview indent
+#+OPTIONS: H:5 num:nil toc:nil p:t
+#+OPTIONS: d:("HEADER")
+#+PROPERTY: header-args :eval never-export
+#+TOC: ALT_TITLE:Index headlines 1 
+:END:
 
 * 1on1
 ** Kantha
-*** 6/13/23
-  + Shared learning (Kantha)
-    I was stuck, I figured it out, here's how.
-    Post it in the team chat
-    Some ideas are good for DCOps, how to share with them?
-  + We need a team meeting that's just our team
-  + Promotion/raise info, when
-** Rajesh
 *** 6/26/23
+**** Bonus Award
+ + FY23 bonus
+   - 5636.70 Ringgits
+   - Paid at end of June payroll
+ + FY24 Equity
+   - RSU's will be granted July 1
+   - Amount will be based on usd $1100
+   - watch for future communication
+   - Shareworks
+   - vest over 3 years, 1/3rd at 1 year anniversary and then 1/12th every 3 months after that
+   - talk to local HR partner for questions/details
+*** 6/13/23
+  * Shared learning (Kantha)
+    - I was stuck, I figured it out, here's how.
+    - Post it in the team chat
+    - Some ideas are good for DCOps, how to share with them?
+  * We need a team meeting that's just our team
+  * Promotion/raise info, when
+** Rajesh
+*** 6/28/23
+**** Bonus Award
+ + email
+   - I've attached your Corporate Incentive statement and would like to thank you for everything you've brought to the team both before and after moving over to DC Engineering.  It has been a long journey to get this far and we still have a ways to go, but I am confident we have the right folks to make it all work within the special nuances of E2open.
+ + FY23 bonus
+   - 9276.92 Ringgits
+   - Paid at end of June payroll
+ + FY24 Equity
+   - RSU's will be granted July 1
+   - Amount will be based on usd $2000
+   - watch for future communication
+   - Shareworks
+   - vest over 3 years, 1/3rd at 1 year anniversary and then 1/12th every 3 months after that
+   - talk to local HR partner for questions/details
 ** Me
-*** 3/28/23
-+ work hours change
-+ adam
-- capacity planning
-- vsphere/vrops
-+ Capacity Analysis
-- should meet next week to review desired changes.
-+ gitops
-- day 2.5 with cdm
-- does the decision making
-- doesn't do go/no-go (unless you want)
-+ mvi/mvp
-- need to start over, ship has sailed.
-- talk about platform as a product
-- vs what platform as a service is
-+ goals
-- personal
-- DCEng
-- VMware initiatives
-- https://i.imgur.com/C0vDUYF.png
-+ incident manager
-- better, but not comfortable at all.
-- I'll be honest, I deal with the intensity and stress of this job largely due to the flexibility of it... commitments that are likely to interfere with my own time are going to make these things harder to deal with.
 *** 6/23/23
 **** equity compensation
     + bonus $11937 100% of 55.5%
@@ -54,3 +58,27 @@
       - last year is over 3 x 12 mo periods.  1/3rd per year.
       - this year first 1/3rd over 12 mo period.  remainder vest 1/12th every 3 mo over next 2 years.
       - details are all in shareworks
+
+*** 3/28/23
+ + work hours change
+ + adam
+   - capacity planning
+   - vsphere/vrops
+ + Capacity Analysis
+   - should meet next week to review desired changes.
+ + gitops
+   - day 2.5 with cdm
+   - does the decision making
+   - doesn't do go/no-go (unless you want)
+ + mvi/mvp
+   - need to start over, ship has sailed.
+   - talk about platform as a product
+   - vs what platform as a service is
+ + goals
+   - personal
+   - DCEng
+   - VMware initiatives
+   - https://i.imgur.com/C0vDUYF.png
+ + incident manager
+   - better, but not comfortable at all.
+   - I'll be honest, I deal with the intensity and stress of this job largely due to the flexibility of it... commitments that are likely to interfere with my own time are going to make these things harder to deal with.

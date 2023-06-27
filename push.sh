@@ -106,3 +106,5 @@ git diff --stat --cached origin/main | cat
 confirmpush
 
 git status
+
+echo "https://mkronvold.github.io/"

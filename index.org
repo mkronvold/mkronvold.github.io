@@ -141,11 +141,11 @@
 *** DR
 **** RWM
 ***** prod
-+ netapp vault
+- netapp vault
 ***** stg
-+ netbackup
+- netbackup
 ***** dev
-+ netbackup
+- netbackup
 **** RWO
 ***** prod/stg/dev
 + only metadata is backed up using valero

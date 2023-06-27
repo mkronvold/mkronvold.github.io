@@ -141,23 +141,23 @@
 *** DR
 **** RWM
 ***** prod
-****** netapp vault
++ netapp vault
 ***** stg
-****** netbackup
++ netbackup
 ***** dev
-****** netbackup
++ netbackup
 **** RWO
 ***** prod/stg/dev
-****** only metadata is backed up using valero
-****** we plan to use rubrik in prod if it survives testing
-****** there are limits to how much can be backed up
++ only metadata is backed up using valero
++ we plan to use rubrik in prod if it survives testing
++ there are limits to how much can be backed up
 ** PowerStore
 *** $1,944,053 including buy back credits
 **** 378TB usable at 4:1
-***** 4:1 guarantee
++ 4:1 guarantee
 **** 3 x 5200 appliances
-***** 48 FC ports
-***** 6 mo update cycle
++ 48 FC ports
+**** 6 mo update cycle
 **** 2 x switches for back end intercluster communications (not a primary dataplane)
 **** 3yr support, install, training included
 **** TODO How much cache does each appliance have?

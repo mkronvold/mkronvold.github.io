@@ -1,4 +1,4 @@
-:HEADER:
+#+BEGIN_OPTIONS
 # Hey Emacs, this is a -*- org -*- file ...
 #+TITLE: mkronvold org-mode notes
 #+AUTHOR:    Michael Kronvold
@@ -6,13 +6,13 @@
 #+DESCRIPTION: Org mode Notes
 #+KEYWORDS:  syntax, org, document
 #+LANGUAGE:  en
-# Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
 #+STARTUP: overview indent
 #+OPTIONS: H:5 num:nil toc:nil p:t
-#+OPTIONS: d
+#+OPTIONS: d:("HEADER")
 #+PROPERTY: header-args :eval never-export
 #+TOC: ALT_TITLE:Index headlines 1 
-:END:
+# Adapted from https://dev.to/erickgnavar/auto-build-and-publish-emacs-org-configuration-as-a-website-2cl9
+#+END_OPTIONS
 
 * Quick Notes
 ** Biken Nepal

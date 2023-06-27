@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-06-26 Mon 11:23 -->
+<!-- 2023-06-27 Tue 09:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>mkronvold org-mode notes</title>
@@ -12,201 +12,12 @@
 <meta name="description" content="Org mode Notes"
  />
 <meta name="keywords" content="syntax, org, document" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
-<link rel="stylesheet" type="text/css" href="export/styles/darksun/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="export/styles/darksun/css/darksun.css"/>
-<link rel="stylesheet" type="text/css" href="export/styles/darksun/css/hideshow.css"/>
-<script type="text/javascript" src="export/styles/darksun/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="export/styles/darksun/js/jquery-ui-1.10.2.min.js"></script>
-<script type="text/javascript" src="export/styles/darksun/js/jquery.localscroll-min.js"></script>
-<script type="text/javascript" src="export/styles/darksun/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-<script type="text/javascript" src="export/styles/darksun/js/jquery.zclip.min.js"></script>
-<script type="text/javascript" src="export/styles/darksun/js/darksun.js"></script>
-<script type="text/javascript" src="export/styles/darksun/js/hideshow.js"></script>
-<script type="text/javascript" src="export/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://mkronvold.github.io/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://mkronvold.github.io/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://mkronvold.github.io/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://mkronvold.github.io/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -287,14 +98,14 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org43683a3">Quick Notes</a></li>
-<li><a href="#org336d8d2">Mon</a></li>
-<li><a href="#orgbe7467f">Tue</a></li>
-<li><a href="#org49dd8dc">Wed</a></li>
-<li><a href="#org783838a">Thu</a></li>
-<li><a href="#org661b6f9">Fri</a></li>
-<li><a href="#org5b32289">Attention</a></li>
-<li><a href="#orgde11310">Archive</a></li>
+<li><a href="#org24a56b4">Quick Notes</a></li>
+<li><a href="#org69a5de7">Mon</a></li>
+<li><a href="#orgb1b3b40">Tue</a></li>
+<li><a href="#org441223d">Wed</a></li>
+<li><a href="#org54df8d2">Thu</a></li>
+<li><a href="#org980134b">Fri</a></li>
+<li><a href="#org765a789">Attention</a></li>
+<li><a href="#org8741327">Archive</a></li>
 </ul>
 </div>
 </div>
@@ -302,22 +113,42 @@ for the JavaScript code in this tag.
 :END:
 </p>
 
-<div id="outline-container-org43683a3" class="outline-2">
-<h2 id="org43683a3">Quick Notes</h2>
+<div id="outline-container-org24a56b4" class="outline-2">
+<h2 id="org24a56b4">Quick Notes</h2>
+<div class="outline-text-2" id="text-org24a56b4">
+</div>
+<div id="outline-container-org3115e62" class="outline-3">
+<h3 id="org3115e62">Biken Nepal</h3>
+<div class="outline-text-3" id="text-org3115e62">
+</div>
+<div id="outline-container-org1d22ce7" class="outline-4">
+<h4 id="org1d22ce7">Works for CSS team</h4>
+<div class="outline-text-4" id="text-org1d22ce7">
+<ul class="org-ul">
+<li>level 1 ops issues go to css team</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa0c557" class="outline-4">
+<h4 id="orgaa0c557">IST</h4>
+</div>
+<div id="outline-container-org576fb98" class="outline-4">
+<h4 id="org576fb98">CKA</h4>
+</div>
+</div>
 </div>
 
-
-<div id="outline-container-org336d8d2" class="outline-2">
-<h2 id="org336d8d2">Mon</h2>
-<div class="outline-text-2" id="text-org336d8d2">
+<div id="outline-container-org69a5de7" class="outline-2">
+<h2 id="org69a5de7">Mon</h2>
+<div class="outline-text-2" id="text-org69a5de7">
 </div>
-<div id="outline-container-orgd2c536c" class="outline-3">
-<h3 id="orgd2c536c">Vault</h3>
-<div class="outline-text-3" id="text-orgd2c536c">
+<div id="outline-container-org7cb0d03" class="outline-3">
+<h3 id="org7cb0d03">Vault</h3>
+<div class="outline-text-3" id="text-org7cb0d03">
 </div>
-<div id="outline-container-orgf23a458" class="outline-4">
-<h4 id="orgf23a458">Watermill Prod</h4>
-<div class="outline-text-4" id="text-orgf23a458">
+<div id="outline-container-org820ab60" class="outline-4">
+<h4 id="org820ab60">Watermill Prod</h4>
+<div class="outline-text-4" id="text-org820ab60">
 <ul class="org-ul">
 <li>We have requests for dev's to have access to prod vault</li>
 <li>They cannot get to the vault url because they don't have access to a windows server in PROD</li>
@@ -329,9 +160,9 @@ for the JavaScript code in this tag.
 <li>Should we tell them to wait?</li>
 </ul>
 </div>
-<div id="outline-container-org3856c78" class="outline-5">
-<h5 id="org3856c78"><span class="todo TODO">TODO</span> schedule call with Shaival and Saravana (watermill)</h5>
-<div class="outline-text-5" id="text-org3856c78">
+<div id="outline-container-org46987ae" class="outline-5">
+<h5 id="org46987ae"><span class="todo TODO">TODO</span> schedule call with Shaival and Saravana (watermill)</h5>
+<div class="outline-text-5" id="text-org46987ae">
 <ul class="org-ul">
 <li>watermill DR during engagement</li>
 <li>vault prod access</li>
@@ -339,8 +170,8 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org536e1cb" class="outline-5">
-<h5 id="org536e1cb"><span class="todo TODO">TODO</span> schedule call with CDM and Shaival to discuss external secrets usage</h5>
+<div id="outline-container-org06e89c3" class="outline-5">
+<h5 id="org06e89c3"><span class="todo TODO">TODO</span> schedule call with CDM and Shaival to discuss external secrets usage</h5>
 </div>
 </div>
 </div>
@@ -349,17 +180,17 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-orgbe7467f" class="outline-2">
-<h2 id="orgbe7467f">Tue</h2>
-<div class="outline-text-2" id="text-orgbe7467f">
+<div id="outline-container-orgb1b3b40" class="outline-2">
+<h2 id="orgb1b3b40">Tue</h2>
+<div class="outline-text-2" id="text-orgb1b3b40">
 </div>
-<div id="outline-container-orgf1f9e1e" class="outline-3">
-<h3 id="orgf1f9e1e">New</h3>
-<div class="outline-text-3" id="text-orgf1f9e1e">
+<div id="outline-container-orgc6ddae3" class="outline-3">
+<h3 id="orgc6ddae3">New</h3>
+<div class="outline-text-3" id="text-orgc6ddae3">
 </div>
-<div id="outline-container-org98a07f3" class="outline-4">
-<h4 id="org98a07f3">Oncall</h4>
-<div class="outline-text-4" id="text-org98a07f3">
+<div id="outline-container-org00be66f" class="outline-4">
+<h4 id="org00be66f">Oncall</h4>
+<div class="outline-text-4" id="text-org00be66f">
 <ul class="org-ul">
 <li>new hires, should drop off Ops Oncall.
 <ul class="org-ul">
@@ -369,9 +200,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org47b0b24" class="outline-4">
-<h4 id="org47b0b24">OCVS</h4>
-<div class="outline-text-4" id="text-org47b0b24">
+<div id="outline-container-org6794b5f" class="outline-4">
+<h4 id="org6794b5f">OCVS</h4>
+<div class="outline-text-4" id="text-org6794b5f">
 <ul class="org-ul">
 <li>Netops is working on fastconnect that connects our DCs to cloud
 <ul class="org-ul">
@@ -380,27 +211,54 @@ for the JavaScript code in this tag.
 </ul></li>
 </ul>
 </div>
+<div id="outline-container-orgb5f208f" class="outline-6">
+<h6 id="orgb5f208f"><span class="todo TODO">TODO</span> ask Brian / NA team who can provision TKG in OCI</h6>
 </div>
-<div id="outline-container-orgbf60587" class="outline-4">
-<h4 id="orgbf60587">GitOps sans automation, workflow manumation, documation</h4>
 </div>
-<div id="outline-container-org7eb87d0" class="outline-4">
-<h4 id="org7eb87d0">CI build automation</h4>
-<div class="outline-text-4" id="text-org7eb87d0">
+<div id="outline-container-orgcecbd99" class="outline-4">
+<h4 id="orgcecbd99">Path WCP</h4>
+<div class="outline-text-4" id="text-orgcecbd99">
+<ul class="org-ul">
+<li>from 22.6 to 23.x</li>
+<li>requires vcenter 8
+<ul class="org-ul">
+<li>does it require vsphere 8?</li>
+<li>what is the effort to convert</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org7625cd0" class="outline-6">
+<h6 id="org7625cd0"><span class="todo TODO">TODO</span> Schedule call with Ryan to talk about OCI, s vs m, separate vcenter, migrate prod etc.</h6>
+</div>
+</div>
+<div id="outline-container-orgff848e3" class="outline-4">
+<h4 id="orgff848e3">GitOps sans automation, workflow manumation, documation</h4>
+</div>
+<div id="outline-container-orgbbb000e" class="outline-4">
+<h4 id="orgbbb000e">CI build automation</h4>
+<div class="outline-text-4" id="text-orgbbb000e">
 <ul class="org-ul">
 <li>Github actions to prep things for use</li>
 <li>Alternatives?</li>
 </ul>
 </div>
 </div>
+<div id="outline-container-org882c519" class="outline-4">
+<h4 id="org882c519">DR Playbooks for CI</h4>
+<div class="outline-text-4" id="text-org882c519">
+<ul class="org-ul">
+<li>Do we have them for K8s?  We were told they exist.</li>
+</ul>
 </div>
-<div id="outline-container-org34a780a" class="outline-3">
-<h3 id="org34a780a">Old</h3>
-<div class="outline-text-3" id="text-org34a780a">
 </div>
-<div id="outline-container-org2770fa3" class="outline-4">
-<h4 id="org2770fa3">Next projects</h4>
-<div class="outline-text-4" id="text-org2770fa3">
+</div>
+<div id="outline-container-org9e37ac8" class="outline-3">
+<h3 id="org9e37ac8">Old</h3>
+<div class="outline-text-3" id="text-org9e37ac8">
+</div>
+<div id="outline-container-org68d23af" class="outline-4">
+<h4 id="org68d23af">Next projects</h4>
+<div class="outline-text-4" id="text-org68d23af">
 <ul class="org-ul">
 <li>ArgoCD Design (K)</li>
 <li>Vault Justification (R)</li>
@@ -408,31 +266,31 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org39d7d44" class="outline-4">
-<h4 id="org39d7d44">Label Mandate</h4>
-<div class="outline-text-4" id="text-org39d7d44">
+<div id="outline-container-org1888641" class="outline-4">
+<h4 id="org1888641">Label Mandate</h4>
+<div class="outline-text-4" id="text-org1888641">
 <ul class="org-ul">
 <li>Label mandata, all environments</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7f776ff" class="outline-4">
-<h4 id="org7f776ff">Wrap up research</h4>
-<div class="outline-text-4" id="text-org7f776ff">
+<div id="outline-container-orgc8fffed" class="outline-4">
+<h4 id="orgc8fffed">Wrap up research</h4>
+<div class="outline-text-4" id="text-orgc8fffed">
 <ul class="org-ul">
 <li>config mgmt (all the same) vs cattle (different but treated the same)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb7f6b12" class="outline-4">
-<h4 id="orgb7f6b12">Schedule 1on1s</h4>
+<div id="outline-container-org13a3188" class="outline-4">
+<h4 id="org13a3188">Schedule 1on1s</h4>
 </div>
-<div id="outline-container-org049a3d7" class="outline-4">
-<h4 id="org049a3d7">Additional weekly meeting</h4>
+<div id="outline-container-org7283c86" class="outline-4">
+<h4 id="org7283c86">Additional weekly meeting</h4>
 </div>
-<div id="outline-container-org35a17e4" class="outline-4">
-<h4 id="org35a17e4">CDM</h4>
-<div class="outline-text-4" id="text-org35a17e4">
+<div id="outline-container-orgaa37b0b" class="outline-4">
+<h4 id="orgaa37b0b">CDM</h4>
+<div class="outline-text-4" id="text-orgaa37b0b">
 <ul class="org-ul">
 <li>CDM
 <ul class="org-ul">
@@ -441,9 +299,9 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-org6609242" class="outline-4">
-<h4 id="org6609242">New tasklist/progress tracker</h4>
-<div class="outline-text-4" id="text-org6609242">
+<div id="outline-container-org51b74d7" class="outline-4">
+<h4 id="org51b74d7">New tasklist/progress tracker</h4>
+<div class="outline-text-4" id="text-org51b74d7">
 <ul class="org-ul">
 <li>Confluence table
 Excel
@@ -451,9 +309,9 @@ MS Planner</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org191cf8f" class="outline-4">
-<h4 id="org191cf8f">Add 9:00am working sessions?</h4>
-<div class="outline-text-4" id="text-org191cf8f">
+<div id="outline-container-org8483365" class="outline-4">
+<h4 id="org8483365">Add 9:00am working sessions?</h4>
+<div class="outline-text-4" id="text-org8483365">
 <ul class="org-ul">
 <li>Tue? Wed?
 9am?
@@ -461,9 +319,9 @@ MS Planner</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1ca978d" class="outline-4">
-<h4 id="org1ca978d">Generate argocd notes</h4>
-<div class="outline-text-4" id="text-org1ca978d">
+<div id="outline-container-org09e16ab" class="outline-4">
+<h4 id="org09e16ab">Generate argocd notes</h4>
+<div class="outline-text-4" id="text-org09e16ab">
 <ul class="org-ul">
 <li><a href="https://confluence.dev.e2open.com/display/KUBE/Argocd+Automation%0D">https://confluence.dev.e2open.com/display/KUBE/Argocd+Automation%0D</a>
 Pros
@@ -473,9 +331,9 @@ Other concerns</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9370c00" class="outline-4">
-<h4 id="org9370c00">Terraform</h4>
-<div class="outline-text-4" id="text-org9370c00">
+<div id="outline-container-org3079dd4" class="outline-4">
+<h4 id="org3079dd4">Terraform</h4>
+<div class="outline-text-4" id="text-org3079dd4">
 <ul class="org-ul">
 <li>Create tkc</li>
 <li>What can it do that argo can't?</li>
@@ -527,26 +385,49 @@ Cons:
 </div>
 </div>
 </div>
-</div>
 
 
 
-
-<div id="outline-container-org49dd8dc" class="outline-2">
-<h2 id="org49dd8dc">Wed</h2>
-<div class="outline-text-2" id="text-org49dd8dc">
+<div id="outline-container-org0fd8441" class="outline-3">
+<h3 id="org0fd8441">Dell</h3>
+<div class="outline-text-3" id="text-org0fd8441">
 </div>
-<div id="outline-container-org7156016" class="outline-3">
-<h3 id="org7156016">New</h3>
-<div class="outline-text-3" id="text-org7156016">
+<div id="outline-container-orge65dcaa" class="outline-4">
+<h4 id="orge65dcaa">CloudIQ</h4>
+<div class="outline-text-4" id="text-orge65dcaa">
 </div>
-<div id="outline-container-org3c064b0" class="outline-4">
-<h4 id="org3c064b0">Tanzu Labs</h4>
-<div class="outline-text-4" id="text-org3c064b0">
+<div id="outline-container-org07eff95" class="outline-6">
+<h6 id="org07eff95"><span class="todo TODO">TODO</span> Add Dean Moon to cloudIQ</h6>
 </div>
-<div id="outline-container-org61c4830" class="outline-5">
-<h5 id="org61c4830"><span class="todo TODO">TODO</span> ask about engagement hours</h5>
-<div class="outline-text-5" id="text-org61c4830">
+</div>
+<div id="outline-container-org50aba44" class="outline-4">
+<h4 id="org50aba44">MyService360</h4>
+<div class="outline-text-4" id="text-org50aba44">
+</div>
+<div id="outline-container-orgba0de18" class="outline-6">
+<h6 id="orgba0de18"><a href="https://www.dell.com/support/myservice360%0D">https://www.dell.com/support/myservice360%0D</a></h6>
+</div>
+<div id="outline-container-org58b8d3e" class="outline-6">
+<h6 id="org58b8d3e"></h6>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org441223d" class="outline-2">
+<h2 id="org441223d">Wed</h2>
+<div class="outline-text-2" id="text-org441223d">
+</div>
+<div id="outline-container-orga830fb3" class="outline-3">
+<h3 id="orga830fb3">New</h3>
+<div class="outline-text-3" id="text-orga830fb3">
+</div>
+<div id="outline-container-org80e2aed" class="outline-4">
+<h4 id="org80e2aed">Tanzu Labs</h4>
+<div class="outline-text-4" id="text-org80e2aed">
+</div>
+<div id="outline-container-orgf8032c1" class="outline-5">
+<h5 id="orgf8032c1"><span class="todo TODO">TODO</span> ask about engagement hours</h5>
+<div class="outline-text-5" id="text-orgf8032c1">
 <ul class="org-ul">
 <li>Anticipating 7 to 4 or 8 to 5 US/Central</li>
 <li>Is it okay to have meetings on Friday 7 to 11am US/Central?</li>
@@ -554,17 +435,17 @@ Cons:
 </div>
 </div>
 </div>
-<div id="outline-container-org87e5099" class="outline-4">
-<h4 id="org87e5099">Vault</h4>
-<div class="outline-text-4" id="text-org87e5099">
+<div id="outline-container-org8cfff12" class="outline-4">
+<h4 id="org8cfff12">Vault</h4>
+<div class="outline-text-4" id="text-org8cfff12">
 </div>
-<div id="outline-container-org673e98e" class="outline-5">
-<h5 id="org673e98e"><span class="todo TODO">TODO</span> Any questions, followup from Monday</h5>
+<div id="outline-container-org7103220" class="outline-5">
+<h5 id="org7103220"><span class="todo TODO">TODO</span> Any questions, followup from Monday</h5>
 </div>
 </div>
-<div id="outline-container-orgece19c1" class="outline-4">
-<h4 id="orgece19c1">Training and expenses</h4>
-<div class="outline-text-4" id="text-orgece19c1">
+<div id="outline-container-org1039ee3" class="outline-4">
+<h4 id="org1039ee3">Training and expenses</h4>
+<div class="outline-text-4" id="text-org1039ee3">
 <ul class="org-ul">
 <li>What do we need</li>
 <li>Take what you need, udemy, paid classes</li>
@@ -575,16 +456,16 @@ Cons:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf159b02" class="outline-4">
-<h4 id="orgf159b02">Label mandate, all environments</h4>
-<div class="outline-text-4" id="text-orgf159b02">
+<div id="outline-container-orgcf4e8e0" class="outline-4">
+<h4 id="orgcf4e8e0">Label mandate, all environments</h4>
+<div class="outline-text-4" id="text-orgcf4e8e0">
 </div>
-<div id="outline-container-org6383949" class="outline-5">
-<h5 id="org6383949"><span class="todo TODO">TODO</span> Followup from last week</h5>
+<div id="outline-container-org224a298" class="outline-5">
+<h5 id="org224a298"><span class="todo TODO">TODO</span> Followup from last week</h5>
 </div>
-<div id="outline-container-orgaed977a" class="outline-5">
-<h5 id="orgaed977a">Labelling VMs</h5>
-<div class="outline-text-5" id="text-orgaed977a">
+<div id="outline-container-org5677bcc" class="outline-5">
+<h5 id="org5677bcc">Labelling VMs</h5>
+<div class="outline-text-5" id="text-org5677bcc">
 <ul class="org-ul">
 <li>VM (as seen from vSphere)
 <ul class="org-ul">
@@ -612,9 +493,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf34dc72" class="outline-5">
-<h5 id="orgf34dc72">Labelling namespaces</h5>
-<div class="outline-text-5" id="text-orgf34dc72">
+<div id="outline-container-orgac5b6d8" class="outline-5">
+<h5 id="orgac5b6d8">Labelling namespaces</h5>
+<div class="outline-text-5" id="text-orgac5b6d8">
 <ul class="org-ul">
 <li>Namespace
 <ul class="org-ul">
@@ -631,9 +512,9 @@ Might need to filter at the cloud insight level
 </div>
 </div>
 </div>
-<div id="outline-container-org1dbdaf7" class="outline-4">
-<h4 id="org1dbdaf7">PortWorks</h4>
-<div class="outline-text-4" id="text-org1dbdaf7">
+<div id="outline-container-org80a2aae" class="outline-4">
+<h4 id="org80a2aae">PortWorks</h4>
+<div class="outline-text-4" id="text-org80a2aae">
 <ul class="org-ul">
 <li>start initial research
 <ul class="org-ul">
@@ -642,13 +523,13 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-org25ad264" class="outline-4">
-<h4 id="org25ad264">DR</h4>
-<div class="outline-text-4" id="text-org25ad264">
+<div id="outline-container-org8950c86" class="outline-4">
+<h4 id="org8950c86">DR</h4>
+<div class="outline-text-4" id="text-org8950c86">
 </div>
-<div id="outline-container-orge262e0b" class="outline-5">
-<h5 id="orge262e0b">What can k8s offer?</h5>
-<div class="outline-text-5" id="text-orge262e0b">
+<div id="outline-container-org6d0a798" class="outline-5">
+<h5 id="org6d0a798">What can k8s offer?</h5>
+<div class="outline-text-5" id="text-org6d0a798">
 <ul class="org-ul">
 <li>Self-healing
 <ul class="org-ul">
@@ -679,9 +560,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-orga810606" class="outline-5">
-<h5 id="orga810606">Components of DR</h5>
-<div class="outline-text-5" id="text-orga810606">
+<div id="outline-container-orga2fe6b1" class="outline-5">
+<h5 id="orga2fe6b1">Components of DR</h5>
+<div class="outline-text-5" id="text-orga2fe6b1">
 <ul class="org-ul">
 <li>Application
 <ul class="org-ul">
@@ -748,9 +629,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-org88d7a1d" class="outline-5">
-<h5 id="org88d7a1d">Responsibilities</h5>
-<div class="outline-text-5" id="text-org88d7a1d">
+<div id="outline-container-orgdf2cd80" class="outline-5">
+<h5 id="orgdf2cd80">Responsibilities</h5>
+<div class="outline-text-5" id="text-orgdf2cd80">
 <ul class="org-ul">
 <li>Application
 <ul class="org-ul">
@@ -781,9 +662,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcb5ec47" class="outline-5">
-<h5 id="orgcb5ec47">What to do</h5>
-<div class="outline-text-5" id="text-orgcb5ec47">
+<div id="outline-container-org124d419" class="outline-5">
+<h5 id="org124d419">What to do</h5>
+<div class="outline-text-5" id="text-org124d419">
 <ul class="org-ul">
 <li>Everything on here needs:
 <ul class="org-ul">
@@ -836,13 +717,13 @@ Might need to filter at the cloud insight level
 </div>
 </div>
 </div>
-<div id="outline-container-orge273f76" class="outline-4">
-<h4 id="orge273f76">Misc</h4>
-<div class="outline-text-4" id="text-orge273f76">
+<div id="outline-container-org33b6237" class="outline-4">
+<h4 id="org33b6237">Misc</h4>
+<div class="outline-text-4" id="text-org33b6237">
 </div>
-<div id="outline-container-org2d7b5fa" class="outline-5">
-<h5 id="org2d7b5fa"><span class="done DONE">DONE</span> ask about stippen</h5>
-<div class="outline-text-5" id="text-org2d7b5fa">
+<div id="outline-container-org1a53f58" class="outline-5">
+<h5 id="org1a53f58"><span class="done DONE">DONE</span> ask about stippen</h5>
+<div class="outline-text-5" id="text-org1a53f58">
 <ul class="org-ul">
 <li>how do they get it approved?</li>
 <li>how do they know they got it?</li>
@@ -851,50 +732,50 @@ Might need to filter at the cloud insight level
 </div>
 </div>
 </div>
-<div id="outline-container-org86b2b8a" class="outline-3">
-<h3 id="org86b2b8a">Old</h3>
+<div id="outline-container-org25b5190" class="outline-3">
+<h3 id="org25b5190">Old</h3>
 </div>
 </div>
 
 
 
-<div id="outline-container-org783838a" class="outline-2">
-<h2 id="org783838a">Thu</h2>
-<div class="outline-text-2" id="text-org783838a">
+<div id="outline-container-org54df8d2" class="outline-2">
+<h2 id="org54df8d2">Thu</h2>
+<div class="outline-text-2" id="text-org54df8d2">
 </div>
-<div id="outline-container-org01f98a7" class="outline-3">
-<h3 id="org01f98a7">New</h3>
-<div class="outline-text-3" id="text-org01f98a7">
+<div id="outline-container-orgd3f74a9" class="outline-3">
+<h3 id="orgd3f74a9">New</h3>
+<div class="outline-text-3" id="text-orgd3f74a9">
 </div>
-<div id="outline-container-orgf2f0637" class="outline-4">
-<h4 id="orgf2f0637">Tanzu Labs</h4>
+<div id="outline-container-org6b786e4" class="outline-4">
+<h4 id="org6b786e4">Tanzu Labs</h4>
 </div>
 </div>
-<div id="outline-container-org0ce10fd" class="outline-3">
-<h3 id="org0ce10fd">Old</h3>
+<div id="outline-container-org8002a72" class="outline-3">
+<h3 id="org8002a72">Old</h3>
 </div>
 </div>
 
 
 
-<div id="outline-container-org661b6f9" class="outline-2">
-<h2 id="org661b6f9">Fri</h2>
-<div class="outline-text-2" id="text-org661b6f9">
+<div id="outline-container-org980134b" class="outline-2">
+<h2 id="org980134b">Fri</h2>
+<div class="outline-text-2" id="text-org980134b">
 </div>
-<div id="outline-container-org352f555" class="outline-5">
-<h5 id="org352f555"><span class="todo TODO">TODO</span> END OF WEEK TASKLIST CLEANUP</h5>
+<div id="outline-container-org16255a7" class="outline-5">
+<h5 id="org16255a7"><span class="todo TODO">TODO</span> END OF WEEK TASKLIST CLEANUP</h5>
 </div>
-<div id="outline-container-orga255adb" class="outline-3">
-<h3 id="orga255adb">New</h3>
-<div class="outline-text-3" id="text-orga255adb">
+<div id="outline-container-org28555a9" class="outline-3">
+<h3 id="org28555a9">New</h3>
+<div class="outline-text-3" id="text-org28555a9">
 </div>
-<div id="outline-container-orge2cd5f5" class="outline-4">
-<h4 id="orge2cd5f5">6/30/23</h4>
-<div class="outline-text-4" id="text-orge2cd5f5">
+<div id="outline-container-org91a7c73" class="outline-4">
+<h4 id="org91a7c73">6/30/23</h4>
+<div class="outline-text-4" id="text-org91a7c73">
 </div>
-<div id="outline-container-org802454d" class="outline-5">
-<h5 id="org802454d">Oncall Allowance</h5>
-<div class="outline-text-5" id="text-org802454d">
+<div id="outline-container-org9d11c7c" class="outline-5">
+<h5 id="org9d11c7c">Oncall Allowance</h5>
+<div class="outline-text-5" id="text-org9d11c7c">
 <ul class="org-ul">
 <li>who approves this
 <ul class="org-ul">
@@ -904,9 +785,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-org22e3dd6" class="outline-5">
-<h5 id="org22e3dd6">Kantha Salary adjustment/correction</h5>
-<div class="outline-text-5" id="text-org22e3dd6">
+<div id="outline-container-org3d83eab" class="outline-5">
+<h5 id="org3d83eab">Kantha Salary adjustment/correction</h5>
+<div class="outline-text-5" id="text-org3d83eab">
 <ul class="org-ul">
 <li>He's looking for a commitment and date
 <ul class="org-ul">
@@ -916,19 +797,19 @@ Might need to filter at the cloud insight level
 </div>
 </div>
 </div>
-<div id="outline-container-orga39e1b8" class="outline-4">
-<h4 id="orga39e1b8">6/23/23</h4>
-<div class="outline-text-4" id="text-orga39e1b8">
+<div id="outline-container-orgb611bd5" class="outline-4">
+<h4 id="orgb611bd5">6/23/23</h4>
+<div class="outline-text-4" id="text-orgb611bd5">
 </div>
-<div id="outline-container-org4b746f6" class="outline-5">
-<h5 id="org4b746f6">E2net update</h5>
+<div id="outline-container-orge0315c4" class="outline-5">
+<h5 id="orge0315c4">E2net update</h5>
 </div>
-<div id="outline-container-org3324f52" class="outline-5">
-<h5 id="org3324f52">Portworks</h5>
+<div id="outline-container-org5284cef" class="outline-5">
+<h5 id="org5284cef">Portworks</h5>
 </div>
-<div id="outline-container-orgc25e076" class="outline-5">
-<h5 id="orgc25e076">OCVS</h5>
-<div class="outline-text-5" id="text-orgc25e076">
+<div id="outline-container-org8e7dba9" class="outline-5">
+<h5 id="org8e7dba9">OCVS</h5>
+<div class="outline-text-5" id="text-org8e7dba9">
 <ul class="org-ul">
 <li>TKG/s vs m
 <ul class="org-ul">
@@ -938,16 +819,16 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdd5eee7" class="outline-5">
-<h5 id="orgdd5eee7">DR</h5>
-<div class="outline-text-5" id="text-orgdd5eee7">
+<div id="outline-container-org7633481" class="outline-5">
+<h5 id="org7633481">DR</h5>
+<div class="outline-text-5" id="text-org7633481">
 <ul class="org-ul">
 <li>Should all DR for NA be to DE2 for now?</li>
 </ul>
 </div>
-<div id="outline-container-orgcb52ea2" class="outline-6">
-<h6 id="orgcb52ea2"><span class="todo TODO">TODO</span> Make DR list?</h6>
-<div class="outline-text-6" id="text-orgcb52ea2">
+<div id="outline-container-org17ddb3e" class="outline-6">
+<h6 id="org17ddb3e"><span class="todo TODO">TODO</span> Make DR list?</h6>
+<div class="outline-text-6" id="text-org17ddb3e">
 <ul class="org-ul">
 <li>Steps to DR</li>
 <li>Who does what</li>
@@ -956,9 +837,9 @@ Might need to filter at the cloud insight level
 </div>
 </div>
 </div>
-<div id="outline-container-org25ccfdf" class="outline-5">
-<h5 id="org25ccfdf">Hashicorp purchase Justification</h5>
-<div class="outline-text-5" id="text-org25ccfdf">
+<div id="outline-container-org1c87e7d" class="outline-5">
+<h5 id="org1c87e7d">Hashicorp purchase Justification</h5>
+<div class="outline-text-5" id="text-org1c87e7d">
 <ul class="org-ul">
 <li>Pros:
 <ol class="org-ol">
@@ -1000,17 +881,17 @@ Might need to filter at the cloud insight level
 </div>
 </div>
 </div>
-<div id="outline-container-orgaa9fedc" class="outline-3">
-<h3 id="orgaa9fedc">Old</h3>
-<div class="outline-text-3" id="text-orgaa9fedc">
+<div id="outline-container-orgaa9f2b1" class="outline-3">
+<h3 id="orgaa9f2b1">Old</h3>
+<div class="outline-text-3" id="text-orgaa9f2b1">
 </div>
-<div id="outline-container-org2ba3784" class="outline-4">
-<h4 id="org2ba3784">5/18/23</h4>
-<div class="outline-text-4" id="text-org2ba3784">
+<div id="outline-container-orgbc3d3fd" class="outline-4">
+<h4 id="orgbc3d3fd">5/18/23</h4>
+<div class="outline-text-4" id="text-orgbc3d3fd">
 </div>
-<div id="outline-container-org8cd75ed" class="outline-5">
-<h5 id="org8cd75ed">People</h5>
-<div class="outline-text-5" id="text-org8cd75ed">
+<div id="outline-container-orgd985c24" class="outline-5">
+<h5 id="orgd985c24">People</h5>
+<div class="outline-text-5" id="text-orgd985c24">
 <ul class="org-ul">
 <li>Equity 100 vs 130%
 <ul class="org-ul">
@@ -1030,9 +911,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcaed767" class="outline-5">
-<h5 id="orgcaed767">Places</h5>
-<div class="outline-text-5" id="text-orgcaed767">
+<div id="outline-container-org5ff46bf" class="outline-5">
+<h5 id="org5ff46bf">Places</h5>
+<div class="outline-text-5" id="text-org5ff46bf">
 <ul class="org-ul">
 <li>e2prod fr8, rubrik for backups of trident
 <ul class="org-ul">
@@ -1044,9 +925,9 @@ Might need to filter at the cloud insight level
 </ul>
 </div>
 </div>
-<div id="outline-container-org2592ddd" class="outline-5">
-<h5 id="org2592ddd">Things</h5>
-<div class="outline-text-5" id="text-org2592ddd">
+<div id="outline-container-org4d024f9" class="outline-5">
+<h5 id="org4d024f9">Things</h5>
+<div class="outline-text-5" id="text-org4d024f9">
 <ul class="org-ul">
 <li>Ops will be migrating dev k8s backups from affcluster 1 (no nbu license) to 2 (yes nbu license)</li>
 <li>Vrni licensing to troubleshoot nsx issue</li>
@@ -1061,9 +942,9 @@ Might need to filter at the cloud insight level
 </div>
 
 
-<div id="outline-container-org773be9a" class="outline-4">
-<h4 id="org773be9a">6/8/23</h4>
-<div class="outline-text-4" id="text-org773be9a">
+<div id="outline-container-org49664bf" class="outline-4">
+<h4 id="org49664bf">6/8/23</h4>
+<div class="outline-text-4" id="text-org49664bf">
 <ul class="org-ul">
 <li>E2net update</li>
 <li>Cleanup of unused tkc's
@@ -1107,26 +988,26 @@ Might need to filter at the cloud insight level
 
 
 
-<div id="outline-container-org5b32289" class="outline-2">
-<h2 id="org5b32289">Attention</h2>
-<div class="outline-text-2" id="text-org5b32289">
+<div id="outline-container-org765a789" class="outline-2">
+<h2 id="org765a789">Attention</h2>
+<div class="outline-text-2" id="text-org765a789">
 </div>
-<div id="outline-container-org9d7ce10" class="outline-3">
-<h3 id="org9d7ce10">Clock Skew</h3>
-<div class="outline-text-3" id="text-org9d7ce10">
+<div id="outline-container-orgc1ad208" class="outline-3">
+<h3 id="orgc1ad208">Clock Skew</h3>
+<div class="outline-text-3" id="text-orgc1ad208">
 </div>
-<div id="outline-container-orgf565dfd" class="outline-4">
-<h4 id="orgf565dfd">Ming reinitialized a tanzu node which had a clock skew.</h4>
-<div class="outline-text-4" id="text-orgf565dfd">
+<div id="outline-container-org7a73c4a" class="outline-4">
+<h4 id="org7a73c4a">Ming reinitialized a tanzu node which had a clock skew.</h4>
+<div class="outline-text-4" id="text-org7a73c4a">
 <p>
 Need a monitor for this
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8c5fa74" class="outline-3">
-<h3 id="org8c5fa74">ssh jump pod</h3>
-<div class="outline-text-3" id="text-org8c5fa74">
+<div id="outline-container-org28ec4e7" class="outline-3">
+<h3 id="org28ec4e7">ssh jump pod</h3>
+<div class="outline-text-3" id="text-org28ec4e7">
 <p>
 create an ssh jump server pod
 inject secrets(pubkeys) from vault
@@ -1137,19 +1018,19 @@ create terraform to deploy an ssh pod
 </p>
 </div>
 </div>
-<div id="outline-container-org580ff67" class="outline-3">
-<h3 id="org580ff67">Capacity Analysis</h3>
-<div class="outline-text-3" id="text-org580ff67">
+<div id="outline-container-orgd3ea33a" class="outline-3">
+<h3 id="orgd3ea33a">Capacity Analysis</h3>
+<div class="outline-text-3" id="text-orgd3ea33a">
 </div>
-<div id="outline-container-orgff0aa12" class="outline-4">
-<h4 id="orgff0aa12">R&amp;D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created</h4>
+<div id="outline-container-org8529351" class="outline-4">
+<h4 id="org8529351">R&amp;D and E2open Accoount / E2Customer do not exist in cloudy so they shouldn't be created</h4>
 </div>
-<div id="outline-container-org986a49f" class="outline-4">
-<h4 id="org986a49f">Separate Staging from Dev</h4>
+<div id="outline-container-org9570fba" class="outline-4">
+<h4 id="org9570fba">Separate Staging from Dev</h4>
 </div>
-<div id="outline-container-org1e88f1f" class="outline-4">
-<h4 id="org1e88f1f">Weighted Score for each DC</h4>
-<div class="outline-text-4" id="text-org1e88f1f">
+<div id="outline-container-orgeb412d8" class="outline-4">
+<h4 id="orgeb412d8">Weighted Score for each DC</h4>
+<div class="outline-text-4" id="text-orgeb412d8">
 <p>
 performace
 capacity
@@ -1168,9 +1049,9 @@ prescribed actions
 </div>
 </div>
 </div>
-<div id="outline-container-org20b971c" class="outline-3">
-<h3 id="org20b971c">Network Performance</h3>
-<div class="outline-text-3" id="text-org20b971c">
+<div id="outline-container-org59c94ff" class="outline-3">
+<h3 id="org59c94ff">Network Performance</h3>
+<div class="outline-text-3" id="text-org59c94ff">
 <p>
 VM's consolidated hardware and exposed resource contention in the network and storage areas.
 k8s consolidation is another order of magnitude and further stresses network and storage.
@@ -1178,16 +1059,16 @@ e2open's network is 1gig and 10gig and NAS storage shares that. additionally, ou
 most vendors are recommending dual 25G per esx host minimum and quad 100G between clusters for kubernetes
 </p>
 </div>
-<div id="outline-container-orgd952686" class="outline-4">
-<h4 id="orgd952686">Collect some articles</h4>
+<div id="outline-container-orgfc885d3" class="outline-4">
+<h4 id="orgfc885d3">Collect some articles</h4>
 </div>
-<div id="outline-container-orgf780fb1" class="outline-4">
-<h4 id="orgf780fb1">make a monitoring procedure</h4>
+<div id="outline-container-org251421c" class="outline-4">
+<h4 id="org251421c">make a monitoring procedure</h4>
 </div>
 </div>
-<div id="outline-container-org5ad42de" class="outline-3">
-<h3 id="org5ad42de">Tanzu Design Doc</h3>
-<div class="outline-text-3" id="text-org5ad42de">
+<div id="outline-container-org35960a4" class="outline-3">
+<h3 id="org35960a4">Tanzu Design Doc</h3>
+<div class="outline-text-3" id="text-org35960a4">
 <p>
 Tanzu Design Doc
 
@@ -1199,9 +1080,9 @@ talbot meeting to decide what belongs in that doc
 </p>
 </div>
 </div>
-<div id="outline-container-orgc053d91" class="outline-3">
-<h3 id="orgc053d91">Request for cluster admin</h3>
-<div class="outline-text-3" id="text-orgc053d91">
+<div id="outline-container-org6ac4025" class="outline-3">
+<h3 id="org6ac4025">Request for cluster admin</h3>
+<div class="outline-text-3" id="text-org6ac4025">
 <p>
 Does this app team have their own DevOps team and/or Deployment tool?
 If they do, we can give them their own cluster to build and run. We are not responsible for anything inside the cluster other than providing required policies and daemon sets (falco, fluentbit, need list).
@@ -1209,25 +1090,25 @@ What about namespace admin?
 </p>
 </div>
 </div>
-<div id="outline-container-org2f385ea" class="outline-3">
-<h3 id="org2f385ea">Port Rollover Problem</h3>
-<div class="outline-text-3" id="text-org2f385ea">
+<div id="outline-container-org79aafc1" class="outline-3">
+<h3 id="org79aafc1">Port Rollover Problem</h3>
+<div class="outline-text-3" id="text-org79aafc1">
 <p>
 port roll over problem (1 egress IP) mostly a windows problem, worse for nfs?
 </p>
 </div>
 </div>
-<div id="outline-container-org9176c54" class="outline-3">
-<h3 id="org9176c54">Zabbis DR</h3>
-<div class="outline-text-3" id="text-org9176c54">
+<div id="outline-container-orgcfd4945" class="outline-3">
+<h3 id="orgcfd4945">Zabbis DR</h3>
+<div class="outline-text-3" id="text-orgcfd4945">
 </div>
-<div id="outline-container-org718c5fa" class="outline-4">
-<h4 id="org718c5fa">ask R&amp;D to propose zabbis DR timeline</h4>
+<div id="outline-container-orgd892ba9" class="outline-4">
+<h4 id="orgd892ba9">ask R&amp;D to propose zabbis DR timeline</h4>
 </div>
 </div>
-<div id="outline-container-orge3ac5b7" class="outline-3">
-<h3 id="orge3ac5b7">E2net Migration</h3>
-<div class="outline-text-3" id="text-orge3ac5b7">
+<div id="outline-container-org9ee52b2" class="outline-3">
+<h3 id="org9ee52b2">E2net Migration</h3>
+<div class="outline-text-3" id="text-org9ee52b2">
 <ul class="org-ul">
 <li>B2bc
 <ul class="org-ul">
@@ -1253,9 +1134,9 @@ addressees pending</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcf05dac" class="outline-3">
-<h3 id="orgcf05dac">FR8/OCVS</h3>
-<div class="outline-text-3" id="text-orgcf05dac">
+<div id="outline-container-org29ca998" class="outline-3">
+<h3 id="org29ca998">FR8/OCVS</h3>
+<div class="outline-text-3" id="text-org29ca998">
 <ul class="org-ul">
 <li>fr8</li>
 <li>long term dc in europe</li>
@@ -1270,18 +1151,18 @@ addressees pending</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb7e4750" class="outline-3">
-<h3 id="orgb7e4750">JIRA/Cloudy requests for k8s</h3>
-<div class="outline-text-3" id="text-orgb7e4750">
+<div id="outline-container-orgd069d16" class="outline-3">
+<h3 id="orgd069d16">JIRA/Cloudy requests for k8s</h3>
+<div class="outline-text-3" id="text-orgd069d16">
 <ul class="org-ul">
 <li>jira requests/cloudy</li>
 <li>new/existing kns/tkc</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orged1859c" class="outline-3">
-<h3 id="orged1859c">Plans for FR4</h3>
-<div class="outline-text-3" id="text-orged1859c">
+<div id="outline-container-orgc4763c1" class="outline-3">
+<h3 id="orgc4763c1">Plans for FR4</h3>
+<div class="outline-text-3" id="text-orgc4763c1">
 <p>
 plan for fr4?
 
@@ -1294,26 +1175,26 @@ is this contract even worth continuing?
 </p>
 </div>
 </div>
-<div id="outline-container-orgfac2795" class="outline-3">
-<h3 id="orgfac2795">Plans for Naperville</h3>
+<div id="outline-container-orgecabbf5" class="outline-3">
+<h3 id="orgecabbf5">Plans for Naperville</h3>
 </div>
-<div id="outline-container-org448dd48" class="outline-3">
-<h3 id="org448dd48">Plans for vxRail</h3>
+<div id="outline-container-org40c8c32" class="outline-3">
+<h3 id="org40c8c32">Plans for vxRail</h3>
 </div>
-<div id="outline-container-org139b53f" class="outline-3">
-<h3 id="org139b53f">Plans for DevTools</h3>
+<div id="outline-container-orgaca1660" class="outline-3">
+<h3 id="orgaca1660">Plans for DevTools</h3>
 </div>
 </div>
 
 
 
-<div id="outline-container-orgde11310" class="outline-2">
-<h2 id="orgde11310">Archive</h2>
-<div class="outline-text-2" id="text-orgde11310">
+<div id="outline-container-org8741327" class="outline-2">
+<h2 id="org8741327">Archive</h2>
+<div class="outline-text-2" id="text-org8741327">
 </div>
-<div id="outline-container-org73391f7" class="outline-3">
-<h3 id="org73391f7">Rubrik</h3>
-<div class="outline-text-3" id="text-org73391f7">
+<div id="outline-container-org53f6acf" class="outline-3">
+<h3 id="org53f6acf">Rubrik</h3>
+<div class="outline-text-3" id="text-org53f6acf">
 <ul class="org-ul">
 <li>K8s Agent to CentralDM private tunnel port 8011
 Agents are on google container registry (internet)
@@ -1324,9 +1205,9 @@ Netapp external-snapshotter on github</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org94ef937" class="outline-3">
-<h3 id="org94ef937">Dell server roadmap</h3>
-<div class="outline-text-3" id="text-org94ef937">
+<div id="outline-container-orgf296f91" class="outline-3">
+<h3 id="orgf296f91">Dell server roadmap</h3>
+<div class="outline-text-3" id="text-orgf296f91">
 <p>
 Intel Xeon Gold 6348 @ 2.60GHz
 ddr4 3600
@@ -1336,9 +1217,9 @@ ddr5 4800
 </p>
 </div>
 </div>
-<div id="outline-container-orgfcd611e" class="outline-3">
-<h3 id="orgfcd611e">Elastic Search</h3>
-<div class="outline-text-3" id="text-orgfcd611e">
+<div id="outline-container-org57a141a" class="outline-3">
+<h3 id="org57a141a">Elastic Search</h3>
+<div class="outline-text-3" id="text-org57a141a">
 <p>
 ES for CI
 in dev
@@ -1347,9 +1228,9 @@ build, test, break, runbook
 </p>
 </div>
 </div>
-<div id="outline-container-org4deae96" class="outline-3">
-<h3 id="org4deae96">Vault</h3>
-<div class="outline-text-3" id="text-org4deae96">
+<div id="outline-container-orgd438619" class="outline-3">
+<h3 id="orgd438619">Vault</h3>
+<div class="outline-text-3" id="text-orgd438619">
 <ul class="org-ul">
 <li><p>
 Proposal
@@ -1440,9 +1321,9 @@ YES (hashi)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8d037ad" class="outline-3">
-<h3 id="org8d037ad">CloudHealth</h3>
-<div class="outline-text-3" id="text-org8d037ad">
+<div id="outline-container-org2851d4d" class="outline-3">
+<h3 id="org2851d4d">CloudHealth</h3>
+<div class="outline-text-3" id="text-org2851d4d">
 <ul class="org-ul">
 <li>install on each cluster
 export CHT<sub>API</sub><sub>TOKEN</sub>=7eb7c32fa68fc108ac7ad934a28ceaa2f76e892aa2accb35
@@ -1463,9 +1344,9 @@ helm repo remove cloudhealth</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org03212bd" class="outline-3">
-<h3 id="org03212bd">Incident Manager</h3>
-<div class="outline-text-3" id="text-org03212bd">
+<div id="outline-container-org50ce828" class="outline-3">
+<h3 id="org50ce828">Incident Manager</h3>
+<div class="outline-text-3" id="text-org50ce828">
 <p>
 Unified Incident Management Process
 e2pr in april
@@ -1484,9 +1365,9 @@ currently 5 in US
 </p>
 </div>
 </div>
-<div id="outline-container-orge5a6510" class="outline-3">
-<h3 id="orge5a6510">Naming Conventions</h3>
-<div class="outline-text-3" id="text-orge5a6510">
+<div id="outline-container-org94acc18" class="outline-3">
+<h3 id="org94acc18">Naming Conventions</h3>
+<div class="outline-text-3" id="text-org94acc18">
 <ul class="org-ul">
 <li>Discuss naming conventions
 <ul class="org-ul">
@@ -1605,9 +1486,9 @@ p   Default                  &lt;&#x2013; system created cluster
 </p>
 </div>
 </div>
-<div id="outline-container-org0a272b0" class="outline-3">
-<h3 id="org0a272b0">CD vs Config Management</h3>
-<div class="outline-text-3" id="text-org0a272b0">
+<div id="outline-container-org720da20" class="outline-3">
+<h3 id="org720da20">CD vs Config Management</h3>
+<div class="outline-text-3" id="text-org720da20">
 <ul class="org-ul">
 <li>Define CM
 <ul class="org-ul">
@@ -1624,13 +1505,13 @@ This could be solved by running a CI build whenever the yaml is checked in to in
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf3815dd" class="outline-3">
-<h3 id="orgf3815dd">CodeFresh</h3>
-<div class="outline-text-3" id="text-orgf3815dd">
+<div id="outline-container-org2a4d686" class="outline-3">
+<h3 id="org2a4d686">CodeFresh</h3>
+<div class="outline-text-3" id="text-org2a4d686">
 </div>
-<div id="outline-container-org8a8e5e4" class="outline-4">
-<h4 id="org8a8e5e4">TF</h4>
-<div class="outline-text-4" id="text-org8a8e5e4">
+<div id="outline-container-org89ec1ef" class="outline-4">
+<h4 id="org89ec1ef">TF</h4>
+<div class="outline-text-4" id="text-org89ec1ef">
 <ul class="org-ul">
 <li>Terraform requires lock management to prevent multiple tf's from trying to make changes at the same time.  The infra to do this is 3rd party (Atlantis) and untested.   Definitely complex.</li>
 <li>Actual state is not stored in git, only "Expected" state</li>
@@ -1638,17 +1519,17 @@ This could be solved by running a CI build whenever the yaml is checked in to in
 </ul>
 </div>
 </div>
-<div id="outline-container-org2cdea4f" class="outline-4">
-<h4 id="org2cdea4f">Argo</h4>
-<div class="outline-text-4" id="text-org2cdea4f">
+<div id="outline-container-orgef77e58" class="outline-4">
+<h4 id="orgef77e58">Argo</h4>
+<div class="outline-text-4" id="text-orgef77e58">
 <ul class="org-ul">
 <li>for everything else?</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3441fcf" class="outline-4">
-<h4 id="org3441fcf">Tunnelling</h4>
-<div class="outline-text-4" id="text-org3441fcf">
+<div id="outline-container-org79acbc4" class="outline-4">
+<h4 id="org79acbc4">Tunnelling</h4>
+<div class="outline-text-4" id="text-org79acbc4">
 <ul class="org-ul">
 <li>Using a tunnel/mesh to communicate between CD components, git, argo, image repos, artifactory, jump servers.
 Codefresh has a TLS based one that uses 443, expects 443 open to everywhere, public cloud based.
@@ -1656,26 +1537,26 @@ Tailscale-WireGuard</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org95c24e0" class="outline-4">
-<h4 id="org95c24e0">TMC</h4>
-<div class="outline-text-4" id="text-org95c24e0">
+<div id="outline-container-org44c4d38" class="outline-4">
+<h4 id="org44c4d38">TMC</h4>
+<div class="outline-text-4" id="text-org44c4d38">
 <ul class="org-ul">
 <li>To apply OPA to entire cluster rather than using tf or argo</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc292fad" class="outline-4">
-<h4 id="orgc292fad">Tigris</h4>
-<div class="outline-text-4" id="text-orgc292fad">
+<div id="outline-container-orgd465d1c" class="outline-4">
+<h4 id="orgd465d1c">Tigris</h4>
+<div class="outline-text-4" id="text-orgd465d1c">
 <ul class="org-ul">
 <li>Nosql key/value store
 <a href="https://github.com/tigrisdata/tigris%0D">https://github.com/tigrisdata/tigris%0D</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0e198c7" class="outline-4">
-<h4 id="org0e198c7">Monitoring and health</h4>
-<div class="outline-text-4" id="text-org0e198c7">
+<div id="outline-container-orgf52b325" class="outline-4">
+<h4 id="orgf52b325">Monitoring and health</h4>
+<div class="outline-text-4" id="text-orgf52b325">
 <ul class="org-ul">
 <li>argocd<sub>app</sub><sub>info</sub>
 <a href="https://argo-cd.readthedocs.io/enn/stable/operator-manual/health%0D">https://argo-cd.readthedocs.io/enn/stable/operator-manual/health%0D</a>
@@ -1688,9 +1569,9 @@ Tailscale-WireGuard</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb94bbfc" class="outline-4">
-<h4 id="orgb94bbfc">Codefresh conclusions</h4>
-<div class="outline-text-4" id="text-orgb94bbfc">
+<div id="outline-container-org73d367e" class="outline-4">
+<h4 id="org73d367e">Codefresh conclusions</h4>
+<div class="outline-text-4" id="text-org73d367e">
 <ul class="org-ul">
 <li><a href="https://i.imgur.com/TISi4wq.png%0D">https://i.imgur.com/TISi4wq.png%0D</a></li>
 <li>coupon / class
@@ -1703,7 +1584,7 @@ Tailscale-WireGuard</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Michael Kronvold</p>
-<p class="date">Created: 2023-06-26 Mon 11:23</p>
+<p class="date">Created: 2023-06-27 Tue 09:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

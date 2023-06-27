@@ -15,7 +15,11 @@
 :END:
 
 * Quick Notes
-
+** Biken Nepal
+*** Works for CSS team
+- level 1 ops issues go to css team
+*** IST
+*** CKA
 
 * Mon
 ** Vault
@@ -47,10 +51,19 @@
   + Netops is working on fastconnect that connects our DCs to cloud
     - Once that's complete we need to install Tanzu
     - TKG/s
+***** TODO ask Brian / NA team who can provision TKG in OCI
+*** Path WCP
++ from 22.6 to 23.x
++ requires vcenter 8
+  - does it require vsphere 8?
+  - what is the effort to convert
+***** TODO Schedule call with Ryan to talk about OCI, s vs m, separate vcenter, migrate prod etc.
 *** GitOps sans automation, workflow manumation, documation
 *** CI build automation
   -  Github actions to prep things for use
   -  Alternatives?
+*** DR Playbooks for CI
++ Do we have them for K8s?  We were told they exist.
 ** Old
 *** Next projects
    - ArgoCD Design (K)
@@ -111,7 +124,12 @@
 
 
 
-    
+** Dell
+*** CloudIQ
+***** TODO Add Dean Moon to cloudIQ
+*** MyService360
+***** https://www.dell.com/support/myservice360
+***** 
 * Wed
 ** New
 *** Tanzu Labs

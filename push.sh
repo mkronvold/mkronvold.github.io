@@ -107,4 +107,5 @@ confirmpush
 
 git status
 
-echo "https://mkronvold.github.io/"
+[ -f ./sitename ] && sitename=$(cat sitename) || sitename=$(basename `pwd`)
+echo "https://${sitename}/"

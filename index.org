@@ -166,15 +166,15 @@
 * Wed
 ** New
 *** Vault
-**** TODO Any questions, followup from Monday
-*** Training and expenses
+**** Any questions, followup from Monday
+*** DONE Training and expenses
 + What do we need
 + Take what you need, udemy, paid classes
 + Personal equipment
   - let me know what you need, we can expense things
-*** Label mandate, all environments
-**** TODO Followup from last week
-**** Labelling VMs
+*** DONE Label mandate, all environments
+**** Followup from last week
+**** DONE Labelling VMs
   + VM (as seen from vSphere)
     - Node labels
       visible to K8s
@@ -190,17 +190,17 @@
   + Supervisors
   + control
   + workers
-**** Labelling namespaces
+**** DONE Labelling namespaces
   + Namespace
     - Application ns
       - Normal solution CI- labels applied via yaml
     - Tooling ns
       - Fixed labels for CI-department, etc.
-*** PortWorks
+*** DONE PortWorks
   + start initial research
     - does it resolve some of the issues identified in dev
-*** DR
-**** What can k8s offer?
+*** DONE DR
+**** DONE What can k8s offer?
   + Self-healing
     - Reconcile current state to desired state
     - Requires GitOps
@@ -217,7 +217,7 @@
     - GitOps, GitOps tooling in DR location
     - Data replication in a declarative/code way
     - Shift to using Storage abstraction
-**** Components of DR
+**** DONE Components of DR
   + Application
       - Services
       - DBs
@@ -254,7 +254,7 @@
     - bitbucket / github
       - jump servers
       - argo
-**** Responsibilities
+**** DONE Responsibilities
 + Application
     - R&D
 + Platform
@@ -269,12 +269,12 @@
     - jump servers
       -  where?
     - argo
-**** KPE is only responsible for
+**** DONE KPE is only responsible for
 + making sure the data is replicated to DR
 + ingress, egress, load balancers etc.
 + PV, PVC
 + TKG, TKC, NS
-**** What to do
+**** DONE What to do
   + Everything on here needs:
     + Prototype
       - Design doc
@@ -304,8 +304,8 @@
       - Tooling, scripts, deployment yamls, dashboards
       - User Access Guide
       - Non-User Access Guide
-***** manually or automatically build everything in advance, sync changes as they happen
-***** valero replicate all the manifests to dr site
+***** DONE manually or automatically build everything in advance, sync changes as they happen
+***** DONE valero replicate all the manifests to dr site
 + valero is a cluster by cluster backup
   - still need a cluster creation method/script/etc
 + does not back up core k8s objects
@@ -314,29 +314,29 @@
   - application objects that are copied this way will not necessarily work
   - databases will be wrong etc.
   - will any of the current apps work in this way?
-***** provision a TKG and CD at DR site and build everything for DR as needed
-*** Misc
-**** DONE ask about stippen
+***** DONE provision a TKG and CD at DR site and build everything for DR as needed
+*** DONE Misc
+**** TODO ask about stippen
   + how do they get it approved?
   + how do they know they got it?
-*** gitops (manumation) automation of
+*** DONE gitops (manumation) automation of
 + cluster provisioning
 + namespace provisioning
 + post-installation of cluster specific
   - deployments/daemonsets
 + RBAC
-**** TODO Decision on what tools to use
+**** Decision on what tools to use
 + look at helm?  can you re-run helm periodically to maintain an environment/deployment?
   - helm install vs update
-**** TODO how do we update TMC?
+**** how do we update TMC?
 + ask vmware how to use argo with tmc
-**** TODO how many to install and where
-**** TODO are we sharing with app installs
+**** how many to install and where
+**** are we sharing with app installs
 + Some apps use Digital AI and helm instead of ArgoCD (watermill)
-**** TODO how to add existing clusters into git without recreating everything in production
-*** config management vs continuous delivery
-**** using ansible to manage files in git?
-*** DR
+**** how to add existing clusters into git without recreating everything in production
+*** DONE config management vs continuous delivery
+**** DONE using ansible to manage files in git?
+*** DONE DR
 ** Old
 *** Tanzu Labs
 **** DONE ask about engagement hours
@@ -457,7 +457,7 @@
   + Portworx
   + Vault
 
-
+    
 
 * Attention
 ** Clock Skew
@@ -800,3 +800,4 @@ p   Default                  <-- system created cluster
 
 
 
+  
